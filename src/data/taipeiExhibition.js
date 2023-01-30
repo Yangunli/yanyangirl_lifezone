@@ -8,7 +8,7 @@ export const taipeiExp = [
     TicketType: "免費",
     location: "台北市大同區赤峰街17巷4號",
     time: "2023/02/04-2023/02/19 ",
-    src: "https://pic.pimg.tw/yangun410/1675060114-3969748000-g_n.jpg",
+    src: "https://pic.pimg.tw/yangun410/1675086206-2254444568-g_b.jpg",
     link: "https://www.facebook.com/xiaoqiplusg",
   },
   {

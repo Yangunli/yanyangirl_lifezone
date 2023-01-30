@@ -9,6 +9,7 @@ module.exports = {
   entry: "./src/index.js",
   output: {
     path: path.resolve(__dirname, "public"),
+    publicPath: "/",
     filename: "main.js",
     clean: true,
   },
@@ -45,7 +46,11 @@ module.exports = {
     ],
   },
   plugins: [
-    new HtmlWebpackPlugin({ template: "src/template/index.html" }),
+    new HtmlWebpackPlugin({
+      template: "src/template/index.html",
+      inject: "body",
+      filename: "index.html",
+    }),
     new MiniCssExtractPlugin(),
     new WorkboxPlugin.GenerateSW({
       // these options encourage the ServiceWorkers to get in there fast

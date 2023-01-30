@@ -31,7 +31,7 @@ const router = createBrowserRouter(
           <Route path=":Id" element={<CityInfo />} />
         </Route>
       </Route>
-      <Route path="*" element={<Home />} />
+      <Route path="*" element={<Home />} replace />
     </Route>
   )
 );
