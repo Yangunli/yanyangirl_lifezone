@@ -1,0 +1,48 @@
+export const tainanVenues = [
+  {
+    id: 305,
+    venue: "暮拉多元藝術空間 ",
+    openDay: "周一至周日",
+    TicketType: "免費",
+    location: "台南市中西區國華街三段15號",
+    src: "https://pic.pimg.tw/yangun410/1673503391-4135638169-g_b.jpg?v=1673503413",
+    link: "https://themoolahart.wixsite.com/my-site",
+  },
+  {
+    id: 304,
+    venue: "臺南文化中心",
+    openDay: "周三至周日",
+    TicketType: "免費",
+    location: "台南市東區中華東路三段332號",
+    src: "https://pic.pimg.tw/yangun410/1672931785-1067098565-g_n.jpg",
+    link: "https://www.tmcc.gov.tw/events/%e5%ae%b6%e9%84%89-way/",
+  },
+  {
+    id: 303,
+    TicketType: "免費",
+    openDay: "周三至周日",
+    venue: "陸角銀Sixpence Gallery",
+    location: "台南市中西區大德街83號2F",
+    src: "https://pic.pimg.tw/yangun410/1672930112-1028370948-g_n.jpg?v=1672930152",
+    link: "https://www.sixpencegallery.com/exhibition-%E5%B1%95%E8%A6%BD",
+  },
+  {
+    id: 302,
+    TicketType: "免費",
+    openDay: "周三至周日",
+    venue: "索卡藝術·台南",
+    location: "台南市安平區慶平路446號",
+    src: "https://pic.pimg.tw/yangun410/1672930381-2751693358-g_n.jpg",
+    link: "https://www.facebook.com/soka.tainan",
+  },
+
+  {
+    id: 301,
+    venue: "大新美術館",
+    openDay: "周二至周日",
+    TicketType: "免費",
+    location: "台南市北區西門路四段110巷6號",
+    src: " https://pic.pimg.tw/yangun410/1670759820-1783077119-g_n.jpg ",
+    link: " https://www.facebook.com/DaXinArtMuseum ",
+  },
+];

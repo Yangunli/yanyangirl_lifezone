@@ -1,0 +1,25 @@
+.modal-container {
+  position: fixed;
+  display: grid;
+  place-items: center;
+  inset: 0;
+  z-index: 55555;
+  background-color: rgb(57 42 42/0.5);
+}
+
+.modal-body {
+  width: min(90%, 800px);
+  min-height: 200px;
+  background-color: rgb(230, 201, 147);
+  border: 3px solid hsl(35, 11%, 22%);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-radius: 20px;
+  padding: 20px 40px;
+  transform: translateY(5%);
+}
+
+.modal-body dl {
+  display: flex;
+}
