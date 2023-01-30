@@ -5,6 +5,7 @@ import { cityList } from "../data/cityList";
 import { useScrollBgColor } from "../hooks/useScrollBgColor";
 import { useScrollNavDisplay } from "../hooks/useScrollNavDisplay";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { TextSpinner } from "../components/SvgComponents";
 
 // Import Swiper styles
 import "swiper/css";
@@ -16,6 +17,7 @@ import { taichungExp } from "../data/taichungExhibition";
 import { tainanExp } from "../data/tainanExhibition";
 import SingleContent from "../components/SingleContent";
 import ModalContent from "../components/ModalContent";
+import classNames from "../components/classNames";
 const Home = () => {
   const [modalToggle, setModalToggle] = useState(false);
   const [modalContent, setModalContent] = useState([]);
@@ -25,13 +27,16 @@ const Home = () => {
   };
   const bgColor = useScrollBgColor();
   const scrollDirection = useScrollNavDisplay();
-  function classNames(...classes) {
-    return classes.filter(Boolean).join(" ");
-  }
   const exhibition = [
-    ...taipeiExp.slice(-5, -1),
-    ...taichungExp.slice(-5, -1),
-    ...tainanExp.slice(-5, -1),
+    ...taipeiExp
+      .filter((exhibit) => new Date(exhibit.time.split("-")[1]) > new Date())
+      .slice(-5, -1),
+    ...taichungExp
+      .filter((exhibit) => new Date(exhibit.time.split("-")[1]) > new Date())
+      .slice(-5, -1),
+    ...tainanExp
+      .filter((exhibit) => new Date(exhibit.time.split("-")[1]) > new Date())
+      .slice(-5, -1),
   ];
   return (
     <div className="home" style={{ backgroundColor: `hsl(${bgColor},28%,76%` }}>
@@ -70,7 +75,7 @@ const Home = () => {
       <div className="home__city-slider">
         <Swiper
           slidesPerView={2}
-          spaceBetween={20}
+          spaceBetween={30}
           pagination={{
             el: ".swiper-pagination",
             type: "fraction",

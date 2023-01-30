@@ -21,9 +21,6 @@ const PageHeader = () => {
         "page-header"
       )}
     >
-      <nav className="nav-mobile">
-        <MenuSvg2 /> <LogoSvg />
-      </nav>
       <nav className="nav-desktop">
         <button
           className="goToback-btn"

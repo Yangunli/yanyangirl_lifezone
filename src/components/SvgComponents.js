@@ -4,8 +4,6 @@ export const LogoSvg = () => {
   return (
     <svg
       className="logoSvg"
-      width="780"
-      height="200"
       viewBox="0 0 1560 400"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -58,8 +56,6 @@ export const LifezoneSvg = () => {
   return (
     <svg
       className="lifezoneSvg"
-      width="339"
-      height="329"
       viewBox="0 0 339 329"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -104,8 +100,6 @@ export const PureLogoSvg = () => {
   return (
     <svg
       className="pureLogoSvg"
-      width="624"
-      height="67"
       viewBox="0 0 624 67"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -122,8 +116,6 @@ export const ArrowSvg = () => {
   return (
     <svg
       className="arrowSvg"
-      width="80"
-      height="39"
       viewBox="0 0 80 39"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -144,8 +136,6 @@ export const MenuSvg1 = () => {
   return (
     <svg
       className="menuSvg1"
-      width="66"
-      height="60"
       viewBox="0 0 220 200"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -174,8 +164,6 @@ export const MenuSvg2 = () => {
   return (
     <svg
       className="menuSvg2"
-      width="140"
-      height="140"
       viewBox="0 0 140 140"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -203,8 +191,7 @@ export const MenuSvg2 = () => {
 export const TextSpinner = () => {
   return (
     <svg
-      width="400"
-      height="400"
+      className="textSpinnerSvg"
       viewBox="0 0 2992 3002"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -385,13 +372,7 @@ export const TextSpinner = () => {
 
 export const VenueText = () => {
   return (
-    <svg
-      width="250"
-      height="250"
-      viewBox="0 0 1506 1506"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+    <svg viewBox="0 0 1506 1506" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
         d="M476.647 1307.31C475.979 1305.61 474.706 1305.13 472.828 1305.87C469.202 1322.77 462.305 1337.31 452.137 1349.51C441.946 1361.65 429.204 1371.22 413.912 1378.23C408.78 1377.1 404.061 1374.27 399.755 1369.74C395.426 1365.15 392.127 1359.98 389.858 1354.23C386.873 1346.65 385.79 1339.56 386.609 1332.94C394.417 1325.94 402.041 1319.72 409.479 1314.26C423.731 1312.07 430.858 1310.98 430.858 1310.98C431.862 1310.86 432.757 1310.65 433.545 1310.34C435.604 1309.53 436.204 1308.03 435.344 1305.85C432.756 1306.03 425.122 1307.08 412.443 1309C409.212 1309.5 404.747 1310.25 399.048 1311.24C393.265 1312.19 386.423 1313.21 378.523 1314.29C373.661 1309.77 369.821 1303.94 367.004 1296.79C363.589 1288.13 362.987 1280.39 365.197 1273.57C367.346 1266.77 372.388 1261.81 380.322 1258.68C391.951 1254.1 404.567 1252.9 418.169 1255.1C428.92 1256.81 439.753 1260.41 450.667 1265.9L480.647 1254.08C485.718 1257.89 489.526 1261.61 492.071 1265.22C494.677 1268.81 496.851 1272.82 498.594 1277.24C501.89 1285.6 502.906 1292.79 501.643 1298.82C500.38 1304.84 496.629 1309.09 490.39 1311.55L474.401 1317.85C475.061 1316.33 475.723 1314.46 476.387 1312.24C476.99 1310.04 477.077 1308.4 476.647 1307.31Z"
         fill="#5D5E27"

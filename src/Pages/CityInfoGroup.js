@@ -9,6 +9,7 @@ import { tainanExp } from "../data/tainanExhibition";
 import SingleContent from "../components/SingleContent";
 import ModalContent from "../components/ModalContent";
 import PageHeader from "../components/PageHeader";
+import classNames from "../components/classNames";
 const CityInfoGroup = () => {
   const [modalToggle, setModalToggle] = useState(false);
   const [modalContent, setModalContent] = useState([]);
@@ -20,25 +21,30 @@ const CityInfoGroup = () => {
   const city = categoryEl.city;
   const views =
     city === "taipei"
-      ? taipeiExp
+      ? taipeiExp.filter(
+          (exhibit) => new Date(exhibit.time.split("-")[1]) > new Date()
+        )
       : city === "taichung"
-      ? taichungExp
-      : tainanExp;
+      ? taichungExp.filter(
+          (exhibit) => new Date(exhibit.time.split("-")[1]) > new Date()
+        )
+      : tainanExp.filter(
+          (exhibit) => new Date(exhibit.time.split("-")[1]) > new Date()
+        );
   const venues =
     city === "taipei"
       ? taipeiVenues
       : city === "taichung"
       ? taichungVenues
       : tainanVenues;
-  function classNames(...classes) {
-    return classes.filter(Boolean).join(" ");
-  }
 
   return (
     <div
       className={classNames(
         categoryEl.page === "exhibition" ? "exhibition-bg" : "venue-bg",
-        "main"
+        "main",
+        "w-100",
+        "h-100"
       )}
     >
       <PageHeader />

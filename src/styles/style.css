@@ -81,8 +81,12 @@ button {
   padding-top: 200px;
 }
 
-.pt-100 {
-  padding-top: 100px;
+.w-100 {
+  width: 100%;
+}
+
+.h-100 {
+  min-height: 100vh;
 }
 
 .home {
@@ -158,7 +162,6 @@ button {
 
 .info-title {
   width: min(100% - 100px, 1100px);
-  padding-inline: 50px;
   margin-block: 50px;
   height: 100px;
 }
@@ -169,16 +172,29 @@ button {
   line-height: 1.5rem;
 }
 .info-title h1:after {
-  position: absolute;
+  z-index: 0;
   content: "";
   inset: auto;
   width: 50px;
   height: 20px;
   border-radius: 100%;
   background-color: var(--darkBg-text);
-  transform: rotate(-45deg) translate(-30px, 0px);
+  transform: rotate(-45deg);
 }
 
+@media screen and (min-width: 300px) {
+  .info-title h1::after {
+    position: absolute;
+  }
+}
+@media screen and (min-width: 390px) {
+  .info-title {
+    padding-inline: 50px;
+  }
+  .info-title h1:after {
+    transform: rotate(-45deg) translate(-30px, 0px);
+  }
+}
 @media screen and (min-width: 600px) {
   .home__header .logoSvg {
     transform: translate(8%, 0%);
@@ -204,14 +220,15 @@ button {
   }
 }
 @media screen and (min-width: 1200px) {
-  .home__header .logoSvg {
-    scale: 1.2;
-  }
   .home__header svg.menuSvg1 {
     transform: translateY(-20%) scale(1.5);
   }
   .home__nav {
     gap: var(--p);
+  }
+  .home__header .logoSvg {
+    transform: translate(10%, -5%);
+    width: 70%;
   }
 }
 .modal-container {
@@ -224,6 +241,7 @@ button {
 }
 
 .modal-body {
+  position: relative;
   width: min(90%, 800px);
   min-height: 200px;
   background-color: rgb(230, 201, 147);
@@ -234,12 +252,44 @@ button {
   border-radius: 20px;
   padding: 20px 40px;
   transform: translateY(5%);
+  overflow: hidden;
 }
 
 .modal-body dl {
   display: flex;
 }
 
+.spinner {
+  position: absolute;
+  right: -50px;
+  top: -10%;
+  width: 200px;
+  transform: translate(-50%, -50%);
+  transform-origin: center center;
+  -webkit-animation: rotateText 10s linear infinite;
+          animation: rotateText 10s linear infinite;
+}
+.spinner .textSpinnerSvg {
+  width: 200px;
+}
+
+@-webkit-keyframes rotateText {
+  from {
+    transform: rotate(0) translateX(0);
+  }
+  to {
+    transform: rotate(-360deg) translateX(0);
+  }
+}
+
+@keyframes rotateText {
+  from {
+    transform: rotate(0) translateX(0);
+  }
+  to {
+    transform: rotate(-360deg) translateX(0);
+  }
+}
 .card-container {
   display: grid;
   width: min(100% - 100px, 1100px);
@@ -250,16 +300,17 @@ button {
 
 .card {
   width: 100%;
-  text-align: center;
+  text-align: justify;
+}
+.card h2,
+.card h3 {
+  padding-top: 5px;
 }
 
 @media screen and (min-width: 450px) {
   .card-container {
     grid-template-columns: repeat(2, 1fr);
     gap: calc(var(--p) * 5);
-  }
-  .card {
-    padding: 0;
   }
 }
 @media screen and (min-width: 800px) {
@@ -357,22 +408,10 @@ button {
   z-index: 10;
   inset: -2px auto;
 }
-.page-header > .pureLogoSvg {
-  height: 52px;
-}
 .page-header .menuSvg2 {
   height: 65px;
   padding-left: var(--p);
   padding-top: var(--p);
-}
-.page-header > .logoSvg {
-  height: 80px;
-}
-
-.nav-mobile {
-  width: 100%;
-  height: 100%;
-  display: none;
 }
 
 .nav-desktop {
@@ -415,8 +454,8 @@ button {
   display: grid;
   grid-template-columns: 1fr;
   place-items: center;
-  padding-block: 30px;
-  gap: var(--p);
+  padding-block: 60px;
+  gap: calc(var(--p) * 2);
 }
 .nav__center .pureLogoSvg {
   width: 60%;
@@ -442,14 +481,15 @@ button {
     width: 50px;
     inset: 35% 35%;
   }
-  .nav-mobile {
-    display: none;
+  .nav__center {
+    gap: calc(var(--p) * 4);
   }
 }
 @media screen and (min-width: 1200px) {
   .nav__center {
     place-items: center;
-    padding-top: 50px;
+    transform: translateY(30px);
+    gap: calc(var(--p) * 5);
   }
   .nav-desktop > .menuSvg2 {
     top: 50%;
@@ -464,9 +504,7 @@ button {
 
 .mySwiper {
   width: 98vw;
-  height: 320px;
-  margin-left: auto;
-  margin-right: auto;
+  height: 280px;
 }
 
 .swiper-slide {
@@ -524,6 +562,11 @@ button {
   scale: 1;
 }
 
+@media screen and (min-width: 300px) {
+  .mySwiper {
+    height: 320px;
+  }
+}
 @media screen and (min-width: 600px) {
   .mySwiper {
     height: 500px;

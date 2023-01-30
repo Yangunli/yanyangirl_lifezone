@@ -1,6 +1,19 @@
 export const tainanExp = [
   {
-    id: 5,
+    id: 303,
+    name: "愛是塑膠",
+    TicketType: "免費",
+    time: "2023/02/04-2023/02/26",
+    openDay: "周三至周日",
+    artist: "劉倩帆",
+    venue: "陸角銀Sixpence Gallery",
+    location: "台南市中西區大德街83號2F",
+    src: "https://pic.pimg.tw/yangun410/1675060935-3167826214-g_b.jpg",
+    link: "https://www.facebook.com/Sixpence.Gallery",
+  },
+
+  {
+    id: 302,
     name: "站在光裡的是路過的你嗎",
     artist: "陳廷晉",
     venue: "暮拉多元藝術空間 ",
@@ -12,7 +25,7 @@ export const tainanExp = [
     link: "https://themoolahart.wixsite.com/my-site",
   },
   {
-    id: 4,
+    id: 301,
     name: "家鄉WAY",
     artist: "吳芊頤、走路草農／藝團、程仁珮、蔡宗祐",
     venue: "臺南文化中心",
@@ -22,43 +35,5 @@ export const tainanExp = [
     time: "2023/01/13-2023/02/05",
     src: "https://pic.pimg.tw/yangun410/1672931785-1067098565-g_n.jpg",
     link: "https://www.tmcc.gov.tw/events/%e5%ae%b6%e9%84%89-way/",
-  },
-  {
-    id: 3,
-    name: "麥麥 DEAR FRIEND",
-    TicketType: "免費",
-    time: "2022/12/24-2023/01/15",
-    openDay: "周三至周日",
-    artist: "KIRA",
-    venue: "陸角銀Sixpence Gallery",
-    location: "台南市中西區大德街83號2F",
-    src: "https://pic.pimg.tw/yangun410/1672930112-1028370948-g_n.jpg?v=1672930152",
-    link: "https://www.sixpencegallery.com/exhibition-%E5%B1%95%E8%A6%BD",
-  },
-  {
-    id: 2,
-    name: "遊戲人間",
-    TicketType: "免費",
-    time: "2022/12/10-2023/01/19",
-    openDay: "周三至周日",
-    artist: "李西西",
-    venue: "索卡藝術·台南",
-    location: "台南市安平區慶平路446號",
-    src: "https://pic.pimg.tw/yangun410/1672930381-2751693358-g_n.jpg",
-    link: "https://www.facebook.com/soka.tainan",
-  },
-
-  {
-    id: 1,
-    name: "轉境︰藝術森林的摺曲之徑",
-    artist:
-      "曾英棟、許自貴、侯立仁、張振輝、吳新年、鄭宏南、楊明忠、梁任宏、林鴻文、謝宏達、賴美華、徐永旭、盧明德、郭挹芬、吳孟璋、沈昌明",
-    venue: "大新美術館",
-    openDay: "周二至周日",
-    TicketType: "免費",
-    location: "台南市北區西門路四段110巷6號",
-    time: "2022/11/19-2023/01/15",
-    src: " https://pic.pimg.tw/yangun410/1670759820-1783077119-g_n.jpg ",
-    link: " https://www.facebook.com/DaXinArtMuseum ",
   },
 ];

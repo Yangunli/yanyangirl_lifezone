@@ -8,16 +8,17 @@
 
 .card {
   width: 100%;
-  text-align: center;
+  text-align: justify;
+  h2,
+  h3 {
+    padding-top: 5px;
+  }
 }
 
 @media screen and (min-width: 450px) {
   .card-container {
     grid-template-columns: repeat(2, 1fr);
     gap: calc(var(--p) * 5);
-  }
-  .card {
-    padding: 0;
   }
 }
 
