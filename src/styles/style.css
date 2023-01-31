@@ -6,7 +6,7 @@
 
 :root {
   --darkBg-text: hsl(60, 100%, 71%);
-  --lightBg-text: hsl(60, 83%, 8%);
+  --lightBg-text: hsl(173, 61%, 11%);
   --matcha-bg: hsl(62, 20%, 59%);
   --milktea-bg: hsl(39, 28%, 76%);
   --p: 15px;
@@ -51,6 +51,7 @@ li {
 button {
   padding: none;
   border: none;
+  background-color: transparent;
 }
 
 .goback {
@@ -66,6 +67,7 @@ button {
 .opacity-1 {
   opacity: 1;
   transform: translateY(0);
+  will-change: transform;
   transition: all 0.5s ease-in-out;
 }
 
@@ -134,29 +136,32 @@ button {
   transform: translate(5%, -5%);
 }
 
-.home__header .menuSvg2 {
-  position: absolute;
+.home .menuSvg2 {
+  position: fixed;
   height: 30px;
   width: 30px;
-  right: 5%;
-  top: 25%;
-  transform: translateY(-50%);
+  right: 0%;
+  top: 0%;
+  z-index: 5;
 }
 
-.home__header svg.menuSvg1 {
+.home .menuSvg1 {
   width: 60px;
   height: 60px;
-  position: absolute;
-  top: 30%;
+  position: fixed;
+  top: 5%;
   left: 5%;
-  transform: translateY(-50%);
+  z-index: 5;
   display: none;
+  color: var(--lightBg-text);
 }
-.home__header svg.menuSvg1 path {
-  stroke: var(--lightBg-text);
+.home .menuSvg1 path {
+  stroke: currentColor;
 }
-.home__header svg.menuSvg1 path:nth-child(2) {
-  color: rgb(21, 1, 3);
+.home .menuSvg1 path:nth-child(1) {
+  filter: drop-shadow(2px 2px 0px rgb(219, 150, 150)) drop-shadow(4px 3px 0px rgb(154, 146, 117)) drop-shadow(5px 4px 0px rgb(98, 72, 6));
+}
+.home .menuSvg1 path:nth-child(2) {
   fill: currentColor;
 }
 
@@ -196,11 +201,11 @@ button {
   }
 }
 @media screen and (min-width: 600px) {
-  .home__header .logoSvg {
+  .home .logoSvg {
     transform: translate(8%, 0%);
     width: 80%;
   }
-  .home__header .menuSvg2 {
+  .home .menuSvg2 {
     width: 40px;
     height: 40px;
   }
@@ -209,10 +214,10 @@ button {
   }
 }
 @media screen and (min-width: 800px) {
-  .home__header .menuSvg2 {
+  .home .menuSvg2 {
     display: none;
   }
-  .home__header svg.menuSvg1 {
+  .home svg.menuSvg1 {
     display: block;
   }
   .home__nav {
@@ -220,15 +225,61 @@ button {
   }
 }
 @media screen and (min-width: 1200px) {
-  .home__header svg.menuSvg1 {
-    transform: translateY(-20%) scale(1.5);
+  .home svg.menuSvg1 {
+    transform: scale(1.2);
   }
   .home__nav {
     gap: var(--p);
   }
-  .home__header .logoSvg {
+  .home .logoSvg {
     transform: translate(10%, -5%);
     width: 70%;
+  }
+}
+.home-animation {
+  position: fixed;
+  inset: 0;
+  opacity: 1;
+  z-index: 55;
+  -webkit-animation: homeAnimation 3s ease-in-out;
+          animation: homeAnimation 3s ease-in-out;
+}
+
+@-webkit-keyframes homeAnimation {
+  0% {
+    background-color: rgb(144, 42, 42);
+  }
+  10% {
+    background-color: pink;
+  }
+  20% {
+    background-color: wheat;
+  }
+  90% {
+    background-color: lightcoral;
+  }
+  100% {
+    background-color: rgb(173, 130, 187);
+    opacity: 0;
+  }
+}
+
+@keyframes homeAnimation {
+  0% {
+    background-color: rgb(144, 42, 42);
+  }
+  10% {
+    background-color: pink;
+  }
+  20% {
+    background-color: wheat;
+  }
+  90% {
+    background-color: lightcoral;
+  }
+  100% {
+    background-color: rgb(173, 130, 187);
+    opacity: 0;
   }
 }
 .modal-container {
@@ -236,7 +287,7 @@ button {
   display: grid;
   place-items: center;
   inset: 0;
-  z-index: 55555;
+  z-index: 6;
   background-color: rgba(57, 42, 42, 0.5);
 }
 
@@ -264,7 +315,7 @@ button {
   right: -50px;
   top: -10%;
   width: 200px;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, 50%);
   transform-origin: center center;
   -webkit-animation: rotateText 10s linear infinite;
           animation: rotateText 10s linear infinite;
@@ -405,7 +456,7 @@ button {
   max-width: 100%;
   height: 55px;
   position: fixed;
-  z-index: 10;
+  z-index: 2;
   inset: -2px auto;
 }
 .page-header .menuSvg2 {
@@ -469,6 +520,11 @@ button {
   padding-right: var(--p);
 }
 
+.menuBtn {
+  position: fixed;
+  right: 10px;
+}
+
 @media screen and (min-width: 800px) {
   .nav-desktop {
     display: flex;
@@ -496,6 +552,13 @@ button {
     right: calc(var(--p) * 2);
     width: 50px;
     height: 50px;
+  }
+  .nav-desktop .goToback-btn {
+    z-index: 555;
+  }
+  .menuBtn {
+    top: var(--p);
+    right: 5%;
   }
 }
 .home__city-slider {
@@ -583,5 +646,40 @@ button {
   }
   .home__city-slider {
     padding-top: 200px;
+  }
+}
+.menu-container {
+  position: fixed;
+  z-index: 5;
+  inset: 0;
+  background-color: var(--matcha-bg);
+  display: grid;
+  place-items: center;
+  padding-block: 100px 280px;
+  font-size: 2rem;
+  -webkit-animation: sidebar 0.8s ease-in-out forwards;
+          animation: sidebar 0.8s ease-in-out forwards;
+}
+
+@media screen and (min-width: 800px) {
+  .menu-container {
+    padding-block: 137px 280px;
+    padding-left: 120px;
+  }
+}
+@-webkit-keyframes sidebar {
+  0% {
+    transform: scale3d(-1.4, 0.4, 0.7);
+  }
+  100% {
+    transform: scale3d(1, 1, 1);
+  }
+}
+@keyframes sidebar {
+  0% {
+    transform: scale3d(-1.4, 0.4, 0.7);
+  }
+  100% {
+    transform: scale3d(1, 1, 1);
   }
 }/*# sourceMappingURL=style.css.map */

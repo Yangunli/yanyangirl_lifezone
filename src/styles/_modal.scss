@@ -3,7 +3,7 @@
   display: grid;
   place-items: center;
   inset: 0;
-  z-index: 55555;
+  z-index: 6;
   background-color: rgb(57 42 42/0.5);
 }
 
@@ -31,7 +31,7 @@
   right: -50px;
   top: -10%;
   width: 200px;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, 50%);
   transform-origin: center center;
   animation: rotateText 10s linear infinite;
   .textSpinnerSvg {

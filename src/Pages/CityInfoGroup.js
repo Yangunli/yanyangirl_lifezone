@@ -9,7 +9,7 @@ import { tainanExp } from "../data/tainanExhibition";
 import SingleContent from "../components/SingleContent";
 import ModalContent from "../components/ModalContent";
 import PageHeader from "../components/PageHeader";
-import classNames from "../components/classNames";
+import classNames from "../function/classNames";
 const CityInfoGroup = () => {
   const [modalToggle, setModalToggle] = useState(false);
   const [modalContent, setModalContent] = useState([]);
@@ -42,9 +42,7 @@ const CityInfoGroup = () => {
     <div
       className={classNames(
         categoryEl.page === "exhibition" ? "exhibition-bg" : "venue-bg",
-        "main",
-        "w-100",
-        "h-100"
+        "main"
       )}
     >
       <PageHeader />

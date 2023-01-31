@@ -46,28 +46,36 @@
   transform: translate(5%, -5%);
 }
 
-.home__header .menuSvg2 {
-  position: absolute;
+.home .menuSvg2 {
+  position: fixed;
   height: 30px;
   width: 30px;
-  right: 5%;
-  top: 25%;
-  transform: translateY(-50%);
+  right: 0%;
+  top: 0%;
+  z-index: 5;
+  // transform: translateY(-50%);
 }
 
-.home__header svg.menuSvg1 {
+.home .menuSvg1 {
   width: 60px;
   height: 60px;
-  position: absolute;
-  top: 30%;
+  position: fixed;
+  top: 5%;
   left: 5%;
-  transform: translateY(-50%);
+  z-index: 5;
+
+  // transform: translateY(-50%);
   display: none;
+  color: var(--lightBg-text);
   path {
-    stroke: var(--lightBg-text);
+    stroke: currentColor;
+  }
+  path:nth-child(1) {
+    filter: drop-shadow(2px 2px 0px rgb(219, 150, 150))
+      drop-shadow(4px 3px 0px rgb(154, 146, 117))
+      drop-shadow(5px 4px 0px rgb(98, 72, 6));
   }
   path:nth-child(2) {
-    color: rgb(21, 1, 3);
     fill: currentColor;
   }
 }
@@ -116,11 +124,11 @@
 }
 
 @media screen and (min-width: 600px) {
-  .home__header .logoSvg {
+  .home .logoSvg {
     transform: translate(8%, 0%);
     width: 80%;
   }
-  .home__header .menuSvg2 {
+  .home .menuSvg2 {
     width: 40px;
     height: 40px;
   }
@@ -132,10 +140,10 @@
 }
 
 @media screen and (min-width: 800px) {
-  .home__header .menuSvg2 {
+  .home .menuSvg2 {
     display: none;
   }
-  .home__header svg.menuSvg1 {
+  .home svg.menuSvg1 {
     display: block;
   }
   .home__nav {
@@ -144,14 +152,42 @@
 }
 
 @media screen and(min-width: 1200px) {
-  .home__header svg.menuSvg1 {
-    transform: translateY(-20%) scale(1.5);
+  .home svg.menuSvg1 {
+    transform: scale(1.2);
   }
   .home__nav {
     gap: var(--p);
   }
-  .home__header .logoSvg {
+  .home .logoSvg {
     transform: translate(10%, -5%);
     width: 70%;
+  }
+}
+
+.home-animation {
+  position: fixed;
+  inset: 0;
+  opacity: 1;
+  z-index: 55;
+  animation: homeAnimation 3s ease-in-out;
+}
+
+@keyframes homeAnimation {
+  0% {
+    background-color: rgb(144, 42, 42);
+  }
+  10% {
+    background-color: pink;
+  }
+  20% {
+    background-color: wheat;
+  }
+  90% {
+    background-color: lightcoral;
+  }
+
+  100% {
+    background-color: rgb(173, 130, 187);
+    opacity: 0;
   }
 }

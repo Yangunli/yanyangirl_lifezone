@@ -1,32 +1,22 @@
-import React, { useState } from "react";
+import React, { useState, useTransition } from "react";
 import { Link } from "react-router-dom";
 import { MenuSvg1, MenuSvg2, LogoSvg } from "../components/SvgComponents";
-import { cityList } from "../data/cityList";
 import { useScrollBgColor } from "../hooks/useScrollBgColor";
 import { useScrollNavDisplay } from "../hooks/useScrollNavDisplay";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { TextSpinner } from "../components/SvgComponents";
-
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
-import { Autoplay, Pagination } from "swiper";
 import { taipeiExp } from "../data/taipeiExhibition";
 import { taichungExp } from "../data/taichungExhibition";
 import { tainanExp } from "../data/tainanExhibition";
 import SingleContent from "../components/SingleContent";
 import ModalContent from "../components/ModalContent";
-import classNames from "../components/classNames";
+import HomeSlider from "../components/HomeSlider";
+import Menu from "../components/Menu";
+
+import classNames from "../function/classNames";
+
 const Home = () => {
   const [modalToggle, setModalToggle] = useState(false);
   const [modalContent, setModalContent] = useState([]);
-  const changeContent = (info) => {
-    setModalContent([info]);
-    setModalToggle(!modalToggle);
-  };
-  const bgColor = useScrollBgColor();
-  const scrollDirection = useScrollNavDisplay();
+  const [sideBarToggle, setSideBarToggle] = useState(false);
   const exhibition = [
     ...taipeiExp
       .filter((exhibit) => new Date(exhibit.time.split("-")[1]) > new Date())
@@ -38,29 +28,45 @@ const Home = () => {
       .filter((exhibit) => new Date(exhibit.time.split("-")[1]) > new Date())
       .slice(-5, -1),
   ];
+
+  const changeSideBar = () => {
+    setSideBarToggle(!sideBarToggle);
+  };
+  const changeContent = (info) => {
+    setModalContent([info]);
+    setModalToggle(!modalToggle);
+  };
+  const bgColor = useScrollBgColor();
+  const scrollDirection = useScrollNavDisplay();
+
+  // useEffect(() => {
+  //   const homeAnimationEl = document.querySelector(".home-animation");
+  //   function homeAnimate() {
+  //     homeAnimationEl.style =
+  //       "transition: opacity 2s ease-in-out; opacity:0; pointer-events:none; ";
+  //   }
+  //   homeAnimationEl.addEventListener("animationend", homeAnimate);
+
+  //   return () => window.removeEventListener("animationend", homeAnimate);
+  // }, []);
+
   return (
     <div className="home" style={{ backgroundColor: `hsl(${bgColor},28%,76%` }}>
+      {/* <div className="home-animation"></div> */}
+      <button onClick={changeSideBar}>
+        <MenuSvg1 />
+      </button>
+      <button onClick={changeSideBar}>
+        <MenuSvg2 />
+      </button>
+      {sideBarToggle ? <Menu changeSideBar={changeSideBar} /> : null}
+
       <header
         className={classNames(
           scrollDirection == "up" ? "opacity-1" : "opacity-0",
           "home__header"
         )}
       >
-        <button
-          onClick={() => {
-            console.log("menu1");
-          }}
-        >
-          <MenuSvg1 />
-        </button>
-        <button
-          className="menu"
-          onClick={() => {
-            console.log("menu2");
-          }}
-        >
-          <MenuSvg2 />
-        </button>
         <div className="home__nav-container">
           <nav className="home__nav">
             <Link to="/">home</Link>
@@ -72,34 +78,7 @@ const Home = () => {
           <LogoSvg />
         </div>
       </header>
-      <div className="home__city-slider">
-        <Swiper
-          slidesPerView={2}
-          spaceBetween={30}
-          pagination={{
-            el: ".swiper-pagination",
-            type: "fraction",
-          }}
-          loop={true}
-          centeredSlides={true}
-          modules={[Pagination, Autoplay]}
-          className="mySwiper"
-          autoplay={{ delay: 3000 }}
-          simulateTouch={false}
-          preloadImages={false}
-          // Enable lazy loading
-          lazy={true}
-        >
-          {cityList.map((city) => (
-            <SwiperSlide key={city.name}>
-              <Link to={city.name}>
-                <img src={city.img} alt="" />
-                {/* <p className="desc">{city.desc}</p> */}
-              </Link>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      </div>
+      <HomeSlider />
       <div className="info-title">
         <h1>CURRENT EXHIBITION</h1>
       </div>

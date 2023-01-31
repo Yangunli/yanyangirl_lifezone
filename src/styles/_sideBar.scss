@@ -1,0 +1,27 @@
+.menu-container {
+  position: fixed;
+  z-index: 5;
+  inset: 0;
+  background-color: var(--matcha-bg);
+  display: grid;
+  place-items: center;
+  padding-block: 100px 280px;
+  font-size: 2rem;
+  animation: sidebar 0.8s ease-in-out forwards;
+}
+
+@media screen and (min-width: 800px) {
+  .menu-container {
+    padding-block: 137px 280px;
+    padding-left: 120px;
+  }
+}
+
+@keyframes sidebar {
+  0% {
+    transform: scale3d(-1.4, 0.4, 0.7);
+  }
+  100% {
+    transform: scale3d(1, 1, 1);
+  }
+}

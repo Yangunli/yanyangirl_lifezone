@@ -6,7 +6,7 @@
 
 :root {
   --darkBg-text: hsl(60, 100%, 71%);
-  --lightBg-text: hsl(60, 83%, 8%);
+  --lightBg-text: hsl(173, 61%, 11%);
   --matcha-bg: hsl(62, 20%, 59%);
   --milktea-bg: hsl(39, 28%, 76%);
   --p: 15px;
@@ -56,6 +56,7 @@ li {
 button {
   padding: none;
   border: none;
+  background-color: transparent;
 }
 
 .goback {
@@ -64,6 +65,7 @@ button {
 
 .opacity-0 {
   opacity: 0;
+
   transform: translateY(-200px);
   transition: all 0.5s ease-in-out;
 }
@@ -71,6 +73,7 @@ button {
 .opacity-1 {
   opacity: 1;
   transform: translateY(0);
+  will-change: transform;
   transition: all 0.5s ease-in-out;
 }
 
@@ -99,3 +102,4 @@ button {
 @import "./card";
 @import "./city";
 @import "./slider";
+@import "./sideBar";

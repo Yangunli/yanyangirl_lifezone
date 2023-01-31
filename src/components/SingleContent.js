@@ -1,10 +1,6 @@
 import React from "react";
 
 const SingleContent = ({ exhibition, changeContent }) => {
-  function classNames(...classes) {
-    return classes.filter(Boolean).join(" ");
-  }
-
   return (
     <div className="card">
       <img
