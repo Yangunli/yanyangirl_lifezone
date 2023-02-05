@@ -133,15 +133,15 @@ button {
 .home__header .logoSvg {
   z-index: -1;
   width: 90%;
-  transform: translate(5%, -5%);
+  transform: translate(5%, 20%);
 }
 
 .home .menuSvg2 {
   position: fixed;
   height: 30px;
   width: 30px;
-  right: 0%;
-  top: 0%;
+  right: 5%;
+  top: 10px;
   z-index: 5;
 }
 
@@ -163,6 +163,11 @@ button {
 }
 .home .menuSvg1 path:nth-child(2) {
   fill: currentColor;
+}
+
+.home .nav-desktop .menuSvg2 {
+  width: 50px;
+  transform: translate(-5px, -10px);
 }
 
 .info-title {
@@ -657,8 +662,8 @@ button {
   place-items: center;
   padding-block: 100px 280px;
   font-size: 2rem;
-  -webkit-animation: sidebar 0.8s ease-in-out forwards;
-          animation: sidebar 0.8s ease-in-out forwards;
+  -webkit-animation: sidebarIn 0.8s ease-in-out forwards;
+          animation: sidebarIn 0.8s ease-in-out forwards;
 }
 
 @media screen and (min-width: 800px) {
@@ -667,7 +672,7 @@ button {
     padding-left: 120px;
   }
 }
-@-webkit-keyframes sidebar {
+@-webkit-keyframes sidebarIn {
   0% {
     transform: scale3d(-1.4, 0.4, 0.7);
   }
@@ -675,11 +680,35 @@ button {
     transform: scale3d(1, 1, 1);
   }
 }
-@keyframes sidebar {
+@keyframes sidebarIn {
   0% {
     transform: scale3d(-1.4, 0.4, 0.7);
   }
   100% {
     transform: scale3d(1, 1, 1);
+  }
+}
+@-webkit-keyframes sidebarOut {
+  0% {
+    transform: scale3d(1, 1, 1);
+  }
+  50% {
+    transform: scale3d(-0.4, 1, 0.7);
+  }
+  100% {
+    transform: scale3d(0, 0, 0);
+    opacity: 0;
+  }
+}
+@keyframes sidebarOut {
+  0% {
+    transform: scale3d(1, 1, 1);
+  }
+  50% {
+    transform: scale3d(-0.4, 1, 0.7);
+  }
+  100% {
+    transform: scale3d(0, 0, 0);
+    opacity: 0;
   }
 }/*# sourceMappingURL=style.css.map */

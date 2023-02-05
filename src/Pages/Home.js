@@ -1,4 +1,4 @@
-import React, { useState, useTransition } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { MenuSvg1, MenuSvg2, LogoSvg } from "../components/SvgComponents";
 import { useScrollBgColor } from "../hooks/useScrollBgColor";
@@ -10,13 +10,14 @@ import SingleContent from "../components/SingleContent";
 import ModalContent from "../components/ModalContent";
 import HomeSlider from "../components/HomeSlider";
 import Menu from "../components/Menu";
-
 import classNames from "../function/classNames";
-
+import PageHeader from "../components/PageHeader";
 const Home = () => {
   const [modalToggle, setModalToggle] = useState(false);
   const [modalContent, setModalContent] = useState([]);
   const [sideBarToggle, setSideBarToggle] = useState(false);
+  const [size, setSize] = useState(0);
+
   const exhibition = [
     ...taipeiExp
       .filter((exhibit) => new Date(exhibit.time.split("-")[1]) > new Date())
@@ -50,34 +51,54 @@ const Home = () => {
   //   return () => window.removeEventListener("animationend", homeAnimate);
   // }, []);
 
-  return (
-    <div className="home" style={{ backgroundColor: `hsl(${bgColor},28%,76%` }}>
-      {/* <div className="home-animation"></div> */}
-      <button onClick={changeSideBar}>
-        <MenuSvg1 />
-      </button>
-      <button onClick={changeSideBar}>
-        <MenuSvg2 />
-      </button>
-      {sideBarToggle ? <Menu changeSideBar={changeSideBar} /> : null}
+  useEffect(() => {
+    window.addEventListener("load", function () {
+      setSize(this.window.innerWidth);
+    });
+    window.addEventListener("resize", function () {
+      setSize(this.window.innerWidth);
+    });
 
-      <header
-        className={classNames(
-          scrollDirection == "up" ? "opacity-1" : "opacity-0",
-          "home__header"
-        )}
-      >
-        <div className="home__nav-container">
-          <nav className="home__nav">
-            <Link to="/">home</Link>
-            <Link to="/taipei">taipei</Link>
-            <Link to="/artist">artist</Link>
-            <Link to="/taichung">taichung</Link>
-            <Link to="/tainan">tainan</Link>
-          </nav>
-          <LogoSvg />
-        </div>
-      </header>
+    return () =>
+      window.removeEventListener("resize", function () {
+        setSize(this.window.innerWidth);
+      });
+  }, [size]);
+
+  return (
+    <div className="home exhibition-bg">
+      {/* <div className="home-animation"></div> */}
+      {size >= 800 ? (
+        <>
+          <button onClick={changeSideBar}>
+            <MenuSvg1 />
+          </button>
+          <button onClick={changeSideBar}>
+            <MenuSvg2 />
+          </button>
+          {sideBarToggle ? <Menu changeSideBar={changeSideBar} /> : null}
+          <header
+            className={classNames(
+              scrollDirection == "up" ? "opacity-1" : "opacity-0",
+              "home__header"
+            )}
+          >
+            <div className="home__nav-container">
+              <nav className="home__nav">
+                <Link to="/">home</Link>
+                <Link to="/taipei">taipei</Link>
+                <Link to="/artist">artist</Link>
+                <Link to="/taichung">taichung</Link>
+                <Link to="/tainan">tainan</Link>
+              </nav>
+              <LogoSvg />
+            </div>
+          </header>
+        </>
+      ) : (
+        <PageHeader />
+      )}
+
       <HomeSlider />
       <div className="info-title">
         <h1>CURRENT EXHIBITION</h1>

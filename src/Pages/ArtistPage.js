@@ -8,7 +8,7 @@ const ArtistPage = () => {
       <PageHeader />
       <div className="pt-200">
         {artists.map((artist) => (
-          <Link to={`/artist/${artist.id}`} key={artist.id} className="card">
+          <Link to={`${artist.id}`} key={artist.id} className="card">
             <h2> {artist.artist} </h2>
             <h3>{artist.category}</h3>
           </Link>

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useOutletContext, Link, useNavigate } from "react-router-dom";
+import { useOutletContext, Link } from "react-router-dom";
 import { taipeiVenues } from "../data/taipeiVenues";
 import { taipeiExp } from "../data/taipeiExhibition";
 import { taichungVenues } from "../data/taichungVenue";
@@ -56,11 +56,7 @@ const CityInfoGroup = () => {
               />
             ))
           : venues.map((view) => (
-              <Link
-                to={`/${city}/venue/${view.id}`}
-                key={view.id}
-                className="card"
-              >
+              <Link to={`${view.id}`} key={view.id} className="card">
                 <img className="card__img" src={view.src} alt={view.name} />
                 <h2> {view.venue} </h2>
               </Link>

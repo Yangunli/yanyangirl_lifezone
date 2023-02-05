@@ -1,8 +1,26 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 const Menu = ({ changeSideBar }) => {
+  useEffect(() => {
+    const menuContainerEl = document.querySelector(".menu-container");
+    function homeAnimate() {
+      menuContainerEl.style =
+        "animation: sidebarOut 0.6s ease-in-out forwards; transform-origin: bottom left; ";
+    }
+    menuContainerEl.addEventListener("click", homeAnimate);
+
+    return () => window.removeEventListener("click", homeAnimate);
+  }, []);
+
   return (
-    <div className="menu-container" onClick={changeSideBar}>
+    <div
+      className="menu-container"
+      onClick={() => {
+        setTimeout(() => {
+          changeSideBar();
+        }, 800);
+      }}
+    >
       <Link to="/">home</Link>
       <Link to="/taipei">taipei</Link>
       <Link to="/artist">artist</Link>
