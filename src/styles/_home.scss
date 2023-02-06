@@ -15,7 +15,6 @@
   height: 150px;
   display: grid;
   place-items: center;
-  //   border-bottom: 1px solid;
   text-transform: uppercase;
 }
 
@@ -129,14 +128,6 @@
 }
 
 @media screen and (min-width: 600px) {
-  .home .logoSvg {
-    transform: translate(8%, 0%);
-    width: 80%;
-  }
-  .home .menuSvg2 {
-    width: 40px;
-    height: 40px;
-  }
   .info-title {
     h1 {
       font-size: 2rem;
@@ -145,9 +136,6 @@
 }
 
 @media screen and (min-width: 800px) {
-  .home .menuSvg2 {
-    display: none;
-  }
   .home svg.menuSvg1 {
     display: block;
   }

@@ -206,22 +206,11 @@ button {
   }
 }
 @media screen and (min-width: 600px) {
-  .home .logoSvg {
-    transform: translate(8%, 0%);
-    width: 80%;
-  }
-  .home .menuSvg2 {
-    width: 40px;
-    height: 40px;
-  }
   .info-title h1 {
     font-size: 2rem;
   }
 }
 @media screen and (min-width: 800px) {
-  .home .menuSvg2 {
-    display: none;
-  }
   .home svg.menuSvg1 {
     display: block;
   }
@@ -293,7 +282,8 @@ button {
   place-items: center;
   inset: 0;
   z-index: 6;
-  background-color: rgba(57, 42, 42, 0.5);
+  background-color: rgba(43, 25, 6, 0.3);
+  transition: opacity 0.5s ease-in-out;
 }
 
 .modal-body {
@@ -307,8 +297,9 @@ button {
   gap: 10px;
   border-radius: 20px;
   padding: 20px 40px;
-  transform: translateY(5%);
   overflow: hidden;
+  -webkit-animation: modalMoveIn 0.6s linear forwards;
+          animation: modalMoveIn 0.6s linear forwards;
 }
 
 .modal-body dl {
@@ -346,6 +337,58 @@ button {
     transform: rotate(-360deg) translateX(0);
   }
 }
+@-webkit-keyframes modalMoveIn {
+  0% {
+    scale: 0;
+    transform: translateY(100vh);
+  }
+  80% {
+    scale: 1;
+    transform: translateY(-10%);
+  }
+  90% {
+    transform: translateY(15%);
+  }
+  100% {
+    transform: translateY(5%);
+  }
+}
+@keyframes modalMoveIn {
+  0% {
+    scale: 0;
+    transform: translateY(100vh);
+  }
+  80% {
+    scale: 1;
+    transform: translateY(-10%);
+  }
+  90% {
+    transform: translateY(15%);
+  }
+  100% {
+    transform: translateY(5%);
+  }
+}
+@-webkit-keyframes modalMoveOut {
+  0% {
+    scale: 1;
+    transform: translateX(0);
+  }
+  100% {
+    scale: 0;
+    transform: translateX(-100vw);
+  }
+}
+@keyframes modalMoveOut {
+  0% {
+    scale: 1;
+    transform: translateX(0);
+  }
+  100% {
+    scale: 0;
+    transform: translateX(-100vw);
+  }
+}
 .card-container {
   display: grid;
   width: min(100% - 100px, 1100px);
@@ -356,7 +399,7 @@ button {
 
 .card {
   width: 100%;
-  text-align: justify;
+  text-align: left;
 }
 .card h2,
 .card h3 {
@@ -662,6 +705,7 @@ button {
   place-items: center;
   padding-block: 100px 280px;
   font-size: 2rem;
+  perspective: 200px;
   -webkit-animation: sidebarIn 0.8s ease-in-out forwards;
           animation: sidebarIn 0.8s ease-in-out forwards;
 }

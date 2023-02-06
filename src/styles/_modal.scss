@@ -4,7 +4,8 @@
   place-items: center;
   inset: 0;
   z-index: 6;
-  background-color: rgb(57 42 42/0.5);
+  background-color: rgba(43, 25, 6, 0.3);
+  transition: opacity 0.5s ease-in-out;
 }
 
 .modal-body {
@@ -18,8 +19,8 @@
   gap: 10px;
   border-radius: 20px;
   padding: 20px 40px;
-  transform: translateY(5%);
   overflow: hidden;
+  animation: modalMoveIn 0.6s linear forwards;
 }
 
 .modal-body dl {
@@ -45,5 +46,32 @@
   }
   to {
     transform: rotate(-360deg) translateX(0);
+  }
+}
+@keyframes modalMoveIn {
+  0% {
+    scale: 0;
+    transform: translateY(100vh);
+  }
+  80% {
+    scale: 1;
+    transform: translateY(-10%);
+  }
+  90% {
+    transform: translateY(15%);
+  }
+  100% {
+    transform: translateY(5%);
+  }
+}
+
+@keyframes modalMoveOut {
+  0% {
+    scale: 1;
+    transform: translateX(0);
+  }
+  100% {
+    scale: 0;
+    transform: translateX(-100vw);
   }
 }
