@@ -3,7 +3,7 @@ export const taipeiExp = [
     id: 108,
     name: "悠悠∙日常",
     TicketType: "免費",
-    time: "2023/02/11-2023/03/25",
+    time: "2023/01/31-2023/02/28 ",
     openDay: "周一至周日",
     artist: "陳奎延、呂文、張峻閡",
     venue: "SOGO天母店3F展演會館",

@@ -9,7 +9,7 @@ const Menu = ({ changeSideBar }) => {
     }
     menuContainerEl.addEventListener("click", homeAnimate);
 
-    return () => window.removeEventListener("click", homeAnimate);
+    return () => menuContainerEl.removeEventListener("click", homeAnimate);
   }, []);
 
   return (
@@ -18,7 +18,7 @@ const Menu = ({ changeSideBar }) => {
       onClick={() => {
         setTimeout(() => {
           changeSideBar();
-        }, 800);
+        }, 600);
       }}
     >
       <Link to="/">home</Link>

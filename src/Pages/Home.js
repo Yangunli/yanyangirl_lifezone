@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { MenuSvg1, MenuSvg2, LogoSvg } from "../components/SvgComponents";
 import { useScrollBgColor } from "../hooks/useScrollBgColor";
@@ -12,29 +12,27 @@ import HomeSlider from "../components/HomeSlider";
 import Menu from "../components/Menu";
 import classNames from "../function/classNames";
 import PageHeader from "../components/PageHeader";
+import { currentFilter } from "../function/exhibitionFilter";
+import Modal from "../components/Modal";
+
 const Home = () => {
   const [modalToggle, setModalToggle] = useState(false);
-  const [modalContent, setModalContent] = useState([]);
   const [sideBarToggle, setSideBarToggle] = useState(false);
   const [size, setSize] = useState(0);
 
+  const modalContent = useRef([]);
+
   const exhibition = [
-    ...taipeiExp
-      .filter((exhibit) => new Date(exhibit.time.split("-")[1]) > new Date())
-      .slice(-5, -1),
-    ...taichungExp
-      .filter((exhibit) => new Date(exhibit.time.split("-")[1]) > new Date())
-      .slice(-5, -1),
-    ...tainanExp
-      .filter((exhibit) => new Date(exhibit.time.split("-")[1]) > new Date())
-      .slice(-5, -1),
+    ...currentFilter(taipeiExp).slice(-5, -1),
+    ...currentFilter(taichungExp).slice(-5, -1),
+    ...currentFilter(tainanExp).slice(-5, -1),
   ];
 
   const changeSideBar = () => {
     setSideBarToggle(!sideBarToggle);
   };
   const changeContent = (info) => {
-    setModalContent([info]);
+    modalContent.current = [info];
     setModalToggle(!modalToggle);
   };
   const bgColor = useScrollBgColor();
@@ -73,9 +71,6 @@ const Home = () => {
           <button onClick={changeSideBar}>
             <MenuSvg1 />
           </button>
-          <button onClick={changeSideBar}>
-            <MenuSvg2 />
-          </button>
           {sideBarToggle ? <Menu changeSideBar={changeSideBar} /> : null}
           <header
             className={classNames(
@@ -112,11 +107,10 @@ const Home = () => {
           />
         ))}
         {modalToggle && (
-          <div className="modal-container" onClick={changeContent}>
-            {modalContent.map((modal) => (
-              <ModalContent info={modal} key="1111" />
-            ))}
-          </div>
+          <Modal
+            changeContent={changeContent}
+            modalContent={modalContent.current}
+          />
         )}
       </div>
     </div>

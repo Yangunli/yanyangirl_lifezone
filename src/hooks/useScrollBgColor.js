@@ -17,7 +17,7 @@ export const useScrollBgColor = () => {
       }
     };
     window.addEventListener("scroll", changeBgColor);
-    changeBgColor();
+    return () => window.removeEventListener("scroll", changeBgColor);
   }, []);
   return bgColor;
 };
