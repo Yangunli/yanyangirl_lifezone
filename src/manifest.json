@@ -1,6 +1,9 @@
 {
+  "lang": "zh",
+  "dir": "ltr",
   "short_name": "YANYANGIRL_TW",
   "name": "YANYANGIRL_TW",
+  "description": "以展覽為圓心走進三座城市的藝文生活圈，內容包含場域與當期展覽，以及YANYANGIRL遇見的台灣創作者。",
   "icons": [
     {
       "src": "favicon.ico",
@@ -17,16 +20,40 @@
     {
       "src": "/android-chrome-192x192.png",
       "sizes": "192x192",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any"
     },
     {
       "src": "/android-chrome-512x512.png",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any"
     }
   ],
-  "start_url": ".",
+  "shortcuts": [
+    {
+      "name": "Exhibitions in Taipei",
+      "short_name": "Exhibitions in TPE",
+      "description": "View more exhibitions",
+      "url": "/taipei/exhibition"
+    },
+    {
+      "name": "Exhibitions in Taichung",
+      "short_name": "Exhibitions in TXG",
+      "description": "View more exhibitions",
+      "url": "/taichung/exhibition"
+    },
+    {
+      "name": "Exhibitions in Tainan",
+      "short_name": "Exhibitions in TNN",
+      "description": "View more exhibitions",
+      "url": "/tainan/exhibition"
+    }
+  ],
+  "id": "/favicon/",
+  "scope": "/",
+  "start_url": "/",
   "display": "standalone",
-  "theme_color": "hsl(39, 28%, 56%)",
-  "background_color": "hsl(39, 28%, 56%)"
+  "theme_color": "#413620",
+  "background_color": "#413620"
 }

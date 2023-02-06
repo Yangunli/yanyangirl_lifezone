@@ -77,7 +77,7 @@ module.exports = {
     }),
     new CopyPlugin({
       patterns: [
-        { from: "src/manifest.json", to: "" },
+        { from: "src/manifest.json", to: "favicon" },
         { from: "src/asset/favicon", to: "favicon" },
         { from: "src/asset/images", to: "images" },
       ],

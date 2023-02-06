@@ -1,5 +1,10 @@
 import React from "react";
-import { Outlet, useParams, useOutletContext } from "react-router-dom";
+import {
+  Outlet,
+  useParams,
+  useOutletContext,
+  useLocation,
+} from "react-router-dom";
 
 const optionList = [
   {
@@ -12,13 +17,13 @@ const optionList = [
 
 const VenueLayout = () => {
   const { option } = useParams();
-  const pathName = useOutletContext();
+  const cityObj = useOutletContext();
+  const path = useLocation();
+  const city = path.pathname.split("/")[1];
   const venueORexhibition = optionList.find((pageEl) => pageEl.name == option);
   return (
     <>
-      <Outlet
-        context={{ page: venueORexhibition.name, city: pathName.cityObj.name }}
-      />
+      <Outlet context={{ page: venueORexhibition.name, city: cityObj?.city }} />
     </>
   );
 };

@@ -9,7 +9,7 @@ const CityLayout = () => {
 
   return (
     <>
-      <Outlet context={{ cityObj: city }} />
+      <Outlet context={{ city: cityName }} />
     </>
   );
 };
