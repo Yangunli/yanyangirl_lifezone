@@ -32,28 +32,28 @@
   ],
   "shortcuts": [
     {
-      "name": "Exhibitions in Taipei",
-      "short_name": "Exhibitions in TPE",
+      "name": "去臺北看展",
+      "short_name": "臺北。展訊",
       "description": "View more exhibitions",
       "url": "/taipei/exhibition"
     },
     {
-      "name": "Exhibitions in Taichung",
-      "short_name": "Exhibitions in TXG",
+      "name": "去臺中看展",
+      "short_name": "臺中。展訊",
       "description": "View more exhibitions",
       "url": "/taichung/exhibition"
     },
     {
-      "name": "Exhibitions in Tainan",
-      "short_name": "Exhibitions in TNN",
-      "description": "View more exhibitions",
+      "name": "去臺南看展",
+      "short_name": "去臺南看展",
+      "description": "臺南。展訊",
       "url": "/tainan/exhibition"
     }
   ],
-  "id": "/favicon/",
+  "id": "./favicon/",
   "scope": "/",
   "start_url": "/",
   "display": "standalone",
-  "theme_color": "#413620",
+  "theme_color": "lightcoral",
   "background_color": "#413620"
 }

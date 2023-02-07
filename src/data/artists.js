@@ -16,7 +16,7 @@ export const artists = [
   },
   {
     id: 4,
-    artist: "曾岩譯",
+    artist: "曾岩懌",
     category: "ceramic",
   },
   {
