@@ -1,20 +1,18 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { useOutletContext, Link, useLocation } from "react-router-dom";
 import { taipeiVenues } from "../data/taipeiVenues";
-import { taipeiExp } from "../data/taipeiExhibition";
 import { taichungVenues } from "../data/taichungVenue";
-import { taichungExp } from "../data/taichungExhibition";
 import { tainanVenues } from "../data/tainanVenues";
-import { tainanExp } from "../data/tainanExhibition";
 import SingleContent from "../components/SingleContent";
 import PageHeader from "../components/PageHeader";
 import classNames from "../function/classNames";
 import { currentFilter, upComingFilter } from "../function/exhibitionFilter";
 import Modal from "../components/Modal";
-
+import { isOpenChecked } from "../function/weekdayFilter";
 const CityInfoGroup = () => {
   const [modalToggle, setModalToggle] = useState(false);
   const [currentTab, setCurrentTab] = useState("current");
+  const [views, setViews] = useState([]);
   const modalContent = useRef([]);
   const changeContent = (info) => {
     modalContent.current = [info];
@@ -23,9 +21,25 @@ const CityInfoGroup = () => {
   const categoryEl = useOutletContext();
   const city = categoryEl.city;
 
-  const views =
-    city == "taipei" ? taipeiExp : city == "taichung" ? taichungExp : tainanExp;
-  let viewsAfterFilter =
+  const getExhibiotnInfo = async () => {
+    if (city == "taipei") {
+      await import("../data/taipeiExhibition").then(({ taipeiExp }) => {
+        setViews(taipeiExp);
+      });
+    }
+    if (city == "taichung") {
+      await import("../data/taichungExhibition").then(({ taichungExp }) => {
+        setViews(taichungExp);
+      });
+    }
+    if (city == "tainan") {
+      await import("../data/tainanExhibition").then(({ tainanExp }) => {
+        setViews(tainanExp);
+      });
+    }
+  };
+
+  const viewsAfterFilter =
     currentTab == "current" ? currentFilter(views) : upComingFilter(views);
   const venues =
     city == "taipei"
@@ -34,6 +48,14 @@ const CityInfoGroup = () => {
       ? taichungVenues
       : tainanVenues;
 
+  useEffect(() => {
+    getExhibiotnInfo();
+  }, [views]);
+  // useEffect(() => {
+  //   return () => {
+  //     console.log("re-render");
+  //   };
+  // });
   return (
     <div
       className={classNames(
@@ -63,13 +85,22 @@ const CityInfoGroup = () => {
         {categoryEl.page == "exhibition"
           ? viewsAfterFilter.map((view) => (
               <SingleContent
+                classNames={classNames}
+                isOpenChecked={isOpenChecked}
                 exhibition={view}
                 key={view.id}
                 changeContent={changeContent}
               />
             ))
           : venues.map((view) => (
-              <Link to={`${view.id}`} key={view.id} className="card">
+              <Link
+                to={`${view.id}`}
+                key={view.id}
+                className={classNames(
+                  isOpenChecked(view.openDay.split("")) ? "" : "closedFilter",
+                  "card"
+                )}
+              >
                 <img className="card__img" src={view.src} alt={view.name} />
                 <h2> {view.venue} </h2>
               </Link>

@@ -14,7 +14,7 @@ import VenueLayout from "./Layout/VenueLayout";
 import ArtistPage from "./Pages/ArtistPage";
 import ArtistInfo from "./Pages/ArtistInfo";
 import CityInfoGroup from "./Pages/CityInfoGroup";
-import CityInfo from "./Pages/CityInfo";
+import VenueInfo from "./Pages/VenueInfo";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -28,7 +28,7 @@ const router = createBrowserRouter(
         <Route index element={<OptionLayout />} />
         <Route path=":option" element={<VenueLayout />}>
           <Route index element={<CityInfoGroup />} />
-          <Route path=":Id" element={<CityInfo />} />
+          <Route path=":Id" element={<VenueInfo />} />
         </Route>
       </Route>
       <Route path="*" element={<Home />} replace />

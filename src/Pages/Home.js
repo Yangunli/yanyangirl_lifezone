@@ -7,7 +7,6 @@ import { taipeiExp } from "../data/taipeiExhibition";
 import { taichungExp } from "../data/taichungExhibition";
 import { tainanExp } from "../data/tainanExhibition";
 import SingleContent from "../components/SingleContent";
-import ModalContent from "../components/ModalContent";
 import HomeSlider from "../components/HomeSlider";
 import Menu from "../components/Menu";
 import classNames from "../function/classNames";
@@ -75,16 +74,30 @@ const Home = () => {
           <header
             className={classNames(
               scrollDirection == "up" ? "opacity-1" : "opacity-0",
-              "home__header"
+              "home__header",
+              "exhibition-bg"
             )}
           >
             <div className="home__nav-container">
               <nav className="home__nav">
-                <Link to="/">home</Link>
-                <Link to="/taipei">taipei</Link>
-                <Link to="/artist">artist</Link>
-                <Link to="/taichung">taichung</Link>
-                <Link to="/tainan">tainan</Link>
+                <Link to="/" aria-label="Back to thehomepage">
+                  home
+                </Link>
+                <Link to="/taipei" aria-label="Read more about Taipei">
+                  taipei
+                </Link>
+                <Link
+                  to="/artist"
+                  aria-label="This page about taiwan/s artists"
+                >
+                  artist
+                </Link>
+                <Link to="/taichung" aria-label="Read more about Taichung">
+                  taichung
+                </Link>
+                <Link to="/tainan" aria-label="Read more about Tainan">
+                  tainan
+                </Link>
               </nav>
               <LogoSvg />
             </div>

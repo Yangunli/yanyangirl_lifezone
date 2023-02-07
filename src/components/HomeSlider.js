@@ -29,7 +29,7 @@ const HomeSlider = () => {
       >
         {cityList.map((city) => (
           <SwiperSlide key={city.name}>
-            <Link to={city.name}>
+            <Link to={city.name} aria-label={city.alt}>
               <img src={city.img} alt="" />
               {/* <p className="desc">{city.desc}</p> */}
             </Link>
