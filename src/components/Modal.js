@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import ModalContent from "./ModalContent";
 
 const Modal = ({ changeContent, modalContent }) => {
@@ -9,6 +9,7 @@ const Modal = ({ changeContent, modalContent }) => {
     modalRef.current.style.transformOrigin = " bottom left ";
     modalContainerRef.style = "opacity:0";
   }
+
   return (
     <div
       ref={modalContainerRef}

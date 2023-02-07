@@ -36,9 +36,9 @@
 
 .card__img {
   width: 100%;
-  aspect-ratio: 3/4;
   object-position: center;
   object-fit: cover;
+  aspect-ratio: 3/4;
   &:hover {
     rotate: -10deg;
   }

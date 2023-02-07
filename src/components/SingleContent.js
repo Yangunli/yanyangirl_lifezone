@@ -1,8 +1,17 @@
 import React from "react";
-
-const SingleContent = ({ exhibition, changeContent }) => {
+const SingleContent = ({
+  exhibition,
+  changeContent,
+  isOpenChecked,
+  classNames,
+}) => {
   return (
-    <div className="card">
+    <div
+      className={classNames(
+        isOpenChecked(exhibition.openDay.split("")) ? "" : "closedFilter",
+        "card"
+      )}
+    >
       <img
         className="card__img"
         onClick={() => changeContent(exhibition)}

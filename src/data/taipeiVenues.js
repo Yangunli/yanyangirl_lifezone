@@ -2,7 +2,7 @@ export const taipeiVenues = [
   {
     id: 101,
     venue: "Chambre 81",
-    openDay: "周二至周日",
+    openDay: "234560",
     TicketType: "免費",
     location: "台北市大安區龍泉街81號1樓",
     src: "https://pic.pimg.tw/yangun410/1672928371-3817409929-g_n.jpg",
@@ -11,7 +11,7 @@ export const taipeiVenues = [
   {
     id: 102,
     venue: "Mangasick",
-    openDay: "周五至周一",
+    openDay: "5601",
     TicketType: "免費",
     location: "台北市羅斯福路三段244巷10弄2號B1",
     src: "https://pic.pimg.tw/yangun410/1672928158-4164088862-g_n.jpg?v=1672928166",
@@ -21,7 +21,7 @@ export const taipeiVenues = [
     id: 103,
 
     venue: "伊日藝術計劃",
-    openDay: "周二至周六",
+    openDay: "23456",
     TicketType: "免費",
     location: "台北市內湖區新明路86巷1號",
 
@@ -32,7 +32,7 @@ export const taipeiVenues = [
     id: 104,
 
     venue: "純Object",
-    openDay: "周二至周日",
+    openDay: "234560",
     TicketType: "免費",
     location: "台北市大安區敦化南路二段63巷21弄27號",
 
@@ -43,7 +43,7 @@ export const taipeiVenues = [
     id: 105,
 
     venue: " Hiro Hiro Art Space",
-    openDay: "周二至周日",
+    openDay: "234560",
     TicketType: "免費",
     location: "台北市中正區紹興南街10號",
     src: "https://pic.pimg.tw/yangun410/1670498597-3225281056-g_n.jpg",
@@ -54,7 +54,7 @@ export const taipeiVenues = [
     id: 106,
 
     venue: "涅普頓畫廊",
-    openDay: "周二至周日",
+    openDay: "234560",
     TicketType: "免費",
     location: "台北市中山區堤頂大道二段340號",
 
@@ -66,7 +66,7 @@ export const taipeiVenues = [
     id: 107,
 
     venue: "琥泊茶苑",
-    openDay: "周三至周日",
+    openDay: "234560",
     TicketType: "免費",
     location: "台北市大安區樂利路72巷15號2樓",
 
@@ -77,7 +77,7 @@ export const taipeiVenues = [
   {
     id: 108,
     venue: "日帝藝術",
-    openDay: "周二至周六",
+    openDay: "23456",
     TicketType: "免費",
     location: "台北市北投區承德路七段286號3樓",
     src: "https://pic.pimg.tw/yangun410/1669109030-3467785781-g_n.jpg",
@@ -86,7 +86,7 @@ export const taipeiVenues = [
   {
     id: 109,
     venue: "衛星",
-    openDay: "周四至周一",
+    openDay: "45601",
     TicketType: "免費",
     location: "台北市泰順街12號2樓",
     src: "https://pic.pimg.tw/yangun410/1670499046-3523283139-g_n.jpg",
@@ -95,7 +95,7 @@ export const taipeiVenues = [
   {
     id: 110,
     venue: "舊香居",
-    openDay: "周二至周日",
+    openDay: "234560",
     TicketType: "免費",
     location: "台北市師大路117巷6號1樓",
     src: "https://firebasestorage.googleapis.com/v0/b/react-firebase-306e5.appspot.com/o/taipei%2Fvenue%2F%E8%88%8A%E9%A6%99%E5%B1%85%2FR0022202.jpg?alt=media&token=8749e693-0761-45d8-935b-992cd74248ef",

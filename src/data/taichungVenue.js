@@ -1,7 +1,7 @@
 export const taichungVenues = [
   {
     id: 208,
-    openDay: "周四至周一",
+    openDay: "45601",
     venue: " luguang gallery",
     location: "台中市西區中興一巷19號",
     TicketType: "免費",
@@ -11,7 +11,7 @@ export const taichungVenues = [
   {
     id: 207,
     venue: "科元藝術",
-    openDay: "周二至周六",
+    openDay: "23456",
     TicketType: "免費",
     location: "台中市清水區中山路126-8號3-4F",
     time: "2022 /11/05-11/26",
@@ -20,7 +20,7 @@ export const taichungVenues = [
   },
   {
     id: 206,
-    openDay: "周二至周六",
+    openDay: "23456",
     venue: "減貼選物",
     location: "台中市西區向上路一段79巷66弄15號",
     TicketType: "免費",
@@ -29,7 +29,7 @@ export const taichungVenues = [
   },
   {
     id: 205,
-    openDay: "周三至周日",
+    openDay: "34560",
     venue: "小路映画",
     location: "台中市西區五權五街94巷36號",
     TicketType: "售票",
@@ -41,7 +41,7 @@ export const taichungVenues = [
     name: "好朋友展",
     artist: "Natsumi Teraoka",
     time: "2022/10/01-10/30",
-    openDay: "周四至周一",
+    openDay: "45601",
     venue: "綠光+marüte",
     location: "台中市西區中興一巷2號",
     TicketType: "免費",
@@ -51,7 +51,7 @@ export const taichungVenues = [
 
   {
     id: 203,
-    openDay: "周三至周日",
+    openDay: "34560",
     venue: "紅點文旅",
     location: "台中市中區民族路206號",
     TicketType: "免費",
@@ -60,7 +60,7 @@ export const taichungVenues = [
   },
   {
     id: 202,
-    openDay: "周二至周六",
+    openDay: "23456",
     venue: "國璽藝術",
     location: "臺中市南屯區向上南路一段167號3樓之1",
     TicketType: "免費",
@@ -70,7 +70,7 @@ export const taichungVenues = [
   {
     id: 201,
     venue: "大象藝術空間館",
-    openDay: "周二至周日",
+    openDay: "234560",
     TicketType: "免費",
     location: "台中市北區博館路15號",
     src: " https://pic.pimg.tw/yangun410/1670870266-3673221375-g_b.jpg",

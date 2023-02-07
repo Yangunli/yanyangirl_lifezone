@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -83,12 +84,23 @@ button {
   padding-top: 200px;
 }
 
-.w-100 {
-  width: 100%;
+.closedFilter {
+  position: relative;
 }
-
-.h-100 {
-  min-height: 100vh;
+.closedFilter > *:not(img) {
+  color: #667945;
+}
+.closedFilter > h2::after {
+  z-index: 1;
+  position: absolute;
+  margin-left: 5px;
+  border: 2px solid currentColor;
+  border-radius: 100%;
+  font-size: 15px;
+  color: currentColor;
+  content: "休";
+  mix-blend-mode: difference;
+  transform: translateY(5px) rotate(45deg);
 }
 
 .home {
@@ -424,11 +436,11 @@ button {
 }
 .card__img {
   width: 100%;
-  aspect-ratio: 3/4;
   -o-object-position: center;
      object-position: center;
   -o-object-fit: cover;
      object-fit: cover;
+  aspect-ratio: 3/4;
 }
 .card__img:hover {
   rotate: -10deg;

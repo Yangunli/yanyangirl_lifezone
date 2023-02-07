@@ -89,12 +89,25 @@ button {
   padding-top: 200px;
 }
 
-.w-100 {
-  width: 100%;
-}
+.closedFilter {
+  position: relative;
 
-.h-100 {
-  min-height: 100vh;
+  & > *:not(img) {
+    color: #667945;
+  }
+
+  > h2::after {
+    z-index: 1;
+    position: absolute;
+    margin-left: 5px;
+    border: 2px solid currentColor;
+    border-radius: 100%;
+    font-size: 15px;
+    color: currentColor;
+    content: "休";
+    mix-blend-mode: difference;
+    transform: translateY(5px) rotate(45deg);
+  }
 }
 
 @import "./home";
