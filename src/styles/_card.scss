@@ -1,7 +1,7 @@
 .card-container {
   display: grid;
-  width: min(calc(100% - 100px), 1100px);
-  padding-inline: 50px;
+  width: 75%;
+  padding-inline: 20px;
   grid-template-columns: repeat(1, 1fr);
   gap: calc(var(--p) * 3);
 }
@@ -9,6 +9,7 @@
 .card {
   width: 100%;
   text-align: left;
+  color: hsl(82, 37%, 19%);
   h2,
   h3 {
     padding-top: 5px;
@@ -17,6 +18,8 @@
 
 @media screen and (min-width: 450px) {
   .card-container {
+    width: min(calc(100% - 100px), 1100px);
+    padding-inline: 50px;
     grid-template-columns: repeat(2, 1fr);
     gap: calc(var(--p) * 5);
   }

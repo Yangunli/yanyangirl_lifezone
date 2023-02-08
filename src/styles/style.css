@@ -88,7 +88,7 @@ button {
   position: relative;
 }
 .closedFilter > *:not(img) {
-  color: #667945;
+  color: hsl(82deg, 37%, 27%);
 }
 .closedFilter > h2::after {
   z-index: 1;
@@ -229,6 +229,10 @@ button {
   .home__nav {
     display: grid;
   }
+  .home .logoSvg {
+    transform: translate(10%, 0%);
+    width: 70%;
+  }
 }
 @media screen and (min-width: 1200px) {
   .home svg.menuSvg1 {
@@ -247,27 +251,7 @@ button {
   inset: 0;
   opacity: 1;
   z-index: 55;
-  -webkit-animation: homeAnimation 3s ease-in-out;
-          animation: homeAnimation 3s ease-in-out;
-}
-
-@-webkit-keyframes homeAnimation {
-  0% {
-    background-color: rgb(144, 42, 42);
-  }
-  10% {
-    background-color: pink;
-  }
-  20% {
-    background-color: wheat;
-  }
-  90% {
-    background-color: lightcoral;
-  }
-  100% {
-    background-color: rgb(173, 130, 187);
-    opacity: 0;
-  }
+  animation: homeAnimation 2s ease-in-out, homeAnimationEnd 0.3s ease-in-out forwards 2s;
 }
 
 @keyframes homeAnimation {
@@ -286,6 +270,15 @@ button {
   100% {
     background-color: rgb(173, 130, 187);
     opacity: 0;
+  }
+}
+@keyframes homeAnimationEnd {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    pointer-events: none;
   }
 }
 .modal-container {
@@ -310,8 +303,7 @@ button {
   border-radius: 20px;
   padding: 20px 40px;
   overflow: hidden;
-  -webkit-animation: modalMoveIn 0.6s linear forwards;
-          animation: modalMoveIn 0.6s linear forwards;
+  animation: modalMoveIn 0.6s linear forwards;
 }
 
 .modal-body dl {
@@ -325,20 +317,10 @@ button {
   width: 200px;
   transform: translate(-50%, 50%);
   transform-origin: center center;
-  -webkit-animation: rotateText 10s linear infinite;
-          animation: rotateText 10s linear infinite;
+  animation: rotateText 10s linear infinite;
 }
 .spinner .textSpinnerSvg {
   width: 200px;
-}
-
-@-webkit-keyframes rotateText {
-  from {
-    transform: rotate(0) translateX(0);
-  }
-  to {
-    transform: rotate(-360deg) translateX(0);
-  }
 }
 
 @keyframes rotateText {
@@ -347,22 +329,6 @@ button {
   }
   to {
     transform: rotate(-360deg) translateX(0);
-  }
-}
-@-webkit-keyframes modalMoveIn {
-  0% {
-    scale: 0;
-    transform: translateY(100vh);
-  }
-  80% {
-    scale: 1;
-    transform: translateY(-10%);
-  }
-  90% {
-    transform: translateY(15%);
-  }
-  100% {
-    transform: translateY(5%);
   }
 }
 @keyframes modalMoveIn {
@@ -381,16 +347,6 @@ button {
     transform: translateY(5%);
   }
 }
-@-webkit-keyframes modalMoveOut {
-  0% {
-    scale: 1;
-    transform: translateX(0);
-  }
-  100% {
-    scale: 0;
-    transform: translateX(-100vw);
-  }
-}
 @keyframes modalMoveOut {
   0% {
     scale: 1;
@@ -403,8 +359,8 @@ button {
 }
 .card-container {
   display: grid;
-  width: min(100% - 100px, 1100px);
-  padding-inline: 50px;
+  width: 75%;
+  padding-inline: 20px;
   grid-template-columns: repeat(1, 1fr);
   gap: calc(var(--p) * 3);
 }
@@ -412,6 +368,7 @@ button {
 .card {
   width: 100%;
   text-align: left;
+  color: hsl(82deg, 37%, 19%);
 }
 .card h2,
 .card h3 {
@@ -420,6 +377,8 @@ button {
 
 @media screen and (min-width: 450px) {
   .card-container {
+    width: min(100% - 100px, 1100px);
+    padding-inline: 50px;
     grid-template-columns: repeat(2, 1fr);
     gap: calc(var(--p) * 5);
   }
@@ -468,36 +427,17 @@ button {
 
 .card:nth-child(4n+1),
 .card:nth-child(4n+2) {
-  -webkit-animation: LTR 0.4s linear;
-          animation: LTR 0.4s linear;
+  animation: LTR 0.4s linear;
 }
 
 .card:nth-child(4n+3),
 .card:nth-child(4n+4) {
-  -webkit-animation: RTL 0.4s linear;
-          animation: RTL 0.4s linear;
-}
-
-@-webkit-keyframes LTR {
-  0% {
-    transform: translate3d(-300px, -200px, 0) scale(1.2);
-  }
-  100% {
-    transform: translate3d(0, 0, 0);
-  }
+  animation: RTL 0.4s linear;
 }
 
 @keyframes LTR {
   0% {
     transform: translate3d(-300px, -200px, 0) scale(1.2);
-  }
-  100% {
-    transform: translate3d(0, 0, 0);
-  }
-}
-@-webkit-keyframes RTL {
-  0% {
-    transform: translate3d(300px, 200px, 0) scale(1);
   }
   100% {
     transform: translate3d(0, 0, 0);
@@ -622,7 +562,7 @@ button {
   }
 }
 .home__city-slider {
-  padding-top: 100px;
+  padding-top: 150px;
 }
 
 .mySwiper {
@@ -717,9 +657,8 @@ button {
   place-items: center;
   padding-block: 100px 280px;
   font-size: 2rem;
-  perspective: 200px;
-  -webkit-animation: sidebarIn 0.8s ease-in-out forwards;
-          animation: sidebarIn 0.8s ease-in-out forwards;
+  perspective: 400px;
+  animation: sidebarIn 0.5s ease-in-out forwards;
 }
 
 @media screen and (min-width: 800px) {
@@ -728,32 +667,12 @@ button {
     padding-left: 120px;
   }
 }
-@-webkit-keyframes sidebarIn {
-  0% {
-    transform: scale3d(-1.4, 0.4, 0.7);
-  }
-  100% {
-    transform: scale3d(1, 1, 1);
-  }
-}
 @keyframes sidebarIn {
   0% {
     transform: scale3d(-1.4, 0.4, 0.7);
   }
   100% {
     transform: scale3d(1, 1, 1);
-  }
-}
-@-webkit-keyframes sidebarOut {
-  0% {
-    transform: scale3d(1, 1, 1);
-  }
-  50% {
-    transform: scale3d(-0.4, 1, 0.7);
-  }
-  100% {
-    transform: scale3d(0, 0, 0);
-    opacity: 0;
   }
 }
 @keyframes sidebarOut {

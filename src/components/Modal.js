@@ -5,9 +5,9 @@ const Modal = ({ changeContent, modalContent }) => {
   const modalContainerRef = useRef();
   const modalRef = useRef();
   function modalMoveOut() {
-    modalRef.current.style.animation = "modalMoveOut 0.2s ease-in-out forwards";
-    modalRef.current.style.transformOrigin = " bottom left ";
-    modalContainerRef.style = "opacity:0";
+    modalRef.current.style =
+      "animation:modalMoveOut 0.2s ease-in-out forwards;transform-origin:  bottom left ;";
+    modalContainerRef.current.style = "opacity:0";
   }
 
   return (

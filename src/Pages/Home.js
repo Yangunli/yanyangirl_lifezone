@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
-import { MenuSvg1, MenuSvg2, LogoSvg } from "../components/SvgComponents";
+import { MenuSvg1, LogoSvg } from "../components/SvgComponents";
 import { useScrollBgColor } from "../hooks/useScrollBgColor";
 import { useScrollNavDisplay } from "../hooks/useScrollNavDisplay";
 import { taipeiExp } from "../data/taipeiExhibition";
@@ -12,13 +12,13 @@ import Menu from "../components/Menu";
 import classNames from "../function/classNames";
 import PageHeader from "../components/PageHeader";
 import { currentFilter } from "../function/exhibitionFilter";
+import { isOpenChecked } from "../function/weekdayFilter";
 import Modal from "../components/Modal";
 
 const Home = () => {
   const [modalToggle, setModalToggle] = useState(false);
   const [sideBarToggle, setSideBarToggle] = useState(false);
   const [size, setSize] = useState(0);
-
   const modalContent = useRef([]);
 
   const exhibition = [
@@ -34,38 +34,30 @@ const Home = () => {
     modalContent.current = [info];
     setModalToggle(!modalToggle);
   };
-  const bgColor = useScrollBgColor();
   const scrollDirection = useScrollNavDisplay();
-
-  // useEffect(() => {
-  //   const homeAnimationEl = document.querySelector(".home-animation");
-  //   function homeAnimate() {
-  //     homeAnimationEl.style =
-  //       "transition: opacity 2s ease-in-out; opacity:0; pointer-events:none; ";
-  //   }
-  //   homeAnimationEl.addEventListener("animationend", homeAnimate);
-
-  //   return () => window.removeEventListener("animationend", homeAnimate);
-  // }, []);
 
   useEffect(() => {
     window.addEventListener("load", function () {
-      setSize(this.window.innerWidth);
+      setSize(window.innerWidth);
     });
     window.addEventListener("resize", function () {
-      setSize(this.window.innerWidth);
+      setSize(window.innerWidth);
     });
 
-    return () =>
-      window.removeEventListener("resize", function () {
-        setSize(this.window.innerWidth);
+    return () => {
+      window.removeEventListener("load", function () {
+        setSize(window.innerWidth);
       });
+      window.removeEventListener("resize", function () {
+        setSize(window.innerWidth);
+      });
+    };
   }, [size]);
 
   return (
     <div className="home exhibition-bg">
       {/* <div className="home-animation"></div> */}
-      {size >= 800 ? (
+      {!size || size >= 800 ? (
         <>
           <button onClick={changeSideBar}>
             <MenuSvg1 />
@@ -114,6 +106,8 @@ const Home = () => {
       <div className="card-container">
         {exhibition.map((exp) => (
           <SingleContent
+            classNames={classNames}
+            isOpenChecked={isOpenChecked}
             exhibition={exp}
             key={exp.id}
             changeContent={changeContent}

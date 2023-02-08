@@ -51,11 +51,7 @@ const CityInfoGroup = () => {
   useEffect(() => {
     getExhibiotnInfo();
   }, [views]);
-  // useEffect(() => {
-  //   return () => {
-  //     console.log("re-render");
-  //   };
-  // });
+
   return (
     <div
       className={classNames(
@@ -68,13 +64,13 @@ const CityInfoGroup = () => {
         {categoryEl.page == "exhibition" && (
           <>
             <button
-              style={{ position: "fixed", top: "200px", left: "50px" }}
+              style={{ position: "fixed", top: "200px" }}
               onClick={() => setCurrentTab("current")}
             >
               current
             </button>
             <button
-              style={{ position: "fixed", top: "200px" }}
+              style={{ position: "fixed", top: "220px" }}
               onClick={() => setCurrentTab("upComing")}
             >
               upcoming
