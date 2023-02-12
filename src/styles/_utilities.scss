@@ -1,0 +1,35 @@
+.opacity-0 {
+  opacity: 0;
+
+  transform: translateY(-200px);
+  transition: all 0.5s ease-in-out;
+}
+
+.opacity-1 {
+  opacity: 1;
+  transform: translateY(0);
+  will-change: transform;
+  transition: all 0.5s ease-in-out;
+}
+
+.pb-15 {
+  padding-bottom: var(--p);
+}
+
+.pi-15 {
+  padding-inline: var(--p);
+}
+
+.pt-200 {
+  padding-top: 200px;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.df {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

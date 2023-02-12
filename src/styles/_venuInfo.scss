@@ -1,0 +1,8 @@
+.venue__img {
+  width: min(80%, 450px);
+  max-height: 450px;
+  aspect-ratio: 1;
+  object-fit: cover;
+  mask-image: url("../asset/images/window.svg");
+  mask-size: 100%;
+}
