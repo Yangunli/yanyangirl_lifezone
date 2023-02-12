@@ -60,20 +60,32 @@ const CityInfoGroup = () => {
       )}
     >
       <PageHeader />
-      <div className="card-container pt-200">
+      <div className="card-container pt-200 ">
         {categoryEl.page == "exhibition" && (
           <>
             <button
-              style={{ position: "fixed", top: "200px" }}
+              style={{
+                position: "fixed",
+                top: "40vh",
+                left: "5px",
+                rotate: "90deg",
+                fontSize: "1rem",
+              }}
               onClick={() => setCurrentTab("current")}
             >
-              current
+              CURRENT
             </button>
             <button
-              style={{ position: "fixed", top: "220px" }}
+              style={{
+                position: "fixed",
+                top: "75vh",
+                left: "0px",
+                rotate: "90deg",
+                fontSize: "1rem",
+              }}
               onClick={() => setCurrentTab("upComing")}
             >
-              upcoming
+              UPCOMING
             </button>
           </>
         )}

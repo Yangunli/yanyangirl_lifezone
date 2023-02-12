@@ -25,14 +25,22 @@ const VenueInfo = () => {
   return (
     <div className="main venue-bg">
       <PageHeader />
-      <div className="pt-200">
+      <div className="pt-200 w-100 df">
         <img className="venue__img" src={venue.src} alt={venue.venue} />
         <h1>{venue.venue}</h1>
-        <h3>{isVenueOpen ? "今日有開" : "今日公休"}</h3>
-        <p>
-          營業日: {translateWeekday(venueOpenArr.at(0))}-
-          {translateWeekday(venueOpenArr.at(-1))}
-        </p>
+        <h3>
+          {isVenueOpen
+            ? isVenueOpen == "?"
+              ? "不定休"
+              : "今日有開"
+            : "今日公休"}
+        </h3>
+        {isVenueOpen != "?" && (
+          <p>
+            營業日: {translateWeekday(venueOpenArr.at(0))}-
+            {translateWeekday(venueOpenArr.at(-1))}
+          </p>
+        )}
       </div>
     </div>
   );

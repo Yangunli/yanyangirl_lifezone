@@ -16,7 +16,7 @@
         "destination": "/index.html"
       },
       {
-        "regex": "/tainan(/.*)?",
+        "regex": "/taichung(/.*)?",
         "destination": "/index.html"
       },
       {

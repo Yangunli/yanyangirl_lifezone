@@ -5,6 +5,7 @@
   place-items: center;
   transition: all 1.2s ease-in-out 0.1s;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 .home__header {
@@ -25,7 +26,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  // transform: translateY(-80px);
 }
 
 .home__nav {

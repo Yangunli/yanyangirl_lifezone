@@ -1,7 +1,8 @@
 .card-container {
   display: grid;
-  width: 75%;
+  width: 60%;
   padding-inline: 20px;
+  padding-bottom: calc(var(--p) * 3);
   grid-template-columns: repeat(1, 1fr);
   gap: calc(var(--p) * 3);
 }
@@ -9,7 +10,7 @@
 .card {
   width: 100%;
   text-align: left;
-  color: hsl(82, 37%, 19%);
+  color: hsl(82, 37%, 17%);
   h2,
   h3 {
     padding-top: 5px;

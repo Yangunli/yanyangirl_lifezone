@@ -5,6 +5,7 @@ import {
   useOutletContext,
   useLocation,
 } from "react-router-dom";
+import Footer from "../components/Footer";
 
 const optionList = [
   {
@@ -15,17 +16,17 @@ const optionList = [
   },
 ];
 
-const VenueLayout = () => {
+const InfoLayout = () => {
   const { option } = useParams();
   const cityObj = useOutletContext();
   const path = useLocation();
-  const city = path.pathname.split("/")[1];
   const venueORexhibition = optionList.find((pageEl) => pageEl.name == option);
   return (
     <>
       <Outlet context={{ page: venueORexhibition.name, city: cityObj?.city }} />
+      <Footer />
     </>
   );
 };
 
-export default VenueLayout;
+export default InfoLayout;

@@ -1,9 +1,28 @@
 .home__city-slider {
+  position: relative;
   padding-top: 150px;
 }
 .mySwiper {
-  width: 98vw;
+  width: 100vw;
   height: 280px;
+}
+
+.home__img {
+  position: fixed;
+  width: 240px;
+  aspect-ratio: 1;
+  left: 0;
+  top: 450px;
+  transform: translateY(-50%);
+}
+
+.home__img2 {
+  position: fixed;
+  width: 250px;
+  aspect-ratio: 1;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .swiper-slide {
@@ -26,6 +45,7 @@
       object-fit: cover;
       object-position: center;
       z-index: -2;
+      border: 5px solid #534b41;
       &:hover {
         rotate: 5deg;
       }
@@ -37,6 +57,7 @@
   }
   &.swiper-slide-active {
     scale: 1;
+    translate: -15px;
   }
   &.swiper-slide-next {
     scale: 0.5;
@@ -76,6 +97,22 @@
   .mySwiper {
     height: 600px;
   }
+  .swiper-slide {
+    a {
+      img {
+        border: 8px solid #534b41;
+      }
+    }
+  }
+  .home__img {
+    width: 250px;
+    z-index: 1;
+  }
+
+  .home__img2 {
+    width: 200px;
+    z-index: 1;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -84,5 +121,12 @@
   }
   .home__city-slider {
     padding-top: 200px;
+  }
+  .home__img {
+    width: 350px;
+  }
+
+  .home__img2 {
+    width: 300px;
   }
 }

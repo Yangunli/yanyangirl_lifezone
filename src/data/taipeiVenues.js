@@ -101,4 +101,13 @@ export const taipeiVenues = [
     src: "https://firebasestorage.googleapis.com/v0/b/react-firebase-306e5.appspot.com/o/taipei%2Fvenue%2F%E8%88%8A%E9%A6%99%E5%B1%85%2FR0022202.jpg?alt=media&token=8749e693-0761-45d8-935b-992cd74248ef",
     link: "https://www.facebook.com/jxjbooks/",
   },
+  {
+    id: 111,
+    venue: "澍林",
+    openDay: "?",
+    TicketType: "免費",
+    location: "台北市師大路117巷6號1樓",
+    src: "https://firebasestorage.googleapis.com/v0/b/react-firebase-306e5.appspot.com/o/taipei%2Fvenue%2F%E6%BE%8D%E6%9E%97%2FR0022151.webp?alt=media&token=61cbfcff-b9ac-4344-8456-64d713fa3509",
+    link: "https://www.facebook.com/jxjbooks/",
+  },
 ];

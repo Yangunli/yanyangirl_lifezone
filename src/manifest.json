@@ -54,6 +54,6 @@
   "scope": "/",
   "start_url": "/",
   "display": "standalone",
-  "theme_color": "lightcoral",
+  "theme_color": "#413620",
   "background_color": "#413620"
 }

@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef } from "react";
 import ModalContent from "./ModalContent";
 
 const Modal = ({ changeContent, modalContent }) => {
@@ -7,7 +7,7 @@ const Modal = ({ changeContent, modalContent }) => {
   function modalMoveOut() {
     modalRef.current.style =
       "animation:modalMoveOut 0.2s ease-in-out forwards;transform-origin:  bottom left ;";
-    modalContainerRef.current.style = "opacity:0";
+    modalContainerRef.current.style = "opacity:0;";
   }
 
   return (

@@ -1,5 +1,7 @@
 export function isOpenChecked(dayArr) {
-  const isOpen = dayArr.includes(new Date().getDay().toString());
+  const isOpen = dayArr.includes("?")
+    ? "?"
+    : dayArr.includes(new Date().getDay().toString());
   return isOpen;
 }
 
@@ -26,6 +28,9 @@ export function translateWeekday(weekday) {
       break;
     case "0":
       weekdayZH = "周日";
+      break;
+    case "?":
+      weekdayZH = "不定休";
       break;
     default:
       console.error("請輸入0-6的字串");

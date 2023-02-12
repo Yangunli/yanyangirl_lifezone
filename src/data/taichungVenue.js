@@ -1,6 +1,6 @@
 export const taichungVenues = [
   {
-    id: 208,
+    id: 210,
     openDay: "45601",
     venue: " luguang gallery",
     location: "台中市西區中興一巷19號",

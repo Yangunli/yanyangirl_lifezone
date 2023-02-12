@@ -16,7 +16,7 @@ export const artists = [
   },
   {
     id: 4,
-    artist: "曾岩懌",
+    artist: "身體山島",
     category: "ceramic",
   },
   {

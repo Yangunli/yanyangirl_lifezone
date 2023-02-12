@@ -63,17 +63,6 @@ module.exports = {
       // swDest: "../workboxServiceWorker.js",
       maximumFileSizeToCacheInBytes: 1024000 * 4, // 只缓存 4M 以下的文件
       include: [/.*.(png|jpg|jpeg|svg|ico|webp)$/], // 只缓存图片、js、css
-      runtimeCaching: [
-        {
-          // runtime cache for images
-          urlPattern: /\.(?:png|jpg|jpeg|svg)$/,
-          handler: "CacheFirst",
-          options: {
-            expiration: { maxEntries: 10 },
-            cacheName: "images",
-          },
-        },
-      ],
     }),
     new CopyPlugin({
       patterns: [

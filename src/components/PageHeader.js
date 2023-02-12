@@ -4,6 +4,9 @@ import { useScrollNavDisplay } from "../hooks/useScrollNavDisplay";
 import { MenuSvg2, LifezoneSvg, ArrowSvg, PureLogoSvg } from "./SvgComponents";
 import Menu from "./Menu";
 import classNames from "../function/classNames";
+import { scrollWin } from "../function/group";
+import { navList } from "../data/navList";
+import { useWindowResize } from "../hooks/useWindowResize";
 const PageHeader = () => {
   const [sideBarToggle, setSideBarToggle] = useState(false);
   const changeSideBar = () => {
@@ -12,8 +15,11 @@ const PageHeader = () => {
 
   const scrollDirection = useScrollNavDisplay();
   const navigate = useNavigate();
-  const pathArr = useLocation().pathname.split("/");
+  const path = useLocation().pathname;
+  const pathArr = path.split("/");
   const bg = pathArr.includes("venue");
+  const { width } = useWindowResize();
+  const navLi = width > 280 ? navList : navList.slice(1, -1);
   return (
     <>
       <header
@@ -36,21 +42,18 @@ const PageHeader = () => {
           <div className="nav__center">
             <PureLogoSvg />
             <div className="nav-container">
-              <Link to="/" aria-label="Back to the homepage">
-                home
-              </Link>
-              <Link to="/taipei" aria-label="Read more about Taipei">
-                taipei
-              </Link>
-              <Link to="/artist" aria-label="The page about taiwan's artists. ">
-                artist
-              </Link>
-              <Link to="/taichung" aria-label="Read more about Taichung">
-                taichung
-              </Link>
-              <Link to="/tainan" aria-label="Read more about Tainan">
-                tainan
-              </Link>
+              {navLi.map((li) => (
+                <Link
+                  to={li.link}
+                  aria-label={li.ariaLabel}
+                  onClick={scrollWin}
+                  className={classNames(
+                    pathArr[1] == li.pathName ? "ball" : ""
+                  )}
+                >
+                  {li.pathName}
+                </Link>
+              ))}
             </div>
           </div>
           <button

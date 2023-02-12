@@ -1,0 +1,41 @@
+export const exhibitionList = [
+  {
+    title: "那些，未被馴服的野獸",
+    venue: "減貼選物",
+    venueLink: "/taichung/venue/206",
+    artist: "身體山島",
+    artistLink: "/artist/4",
+    startDate: "2019/11/23",
+    endDate: "2019/12/07",
+    imgUrl: [
+      "https://firebasestorage.googleapis.com/v0/b/react-firebase-306e5.appspot.com/o/exhibition%2F%E6%B8%9B%E8%B2%BC%E9%81%B8%E7%89%A9%2F191123120703.JPG?alt=media&token=d985d05b-5053-4238-bcd6-d7cc871a0a10",
+      "https://firebasestorage.googleapis.com/v0/b/react-firebase-306e5.appspot.com/o/exhibition%2F%E6%B8%9B%E8%B2%BC%E9%81%B8%E7%89%A9%2FAPC_5308.JPG?alt=media&token=977087f6-ca9e-4c9c-a33c-a5b4fbe77df8",
+      "https://firebasestorage.googleapis.com/v0/b/react-firebase-306e5.appspot.com/o/exhibition%2F%E6%B8%9B%E8%B2%BC%E9%81%B8%E7%89%A9%2FAPC_5310.JPG?alt=media&token=9ab42f4d-066d-4986-80fa-4599a2992b40",
+      "https://firebasestorage.googleapis.com/v0/b/react-firebase-306e5.appspot.com/o/exhibition%2F%E6%B8%9B%E8%B2%BC%E9%81%B8%E7%89%A9%2FAPC_5313.JPG?alt=media&token=e37737f8-8d35-4b97-88c5-04fa0898b213",
+    ],
+  },
+  {
+    title: "輕輕的",
+    venue: "暖煖。私房",
+    venueLink: "",
+    artist: "身體山島",
+    artistLink: "/artist/4",
+    startDate: "2021/12/25",
+    endDate: "2022/01/09",
+    imgUrl: [
+      "https://firebasestorage.googleapis.com/v0/b/react-firebase-306e5.appspot.com/o/exhibition%2F%E6%9A%96%E7%85%96%E7%A7%81%E6%88%BF%2F211201.jpg?alt=media&token=4e4872f6-5cd6-412d-9ab2-50ff2758d9eb",
+      "https://firebasestorage.googleapis.com/v0/b/react-firebase-306e5.appspot.com/o/exhibition%2F%E6%9A%96%E7%85%96%E7%A7%81%E6%88%BF%2F211202.jpg?alt=media&token=49d94630-7770-4deb-bd9c-32799c8c921f",
+      "",
+    ],
+  },
+  {
+    title: "宇宙之初的記憶。真空中的詩",
+    venue: "三徑就荒",
+    venueLink: "/taichung/venue/206",
+    artist: "身體山島",
+    artistLink: "/artist/4",
+    startDate: "2020/05/09",
+    endDate: "2020/06/08",
+    imgUrl: [],
+  },
+];
