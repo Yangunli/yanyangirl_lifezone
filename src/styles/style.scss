@@ -17,6 +17,10 @@
   font-family: "Noto Sans TC", sans-serif;
 }
 
+body {
+  background-color: var(--milktea-bg);
+}
+
 a {
   text-decoration: none;
   color: currentColor;
@@ -97,7 +101,7 @@ button {
 @import "./venuInfo";
 
 .banner {
-  margin-top: 100px;
+  transform: translate3d(0, 100px, 0);
   width: 100%;
   height: calc(100vh - 100px);
   background-position: center;
@@ -117,8 +121,7 @@ button {
   width: 50px;
   box-sizing: content-box;
   position: relative;
-  margin-left: 10%;
-  margin-top: 120px;
+  transform: translate3d(10%, 120px, 0);
   font-size: 8px;
 
   &::after {
@@ -163,7 +166,6 @@ button {
 
 .footer-container {
   min-height: 100px;
-  mix-blend-mode: lighten;
   background-color: hsl(39, 18%, 36%);
   small {
     width: 100%;

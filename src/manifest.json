@@ -34,19 +34,19 @@
     {
       "name": "去臺北看展",
       "short_name": "臺北。展訊",
-      "description": "View more exhibitions",
+      "description": "View more exhibitions in Taipei",
       "url": "/taipei/exhibition"
     },
     {
       "name": "去臺中看展",
       "short_name": "臺中。展訊",
-      "description": "View more exhibitions",
+      "description": "View more exhibitions in Taichung",
       "url": "/taichung/exhibition"
     },
     {
       "name": "去臺南看展",
-      "short_name": "去臺南看展",
-      "description": "臺南。展訊",
+      "short_name": "臺南。展訊",
+      "description": "View more exhibitions in Tainan",
       "url": "/tainan/exhibition"
     }
   ],

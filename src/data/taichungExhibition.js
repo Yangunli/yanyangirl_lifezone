@@ -48,18 +48,7 @@ export const taichungExp = [
     src: "https://pic.pimg.tw/yangun410/1675060114-3822950184-g_n.jpg",
     link: "https://www.facebook.com/events/692508749226371",
   },
-  {
-    id: 205,
-    name: "⟣Illusory⟢",
-    artist: "sophiasartworks",
-    time: "2022/12/27-2023/02/05",
-    openDay: "234560,",
-    venue: "茶筆巷文具生活空間 ",
-    location: "台中市西區昇平街89號",
-    TicketType: "免費",
-    src: "https://pic.pimg.tw/yangun410/1673022993-3293479172-g_b.jpg",
-    link: "https://www.facebook.com/tpl.stationery",
-  },
+
   {
     id: 204,
     name: "回歸線",

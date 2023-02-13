@@ -59,18 +59,7 @@ export const taipeiExp = [
     src: "https://pic.pimg.tw/yangun410/1675086206-2254444568-g_b.jpg",
     link: "https://www.facebook.com/xiaoqiplusg",
   },
-  {
-    id: 103,
-    name: "生日快樂繪本原畫展",
-    artist: "林彥良",
-    venue: "Chambre 81",
-    openDay: "234560",
-    TicketType: "免費",
-    location: "台北市大安區龍泉街81號1樓",
-    time: "2023/01/06-2023/02/05 ",
-    src: "https://pic.pimg.tw/yangun410/1672928371-3817409929-g_n.jpg",
-    link: "https://www.facebook.com/jxjbooks/",
-  },
+
   {
     id: 102,
     name: "幽靈說",

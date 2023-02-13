@@ -25,17 +25,23 @@ export const exhibitionList = [
     imgUrl: [
       "https://firebasestorage.googleapis.com/v0/b/react-firebase-306e5.appspot.com/o/exhibition%2F%E6%9A%96%E7%85%96%E7%A7%81%E6%88%BF%2F211201.jpg?alt=media&token=4e4872f6-5cd6-412d-9ab2-50ff2758d9eb",
       "https://firebasestorage.googleapis.com/v0/b/react-firebase-306e5.appspot.com/o/exhibition%2F%E6%9A%96%E7%85%96%E7%A7%81%E6%88%BF%2F211202.jpg?alt=media&token=49d94630-7770-4deb-bd9c-32799c8c921f",
-      "",
+      "https://firebasestorage.googleapis.com/v0/b/react-firebase-306e5.appspot.com/o/exhibition%2F%E6%9A%96%E7%85%96%E7%A7%81%E6%88%BF%2F211203.jpg?alt=media&token=ec23b8ea-6488-49a6-a7a2-728cefe61757",
+      "https://firebasestorage.googleapis.com/v0/b/react-firebase-306e5.appspot.com/o/exhibition%2F%E6%9A%96%E7%85%96%E7%A7%81%E6%88%BF%2F211205.jpg?alt=media&token=f1405e2f-9693-413d-8a12-e27f9a5b645b",
     ],
   },
   {
     title: "宇宙之初的記憶。真空中的詩",
     venue: "三徑就荒",
-    venueLink: "/taichung/venue/206",
+    venueLink: "/taipei/venue/112",
     artist: "身體山島",
     artistLink: "/artist/4",
     startDate: "2020/05/09",
     endDate: "2020/06/08",
-    imgUrl: [],
+    imgUrl: [
+      "https://firebasestorage.googleapis.com/v0/b/react-firebase-306e5.appspot.com/o/exhibition%2F%E4%B8%89%E5%BE%91%E5%B0%B1%E8%8D%92%2FR0001869.JPG?alt=media&token=8cab791b-e139-46ee-ae74-8e896ee82793",
+      "https://firebasestorage.googleapis.com/v0/b/react-firebase-306e5.appspot.com/o/exhibition%2F%E4%B8%89%E5%BE%91%E5%B0%B1%E8%8D%92%2FR0001853.JPG?alt=media&token=b7c96661-e3c4-46fa-9652-32e6173abe10",
+      "https://firebasestorage.googleapis.com/v0/b/react-firebase-306e5.appspot.com/o/exhibition%2F%E4%B8%89%E5%BE%91%E5%B0%B1%E8%8D%92%2FR0002007.JPG?alt=media&token=9ed230fc-656a-4673-aabc-ca855624ac6b",
+      "https://firebasestorage.googleapis.com/v0/b/react-firebase-306e5.appspot.com/o/exhibition%2F%E4%B8%89%E5%BE%91%E5%B0%B1%E8%8D%92%2FR0001887.JPG?alt=media&token=98c57106-9fe8-4a0a-8f62-699fc031fc1f",
+    ],
   },
 ];

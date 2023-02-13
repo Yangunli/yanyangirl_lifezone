@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import { MenuSvg1, LogoSvg } from "../components/SvgComponents";
 import { useWindowResize } from "../hooks/useWindowResize";
@@ -16,25 +16,17 @@ import PageHeader from "../components/PageHeader";
 import { currentFilter } from "../function/exhibitionFilter";
 import { isOpenChecked } from "../function/weekdayFilter";
 import Footer from "../components/Footer";
-
+import { useModal } from "../hooks/useModal";
+import { useMenu } from "../hooks/useMenu";
 const Home = () => {
-  const [modalToggle, setModalToggle] = useState(false);
-  const [menuToggle, setMenuToggle] = useState(false);
-  const modalContent = useRef([]);
   const windowSize = useWindowResize();
   const exhibition = [
     ...currentFilter(taipeiExp).slice(-5, -1),
     ...currentFilter(taichungExp).slice(-5, -1),
     ...currentFilter(tainanExp).slice(-5, -1),
   ];
-
-  const changeMenu = () => {
-    setMenuToggle(!menuToggle);
-  };
-  const changeContent = (info) => {
-    modalContent.current = [info];
-    setModalToggle(!modalToggle);
-  };
+  const { modalContent, modalToggle, changeContent } = useModal();
+  const { menuToggle, changeMenu } = useMenu();
   const scrollDirection = useScrollNavDisplay();
 
   return (

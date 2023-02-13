@@ -25,15 +25,14 @@ const City = () => {
           to="venue"
           className="test"
           style={{
-            marginTop:
-              width < 800 && height > 610
-                ? `${height - 247}px `
-                : height > 610
-                ? height > 1100 || (width > 1300 && height < 1100)
-                  ? `${height - 350}px`
-                  : `${height - 300}px`
-                : `${height - 300}px`,
-            marginLeft: `${width / 2 - 130}px`,
+            transform: `translate3d(   ${
+              width > 600
+                ? width / 4 + 40
+                : width > 280
+                ? width / 4 - 20
+                : width / 4 - 50
+            }px ,  
+            ${height / 2 + 40}px  ,0)  `,
           }}
         >
           VENUE

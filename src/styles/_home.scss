@@ -10,7 +10,7 @@
 
 .home__header {
   position: fixed;
-  z-index: 2;
+  z-index: 1;
   top: 0;
   width: 100%;
   height: 150px;
@@ -40,19 +40,16 @@
 
 .home__header .logoSvg {
   // position: absolute;
-  z-index: -1;
+
   width: 90%;
   transform: translate(5%, 20%);
 }
 
 .home .menuSvg2 {
   position: fixed;
-  height: 30px;
-  width: 30px;
   right: 5%;
   top: 10px;
   z-index: 5;
-  // transform: translateY(-50%);
 }
 
 .home .menuSvg1 {
@@ -62,8 +59,6 @@
   top: 5%;
   left: 5%;
   z-index: 5;
-
-  // transform: translateY(-50%);
   display: none;
   color: var(--lightBg-text);
   path {

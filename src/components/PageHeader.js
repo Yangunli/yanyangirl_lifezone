@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { useNavigate, Link, useLocation } from "react-router-dom";
+import React from "react";
+import { useNavigate, Link } from "react-router-dom";
 import { useScrollNavDisplay } from "../hooks/useScrollNavDisplay";
 import { MenuSvg2, LifezoneSvg, ArrowSvg, PureLogoSvg } from "./SvgComponents";
 import Menu from "./Menu";
@@ -7,18 +7,17 @@ import classNames from "../function/classNames";
 import { scrollWin } from "../function/group";
 import { navList } from "../data/navList";
 import { useWindowResize } from "../hooks/useWindowResize";
-const PageHeader = () => {
-  const [sideBarToggle, setSideBarToggle] = useState(false);
-  const changeSideBar = () => {
-    setSideBarToggle(!sideBarToggle);
-  };
+import { usePath } from "../hooks/usePath";
+import { useMenu } from "../hooks/useMenu";
 
+const PageHeader = () => {
+  const { menuToggle, changeMenu } = useMenu();
   const scrollDirection = useScrollNavDisplay();
   const navigate = useNavigate();
-  const path = useLocation().pathname;
-  const pathArr = path.split("/");
+  const { pathArr } = usePath();
   const bg = pathArr.includes("venue");
   const { width } = useWindowResize();
+
   const navLi = width > 280 ? navList : navList.slice(1, -1);
   return (
     <>
@@ -44,6 +43,7 @@ const PageHeader = () => {
             <div className="nav-container">
               {navLi.map((li) => (
                 <Link
+                  key={li.pathName}
                   to={li.link}
                   aria-label={li.ariaLabel}
                   onClick={scrollWin}
@@ -57,7 +57,7 @@ const PageHeader = () => {
             </div>
           </div>
           <button
-            onClick={changeSideBar}
+            onClick={changeMenu}
             className="menuBtn"
             aria-label="menu button"
           >
@@ -65,7 +65,7 @@ const PageHeader = () => {
           </button>
         </nav>
       </header>
-      {sideBarToggle && <Menu changeSideBar={changeSideBar} />}
+      {menuToggle && <Menu changeMenu={changeMenu} />}
     </>
   );
 };

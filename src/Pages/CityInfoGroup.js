@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-import { useOutletContext, Link, useLocation } from "react-router-dom";
+import { useOutletContext, Link } from "react-router-dom";
 import { taipeiVenues } from "../data/taipeiVenues";
 import { taichungVenues } from "../data/taichungVenue";
 import { tainanVenues } from "../data/tainanVenues";
@@ -9,15 +9,12 @@ import classNames from "../function/classNames";
 import { currentFilter, upComingFilter } from "../function/exhibitionFilter";
 import Modal from "../components/Modal";
 import { isOpenChecked } from "../function/weekdayFilter";
+import { scrollWin } from "../function/group";
+import { useModal } from "../hooks/useModal";
 const CityInfoGroup = () => {
-  const [modalToggle, setModalToggle] = useState(false);
   const [currentTab, setCurrentTab] = useState("current");
   const [views, setViews] = useState([]);
-  const modalContent = useRef([]);
-  const changeContent = (info) => {
-    modalContent.current = [info];
-    setModalToggle(!modalToggle);
-  };
+  const { modalContent, modalToggle, changeContent } = useModal();
   const categoryEl = useOutletContext();
   const city = categoryEl.city;
 
@@ -104,6 +101,7 @@ const CityInfoGroup = () => {
               <Link
                 to={`${view.id}`}
                 key={view.id}
+                onClick={scrollWin}
                 className={classNames(
                   isOpenChecked(view.openDay.split("")) ? "" : "closedFilter",
                   "card"

@@ -5,13 +5,15 @@ import { taichungVenues } from "../data/taichungVenue";
 import { tainanVenues } from "../data/tainanVenues";
 import PageHeader from "../components/PageHeader";
 import { isOpenChecked, translateWeekday } from "../function/weekdayFilter";
+import { exhibitionList } from "../data/exhibitionList";
+import { useModal } from "../hooks/useModal";
+import Modal from "../components/Modal";
 
 const VenueInfo = () => {
   const { Id } = useParams();
-
   const categoryEl = useOutletContext();
   const city = categoryEl.city;
-
+  const { modalContent, changeContent, modalToggle } = useModal();
   const venues =
     city === "taipei"
       ? taipeiVenues
@@ -21,7 +23,9 @@ const VenueInfo = () => {
   const venue = venues.find((venue) => venue.id == Id);
   const venueOpenArr = venue.openDay.split("");
   const isVenueOpen = isOpenChecked(venueOpenArr);
-  console.log(venueOpenArr[0]);
+  const exhibitions = exhibitionList.filter(
+    (exhibition) => exhibition.venue == venue.venue
+  );
   return (
     <div className="main venue-bg">
       <PageHeader />
@@ -42,6 +46,25 @@ const VenueInfo = () => {
           </p>
         )}
       </div>
+      <div className="card-container pt-100 history">
+        {exhibitions.map((exhibition) =>
+          exhibition.imgUrl.map((url) => (
+            <img
+              key={url}
+              src={url}
+              alt=""
+              className="card"
+              onClick={() => changeContent(exhibition)}
+            />
+          ))
+        )}
+      </div>
+      {modalToggle && (
+        <Modal
+          changeContent={changeContent}
+          modalContent={modalContent.current}
+        />
+      )}
     </div>
   );
 };

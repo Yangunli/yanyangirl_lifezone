@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import ModalContent from "./ModalContent";
-
+import { usePath } from "../hooks/usePath";
 const Modal = ({ changeContent, modalContent }) => {
   const modalContainerRef = useRef();
   const modalRef = useRef();

@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { scrollWin } from "../function/group";
-const Menu = ({ changeSideBar }) => {
+const Menu = ({ changeMenu }) => {
   const menuRef = useRef();
   function menuOut() {
     menuRef.current.style =
@@ -16,7 +16,7 @@ const Menu = ({ changeSideBar }) => {
       onClick={() => {
         menuOut();
         setTimeout(() => {
-          changeSideBar();
+          changeMenu();
         }, 500);
       }}
     >

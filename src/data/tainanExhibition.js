@@ -60,16 +60,4 @@ export const tainanExp = [
     src: "https://pic.pimg.tw/yangun410/1673503391-4135638169-g_b.jpg?v=1673503413",
     link: "https://themoolahart.wixsite.com/my-site",
   },
-  {
-    id: 301,
-    name: "家鄉WAY",
-    artist: "吳芊頤、走路草農／藝團、程仁珮、蔡宗祐",
-    venue: "臺南文化中心",
-    openDay: "34560",
-    TicketType: "免費",
-    location: "台南市東區中華東路三段332號",
-    time: "2023/01/13-2023/02/05",
-    src: "https://pic.pimg.tw/yangun410/1672931785-1067098565-g_n.jpg",
-    link: "https://www.tmcc.gov.tw/events/%e5%ae%b6%e9%84%89-way/",
-  },
 ];

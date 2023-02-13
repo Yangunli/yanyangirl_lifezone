@@ -29,14 +29,14 @@
 
 .spinner {
   position: absolute;
-  right: -50px;
-  top: -10%;
-  width: 200px;
-  transform: translate(-50%, 50%);
+  width: 250px;
+  bottom: -50%;
+  right: -75px;
   transform-origin: center center;
-  animation: rotateText 10s linear infinite;
+
   .textSpinnerSvg {
-    width: 200px;
+    width: 250px;
+    animation: rotateText 10s linear infinite;
   }
 }
 

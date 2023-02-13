@@ -1,12 +1,6 @@
 import React from "react";
-import {
-  Outlet,
-  useParams,
-  useOutletContext,
-  useLocation,
-} from "react-router-dom";
+import { Outlet, useParams, useOutletContext } from "react-router-dom";
 import Footer from "../components/Footer";
-
 const optionList = [
   {
     name: "venue",
@@ -19,7 +13,6 @@ const optionList = [
 const InfoLayout = () => {
   const { option } = useParams();
   const cityObj = useOutletContext();
-  const path = useLocation();
   const venueORexhibition = optionList.find((pageEl) => pageEl.name == option);
   return (
     <>

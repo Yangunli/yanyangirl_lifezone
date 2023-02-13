@@ -18,6 +18,10 @@
   font-family: "Noto Sans TC", sans-serif;
 }
 
+body {
+  background-color: var(--milktea-bg);
+}
+
 a {
   text-decoration: none;
   color: currentColor;
@@ -108,6 +112,10 @@ button {
   padding-inline: var(--p);
 }
 
+.pt-100 {
+  padding-top: 100px;
+}
+
 .pt-200 {
   padding-top: 200px;
 }
@@ -170,8 +178,6 @@ button {
 
 .home .menuSvg2 {
   position: fixed;
-  height: 30px;
-  width: 30px;
   right: 5%;
   top: 10px;
   z-index: 5;
@@ -332,15 +338,14 @@ button {
 
 .spinner {
   position: absolute;
-  right: -50px;
-  top: -10%;
-  width: 200px;
-  transform: translate(-50%, 50%);
+  width: 250px;
+  bottom: -50%;
+  right: -75px;
   transform-origin: center center;
-  animation: rotateText 10s linear infinite;
 }
 .spinner .textSpinnerSvg {
-  width: 200px;
+  width: 250px;
+  animation: rotateText 10s linear infinite;
 }
 
 @keyframes rotateText {
@@ -470,6 +475,26 @@ button {
   }
   100% {
     transform: translate3d(0, 0, 0);
+  }
+}
+.history .card:nth-child(4n+1),
+.history .card:nth-child(4n+2) {
+  animation: LTR 0.4s linear, borderRadius 3s linear alternate infinite 0.5s;
+}
+.history .card:nth-child(4n+3),
+.history .card:nth-child(4n+4) {
+  animation: RTL 0.4s linear, borderRadius 3s linear alternate infinite 0.5s;
+}
+
+@keyframes borderRadius {
+  0% {
+    border-radius: 30% 70% 70% 30%/30% 30% 70% 70%;
+  }
+  50% {
+    border-radius: 50% 27% 68% 32%/42% 62% 38% 58%;
+  }
+  100% {
+    border-radius: 30% 70% 63% 37%/72% 77% 23% 28%;
   }
 }
 .page-header {
@@ -770,7 +795,7 @@ button {
 }
 
 .banner {
-  margin-top: 100px;
+  transform: translate3d(0, 100px, 0);
   width: 100%;
   height: calc(100vh - 100px);
   background-position: center;
@@ -790,8 +815,7 @@ button {
   width: 50px;
   box-sizing: content-box;
   position: relative;
-  margin-left: 10%;
-  margin-top: 120px;
+  transform: translate3d(10%, 120px, 0);
   font-size: 8px;
 }
 .test::after {
@@ -834,7 +858,6 @@ button {
 
 .footer-container {
   min-height: 100px;
-  mix-blend-mode: lighten;
   background-color: hsl(39deg, 18%, 36%);
 }
 .footer-container small {
