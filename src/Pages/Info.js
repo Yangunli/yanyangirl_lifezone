@@ -5,6 +5,7 @@ import { taichungVenues } from "../data/taichungVenue";
 import { taipeiVenues } from "../data/taipeiVenues";
 import { collection, doc, setDoc, query, onSnapshot } from "firebase/firestore";
 import { db } from "../firebase";
+import { exhibitionList } from "../data/exhibitionList";
 
 const Info = () => {
   const { isLogin } = useOutletContext();
@@ -12,18 +13,34 @@ const Info = () => {
     window.location.href = window.location.origin;
     return;
   }
-  const venuesRef = collection(db, "venues");
+  // const venuesRef = collection(db, "venues");
+  // const addIt = () => {
+  //   tainanVenues.map(async (venue) => {
+  //     await setDoc(doc(venuesRef, venue.id.toString()), {
+  //       id: Number(venue.id),
+  //       category: venue?.category,
+  //       venue: venue?.venue,
+  //       openDay: venue?.openDay,
+  //       city: venue?.city,
+  //       location: venue?.location,
+  //       link: venue?.link,
+  //       venueImgUrl: venue?.venueImgUrl,
+  //     });
+  //   });
+  // };
+
+  const venuesRef = collection(db, "exhibitions");
   const addIt = () => {
-    tainanVenues.map(async (venue) => {
-      await setDoc(doc(venuesRef, venue.id.toString()), {
-        id: Number(venue.id),
-        category: venue?.category,
-        venue: venue?.venue,
-        openDay: venue?.openDay,
-        city: venue?.city,
-        location: venue?.location,
-        link: venue?.link,
-        venueImgUrl: venue?.venueImgUrl,
+    exhibitionList.map(async (exhibition) => {
+      await setDoc(doc(venuesRef, exhibition.id), {
+        title: exhibition.title,
+        venue: exhibition.venue,
+        venueLink: exhibition?.venueLink,
+        artist: exhibition.artist,
+        artistLink: exhibition.artistLink,
+        startDate: exhibition.startDate,
+        endDate: exhibition.endDate,
+        imgUrl: exhibition.imgUrl,
       });
     });
   };

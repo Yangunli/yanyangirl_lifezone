@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { cityList } from "../data/cityList";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper";
 import "swiper/css";
@@ -8,7 +7,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { useWindowResize } from "../hooks/useWindowResize";
 import { scrollWin } from "../function/group";
-const HomeSwiper = () => {
+const HomeSwiper = ({ cityList }) => {
   const [scrollHight, setScrollHight] = useState(window.screenY);
   const { width, height } = useWindowResize();
   useEffect(() => {

@@ -1,18 +1,20 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useParams, useOutletContext } from "react-router-dom";
 import { taipeiVenues } from "../data/taipeiVenues";
 import { taichungVenues } from "../data/taichungVenue";
 import { tainanVenues } from "../data/tainanVenues";
 import PageHeader from "../components/PageHeader";
 import { isOpenChecked, translateWeekday } from "../function/weekdayFilter";
-import { exhibitionList } from "../data/exhibitionList";
 import { useModal } from "../hooks/useModal";
+import { collection, where, query, onSnapshot } from "firebase/firestore";
+import { db } from "../firebase";
 import Modal from "../components/Modal";
+import { usePath } from "../hooks/usePath";
 
 const VenueInfo = () => {
+  const [exhibitions, setExhibitions] = useState([]);
   const { Id } = useParams();
-  const categoryEl = useOutletContext();
-  const city = categoryEl.city;
+  const { city } = useOutletContext();
   const { modalContent, changeContent, modalToggle } = useModal();
   const venues =
     city === "taipei"
@@ -23,14 +25,30 @@ const VenueInfo = () => {
   const venue = venues.find((venue) => venue.id == Id);
   const venueOpenArr = venue.openDay.split("");
   const isVenueOpen = isOpenChecked(venueOpenArr);
-  const exhibitions = exhibitionList.filter(
-    (exhibition) => exhibition.venue == venue.venue
-  );
+  const exhibitionRef = collection(db, "exhibitions");
+  const { path } = usePath();
+  useEffect(() => {
+    const q = query(exhibitionRef, where("venueLink", "==", path));
+    const unsubscribe = onSnapshot(q, (querySnapshot) => {
+      let exhibitionArr = [];
+      querySnapshot.forEach((doc) => {
+        exhibitionArr.push({ ...doc.data() });
+      });
+      console.log(exhibitionArr);
+      setExhibitions(exhibitionArr);
+    });
+    return () => unsubscribe();
+  }, []);
+
   return (
     <div className="main venue-bg">
       <PageHeader />
       <div className="pt-200 w-100 df">
-        <img className="venue__img" src={venue.src} alt={venue.venue} />
+        <img
+          className="venue__img"
+          src={venue.hostImgUrl ? venue.hostImgUrl : venue.venueImgUrl[0]}
+          alt={venue.venue}
+        />
         <h1>{venue.venue}</h1>
         <h3>
           {isVenueOpen
@@ -48,13 +66,15 @@ const VenueInfo = () => {
       </div>
       <div className="card-container pt-100 history">
         {exhibitions.map((exhibition) =>
-          exhibition.imgUrl.map((url) => (
+          exhibition.imgUrl.map((url, i) => (
             <img
               key={url}
               src={url}
               alt=""
               className="card"
-              onClick={() => changeContent(exhibition)}
+              onClick={() => {
+                changeContent([{ exhibition }, { index: i }]);
+              }}
             />
           ))
         )}

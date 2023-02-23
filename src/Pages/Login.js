@@ -19,6 +19,8 @@ const Login = () => {
   };
 
   const handleLogin = () => {
+    const email = loginRefs.current?.email?.value;
+    const password = loginRefs.current?.password?.value;
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         // Signed in

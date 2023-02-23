@@ -17,16 +17,16 @@ const ArtistInfo = () => {
     <>
       <PageHeader />
       <div className="pt-200 main">
-        <h1>{artist.artist}</h1>
+        <h1>{artist.brand || artist.artist}</h1>
         <div className="card-container pt-200 ">
-          {exhibitions.map((exhibition) =>
-            exhibition.imgUrl?.map((url) => (
+          {exhibitions.map((exhibition, i) =>
+            exhibition.imgUrl?.map((url, i) => (
               <img
                 key={url}
                 src={url}
                 className="card"
                 alt=""
-                onClick={() => changeContent(exhibition)}
+                onClick={() => changeContent([{ exhibition }, { index: i }])}
               />
             ))
           )}
