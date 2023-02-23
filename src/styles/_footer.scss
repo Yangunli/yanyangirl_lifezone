@@ -1,0 +1,38 @@
+.footer-container {
+  min-height: 100px;
+  background-color: hsl(39, 18%, 36%);
+  small {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+}
+footer {
+  position: relative;
+  display: grid;
+  place-items: center;
+  gap: 20px;
+  .pureLogoSvg {
+    padding-top: 30px;
+    width: 50%;
+  }
+}
+
+.footer__nav {
+  display: flex;
+  gap: 10px;
+  padding-bottom: 10px;
+  a {
+    position: relative;
+    text-transform: uppercase;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .footer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+  }
+}

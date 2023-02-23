@@ -10,8 +10,8 @@
 
 .modal-body {
   position: relative;
-  width: min(90%, 800px);
-  min-height: 200px;
+  width: min(90%, 500px);
+  aspect-ratio: 1;
   background-color: rgb(230, 201, 147);
   border: 3px solid hsl(35, 11%, 22%);
   display: flex;

@@ -48,33 +48,33 @@
   }
 }
 
-.card:nth-child(8n + 1) .card__img,
-.card:nth-child(8n + 3) .card__img,
-.card:nth-child(8n + 6) .card__img,
-.card:nth-child(8n + 8) .card__img {
+:is(
+    :nth-child(8n + 1),
+    :nth-child(8n + 3),
+    :nth-child(8n + 6),
+    :nth-child(8n + 8)
+  ).card
+  .card__img {
   border-radius: 85.71% 85.71% 19.05% 19.05%/70.59% 70.59% 15.69% 15.69%;
 }
 
-.card:nth-child(8n + 2) .card__img {
+:is(:nth-child(8n + 2)).card .card__img {
   border-radius: 9.52% 76.19% 9.52% 9.52%/7.84% 62.74% 7.84% 7.84%;
 }
 
-.card:nth-child(8n + 4) .card__img,
-.card:nth-child(8n + 5) .card__img {
+:is(:nth-child(8n + 4), :nth-child(8n + 5)).card .card__img {
   border-radius: 9.52% 9.52% 76.19% 9.52%/7.84% 7.84% 70.58% 7.84%;
 }
 
-.card:nth-child(8n + 7) .card__img {
+:is(:nth-child(8n + 7)).card .card__img {
   border-radius: 19.05% 19.05% 85.71% 85.71%/15.69% 15.69% 70.59% 70.59%;
 }
 
-.card:nth-child(4n + 1),
-.card:nth-child(4n + 2) {
+:where(:nth-child(4n + 1), :nth-child(4n + 2)).card {
   animation: LTR 0.4s linear;
 }
 
-.card:nth-child(4n + 3),
-.card:nth-child(4n + 4) {
+:where(:nth-child(4n + 3), :nth-child(4n + 4)).card {
   animation: RTL 0.4s linear;
 }
 
@@ -99,11 +99,11 @@
 .history {
   .card:nth-child(4n + 1),
   .card:nth-child(4n + 2) {
-    animation: LTR 0.4s linear, borderRadius 3s linear alternate infinite 0.5s;
+    animation: LTR 0.4s linear, borderRadius 3s linear alternate infinite 0.3s;
   }
   .card:nth-child(4n + 3),
   .card:nth-child(4n + 4) {
-    animation: RTL 0.4s linear, borderRadius 3s linear alternate infinite 0.5s;
+    animation: RTL 0.4s linear, borderRadius 3s linear alternate infinite 0.3s;
   }
 }
 
