@@ -45,7 +45,7 @@ export const taipeiVenues = [
   {
     id: 104,
     category: "art space",
-    venue: "純Object",
+    venue: "純OBJECT",
     openDay: "234560",
     hostImgUrl: "",
     venueImgUrl: [
@@ -244,7 +244,7 @@ export const taipeiVenues = [
     openDay: "1234560",
     hostImgUrl: "",
     venueImgUrl: [
-      "https://firebasestorage.googleapis.com/v0/b/yanyangirl-lifezone.appspot.com/o/venue%2Fgardencity%2FR0000707.webp?alt=media&token=4ae9c74a-2486-4cac-83cd-9b8ce170d9bd",
+      "https://firebasestorage.googleapis.com/v0/b/yanyangirl-lifezone.appspot.com/o/venue%2Fgardencity%2FR0023685.webp?alt=media&token=86fda8fa-8c5a-4b91-ac9f-d5954f93fd84",
     ],
     city: "taipei",
     location: "臺北市中山區中山北路二段72巷6號",

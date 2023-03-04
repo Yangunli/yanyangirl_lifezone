@@ -1,0 +1,36 @@
+.artist-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  color: var(--lightBg-text);
+  padding-top: 120px;
+  gap: 2px;
+}
+
+.artist {
+  aspect-ratio: 1;
+  display: grid;
+
+  place-items: center;
+  background-color: rgb(183, 174, 155);
+  opacity: 0.8;
+  border-radius: 20px;
+  // &:nth-child(4n + 1) {
+  //   background-color: #bb9fab;
+  // }
+  // &:nth-child(4n + 2) {
+  //   background-color: #91adb3;
+  // }
+  // &:nth-child(4n + 3) {
+  //   background-color: #bfb79e;
+  // }
+
+  img {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  h2 {
+    grid-column: 1;
+    grid-row: 1;
+  }
+}

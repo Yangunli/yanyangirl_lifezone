@@ -1,5 +1,17 @@
 export const tainanExp = [
   {
+    id: 307,
+    name: "Bloom And Fly",
+    TicketType: "免費",
+    time: "2023/03/04-2023/04/09",
+    openDay: "34560",
+    artist: "八館ななこ",
+    venue: "陸角銀Sixpence Gallery",
+    location: "台南市中西區大德街83號2F",
+    src: "https://pic.pimg.tw/yangun410/1677154608-2032289747-g_n.jpg?v=1677154621",
+    link: "https://www.facebook.com/Sixpence.Gallery",
+  },
+  {
     id: 306,
     name: "高潮了！瀨戶內",
     artist: "小高潮色計事務所 色長",
@@ -34,30 +46,5 @@ export const tainanExp = [
     location: "台南市中西區忠義路二段186號",
     src: "https://pic.pimg.tw/yangun410/1675584746-2800057194-g_n.jpg",
     link: "https://www.san-gallery.com.tw/archives/3436?v=3d9975706be3",
-  },
-  {
-    id: 303,
-    name: "愛是塑膠",
-    TicketType: "免費",
-    time: "2023/02/04-2023/02/26",
-    openDay: "34560",
-    artist: "劉倩帆",
-    venue: "陸角銀Sixpence Gallery",
-    location: "台南市中西區大德街83號2F",
-    src: "https://pic.pimg.tw/yangun410/1675060935-3167826214-g_b.jpg",
-    link: "https://www.facebook.com/Sixpence.Gallery",
-  },
-
-  {
-    id: 302,
-    name: "站在光裡的是路過的你嗎",
-    artist: "陳廷晉",
-    venue: "暮拉多元藝術空間 ",
-    openDay: "1234560",
-    TicketType: "免費",
-    location: "台南市中西區國華街三段15號",
-    time: "2023/01/12-2023/02/28",
-    src: "https://pic.pimg.tw/yangun410/1673503391-4135638169-g_b.jpg?v=1673503413",
-    link: "https://themoolahart.wixsite.com/my-site",
   },
 ];

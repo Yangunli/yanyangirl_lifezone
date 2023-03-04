@@ -1,12 +1,3 @@
-.card-container {
-  display: grid;
-  width: 60%;
-  padding-inline: 20px;
-  padding-bottom: calc(var(--p) * 3);
-  grid-template-columns: repeat(1, 1fr);
-  gap: calc(var(--p) * 3);
-}
-
 .card {
   width: 100%;
   text-align: left;
@@ -14,27 +5,6 @@
   h2,
   h3 {
     padding-top: 5px;
-  }
-}
-
-@media screen and (min-width: 450px) {
-  .card-container {
-    width: min(calc(100% - 100px), 1100px);
-    padding-inline: 50px;
-    grid-template-columns: repeat(2, 1fr);
-    gap: calc(var(--p) * 5);
-  }
-}
-
-@media screen and (min-width: 800px) {
-  .card-container {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .card-container {
-    grid-template-columns: repeat(4, 1fr);
   }
 }
 
@@ -52,7 +22,7 @@
     :nth-child(8n + 1),
     :nth-child(8n + 3),
     :nth-child(8n + 6),
-    :nth-child(8n + 8)
+    :nth-child(8n)
   ).card
   .card__img {
   border-radius: 85.71% 85.71% 19.05% 19.05%/70.59% 70.59% 15.69% 15.69%;
@@ -71,11 +41,11 @@
 }
 
 :where(:nth-child(4n + 1), :nth-child(4n + 2)).card {
-  animation: LTR 0.4s linear;
+  animation: LTR 0.5s linear;
 }
 
-:where(:nth-child(4n + 3), :nth-child(4n + 4)).card {
-  animation: RTL 0.4s linear;
+:where(:nth-child(4n + 3), :nth-child(4n)).card {
+  animation: RTL 0.5s linear;
 }
 
 @keyframes LTR {
@@ -93,30 +63,5 @@
   }
   100% {
     transform: translate3d(0, 0, 0);
-  }
-}
-
-.history {
-  .card:nth-child(4n + 1),
-  .card:nth-child(4n + 2) {
-    animation: LTR 0.4s linear, borderRadius 3s linear alternate infinite 0.3s;
-  }
-  .card:nth-child(4n + 3),
-  .card:nth-child(4n + 4) {
-    animation: RTL 0.4s linear, borderRadius 3s linear alternate infinite 0.3s;
-  }
-}
-
-@keyframes borderRadius {
-  0% {
-    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-  }
-
-  50% {
-    border-radius: 50% 27% 68% 32% / 42% 62% 38% 58%;
-  }
-
-  100% {
-    border-radius: 30% 70% 63% 37% / 72% 77% 23% 28%;
   }
 }

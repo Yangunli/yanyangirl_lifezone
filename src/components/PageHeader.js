@@ -44,11 +44,16 @@ const PageHeader = () => {
               {navLi.map((li) => (
                 <Link
                   key={li.pathName}
-                  to={li.link}
+                  to={
+                    li.pathName.toLowerCase() == "home"
+                      ? "/"
+                      : `/${li.pathName}`
+                  }
                   aria-label={li.ariaLabel}
                   onClick={scrollWin}
                   className={classNames(
-                    pathArr[1] == li.pathName ? "ball" : ""
+                    pathArr[1] == li.pathName ? "ball" : "",
+                    "nav__link"
                   )}
                 >
                   {li.pathName}

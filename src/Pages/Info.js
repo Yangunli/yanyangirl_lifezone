@@ -50,7 +50,7 @@ const Info = () => {
     const unsubscribe = onSnapshot(q, (querySnapshot) => {
       let venueArr = [];
       querySnapshot.forEach((doc) => {
-        venueArr.push({ ...doc.data() });
+        venueArr.push({ ...doc.data(), id: doc.id });
       });
       console.log(venueArr);
     });
@@ -59,7 +59,7 @@ const Info = () => {
 
   return (
     <div className="info">
-      <button onClick={addIt}>ADD DATA</button>
+      <button onClick={addIt}>ADD List DATA</button>
     </div>
   );
 };

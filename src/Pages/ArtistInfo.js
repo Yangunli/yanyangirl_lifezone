@@ -1,35 +1,37 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { artists } from "../data/artists";
 import PageHeader from "../components/PageHeader";
-import { exhibitionList } from "../data/exhibitionList";
 import Modal from "../components/Modal";
 import { useModal } from "../hooks/useModal";
+import { useExhibitonRefs } from "../hooks/useExhibitionRef";
+import { exhibitionList } from "../data/exhibitionList";
+import { usePath } from "../hooks/usePath";
+import CardSwiper from "../components/Swiper/CardSwiper";
+import PageTransition from "../components/PageTransition";
 const ArtistInfo = () => {
+  // const { path } = usePath();
   const { Id } = useParams();
+  const exhibitions = useExhibitonRefs("artistLink");
   const { changeContent, modalContent, modalToggle } = useModal();
   const artist = artists.find((artist) => artist.id == Id);
-  const exhibitions = exhibitionList.filter(
-    (exhibition) => exhibition.artist == artist.artist
-  );
-
+  // const exhibitions = exhibitionList.filter(
+  //   (exhibition) => exhibition.artistLink == path
+  // );
   return (
     <>
       <PageHeader />
-      <div className="pt-200 main">
-        <h1>{artist.brand || artist.artist}</h1>
-        <div className="card-container pt-200 ">
-          {exhibitions.map((exhibition, i) =>
-            exhibition.imgUrl?.map((url, i) => (
-              <img
-                key={url}
-                src={url}
-                className="card"
-                alt=""
-                onClick={() => changeContent([{ exhibition }, { index: i }])}
-              />
-            ))
-          )}
+      <PageTransition />
+      <div className="pt-200 main ">
+        <h1 className="pb-45">{artist.brand || artist.artist}</h1>
+        <div className="card-container  pi-20 w-70 pb-45">
+          {exhibitions.map((exhibition, i) => (
+            <CardSwiper
+              key={exhibition.id}
+              exhibition={exhibition}
+              changeContent={changeContent}
+            />
+          ))}
         </div>
         {modalToggle && (
           <Modal

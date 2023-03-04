@@ -30,7 +30,7 @@ export const taichungVenues = [
   {
     id: 208,
     category: "art space",
-    venue: "清風MR. WING GALLERY",
+    venue: "MR. WING GALLERY",
     openDay: "234560",
     hostImgUrl: "",
     venueImgUrl: [

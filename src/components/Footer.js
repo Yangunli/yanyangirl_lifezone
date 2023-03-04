@@ -13,7 +13,7 @@ const Footer = () => {
             <Link
               className="footer__li"
               key={city.pathName}
-              to={city.link}
+              to={`/${city.pathName}`}
               aria-label={city.ariaLabel}
               onClick={scrollWin}
             >

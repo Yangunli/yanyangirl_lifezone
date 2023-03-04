@@ -12,11 +12,11 @@ const optionList = [
 
 const InfoLayout = () => {
   const { option } = useParams();
-  const cityObj = useOutletContext();
+  const { city } = useOutletContext();
   const venueORexhibition = optionList.find((pageEl) => pageEl.name == option);
   return (
     <>
-      <Outlet context={{ page: venueORexhibition.name, city: cityObj?.city }} />
+      <Outlet context={{ page: venueORexhibition.name, city: city }} />
       <Footer />
     </>
   );

@@ -1,0 +1,44 @@
+.loading {
+  position: fixed;
+  inset: 0;
+  z-index: 11;
+  pointer-events: none;
+  background-color: var(--milktea-bg);
+  display: grid;
+  place-items: center;
+}
+
+.progress-bar {
+  position: relative;
+  height: 2px;
+  width: 200px;
+  background-color: rgb(126, 60, 9);
+  border-radius: 25px;
+}
+
+.progress-fill {
+  position: absolute;
+  height: 2px;
+  width: 0%;
+  animation: progress-forward 2.5s infinite;
+  background-color: rgb(255, 207, 119);
+  border-radius: 15px;
+}
+
+@keyframes progress-forward {
+  0% {
+    width: 0%;
+  }
+  25% {
+    width: 50%;
+  }
+  50% {
+    width: 75%;
+  }
+  75% {
+    width: 85%;
+  }
+  100% {
+    width: 100%;
+  }
+} ;

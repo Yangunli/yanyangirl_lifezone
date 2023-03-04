@@ -24,6 +24,17 @@ export const tainanVenues = [
   //   link: "https://www.facebook.com/soka.tainan",
   // },
   {
+    id: 308,
+    category: "art space",
+    venue: "水色藝術工坊",
+    openDay: "4560",
+    hostImgUrl: "",
+    venueImgUrl: [
+      "https://firebasestorage.googleapis.com/v0/b/yanyangirl-lifezone.appspot.com/o/venue%2F%E6%B0%B4%E8%89%B2%2FR0023122.webp?alt=media&token=251e3aed-7849-4341-b8c0-79c66fdae0d0",
+      "https://firebasestorage.googleapis.com/v0/b/yanyangirl-lifezone.appspot.com/o/venue%2F%E6%B0%B4%E8%89%B2%2FR0023117.webp?alt=media&token=d1734e92-a05f-46a0-ae21-213c2149983d",
+    ],
+  },
+  {
     id: 307,
     category: "shop,art space",
     venue: "啊雜貨～あ雜貨～",
@@ -103,7 +114,7 @@ export const tainanVenues = [
     id: 302,
     category: "shop,art space",
     openDay: "34560",
-    venue: "陸角銀Sixpence Gallery",
+    venue: "陸角銀",
     hostImgUrl: "",
     venueImgUrl: [
       "https://firebasestorage.googleapis.com/v0/b/yanyangirl-lifezone.appspot.com/o/venue%2F%E9%99%B8%E8%A7%92%E9%8A%80%2FR0023267.webp?alt=media&token=390c0d07-13d1-438f-8cb4-dd404b659abc",

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useParams, useOutletContext } from "react-router-dom";
 import { taipeiVenues } from "../data/taipeiVenues";
 import { taichungVenues } from "../data/taichungVenue";
@@ -6,13 +6,15 @@ import { tainanVenues } from "../data/tainanVenues";
 import PageHeader from "../components/PageHeader";
 import { isOpenChecked, translateWeekday } from "../function/weekdayFilter";
 import { useModal } from "../hooks/useModal";
-import { collection, where, query, onSnapshot } from "firebase/firestore";
-import { db } from "../firebase";
 import Modal from "../components/Modal";
-import { usePath } from "../hooks/usePath";
+import { useExhibitonRefs } from "../hooks/useExhibitionRef";
+import Loading from "../components/Loading";
+import CardSwiper from "../components/Swiper/CardSwiper";
+import PageTransition from "../components/PageTransition";
 
 const VenueInfo = () => {
-  const [exhibitions, setExhibitions] = useState([]);
+  const [imgsLoaded, setImgsLoaded] = useState(false);
+
   const { Id } = useParams();
   const { city } = useOutletContext();
   const { modalContent, changeContent, modalToggle } = useModal();
@@ -25,24 +27,35 @@ const VenueInfo = () => {
   const venue = venues.find((venue) => venue.id == Id);
   const venueOpenArr = venue.openDay.split("");
   const isVenueOpen = isOpenChecked(venueOpenArr);
-  const exhibitionRef = collection(db, "exhibitions");
-  const { path } = usePath();
+  const exhibitions = useExhibitonRefs("venueLink");
+
   useEffect(() => {
-    const q = query(exhibitionRef, where("venueLink", "==", path));
-    const unsubscribe = onSnapshot(q, (querySnapshot) => {
-      let exhibitionArr = [];
-      querySnapshot.forEach((doc) => {
-        exhibitionArr.push({ ...doc.data() });
+    const loadImage = (url) => {
+      return new Promise((resolve, reject) => {
+        const loadImg = new Image();
+        loadImg.src = url;
+        // wait 2 seconds to simulate loading time
+        loadImg.onload = () =>
+          setTimeout(() => {
+            resolve(url);
+          }, 1000);
+        loadImg.onerror = (err) => reject(err);
       });
-      console.log(exhibitionArr);
-      setExhibitions(exhibitionArr);
-    });
-    return () => unsubscribe();
+    };
+
+    Promise.allSettled(
+      exhibitions.map((info) => info.imgUrl.map((url) => loadImage(url)))
+    )
+      .then(() => setImgsLoaded(true))
+      .catch((err) => console.log("Failed to load images", err));
+
+    // Function call
   }, []);
 
   return (
     <div className="main venue-bg">
       <PageHeader />
+      <PageTransition />
       <div className="pt-200 w-100 df">
         <img
           className="venue__img"
@@ -64,19 +77,33 @@ const VenueInfo = () => {
           </p>
         )}
       </div>
-      <div className="card-container pt-100 history">
-        {exhibitions.map((exhibition) =>
-          exhibition.imgUrl.map((url, i) => (
-            <img
-              key={url}
-              src={url}
-              alt=""
-              className="card"
-              onClick={() => {
-                changeContent([{ exhibition }, { index: i }]);
-              }}
-            />
-          ))
+
+      <div className="card-container pt-100  w-70 pb-45">
+        {imgsLoaded ? (
+          <>
+            {exhibitions.map(
+              (exhibition) => (
+                <CardSwiper
+                  key={exhibition.imgUrl[0]}
+                  exhibition={exhibition}
+                  changeContent={changeContent}
+                />
+              )
+
+              // <img
+              //   key={url}
+              //   src={url}
+              //   alt=""
+              //   className="card"
+              // onClick={() => {
+              //   changeContent([{ exhibition }, { index: i }]);
+              // }}
+              // />
+              // ))
+            )}
+          </>
+        ) : (
+          <h1>loading...</h1>
         )}
       </div>
       {modalToggle && (

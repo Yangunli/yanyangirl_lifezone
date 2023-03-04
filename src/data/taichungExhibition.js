@@ -1,5 +1,17 @@
 export const taichungExp = [
   {
+    id: 210,
+    name: "合成 裂縫",
+    artist: "黃仁傑",
+    time: "2023/03/04-2023/04/20",
+    openDay: "234560",
+    venue: "寬藝術空間",
+    location: "台中市西區向上路一段79巷38號",
+    TicketType: "免費",
+    src: "https://pic.pimg.tw/yangun410/1677153581-927250305-g_b.jpg",
+    link: "https://www.facebook.com/kuanartspace",
+  },
+  {
     id: 209,
     name: "手裡的伏流",
     artist: "王譽霖、周霽恩",

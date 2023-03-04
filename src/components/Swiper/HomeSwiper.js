@@ -5,11 +5,11 @@ import { Autoplay, Pagination } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import { useWindowResize } from "../hooks/useWindowResize";
-import { scrollWin } from "../function/group";
+import { useWindowResize } from "../../hooks/useWindowResize";
+import { scrollWin } from "../../function/group";
 const HomeSwiper = ({ cityList }) => {
   const [scrollHight, setScrollHight] = useState(window.screenY);
-  const { width, height } = useWindowResize();
+  const { width } = useWindowResize();
   useEffect(() => {
     window.addEventListener("scroll", () => {
       setScrollHight(window.scrollY);
@@ -25,34 +25,33 @@ const HomeSwiper = ({ cityList }) => {
       <Swiper
         slidesPerView={2}
         spaceBetween={20}
-        pagination={{
-          el: ".swiper-pagination",
-          type: "fraction",
-        }}
         loop={true}
         centeredSlides={true}
         modules={[Pagination, Autoplay]}
-        className="mySwiper"
+        className="homeSwiper"
         autoplay={{ delay: 3000 }}
         simulateTouch={false}
-        preloadImages={false}
+        preloadImages={true}
         // Enable lazy loading
         lazy={true}
       >
         {cityList.map((city) => (
           <SwiperSlide key={city.name}>
             <Link to={city.name} aria-label={city.alt} onClick={scrollWin}>
-              <img src={city.img} alt="" />
-              {/* <p className="desc">{city.desc}</p> */}
+              <img src={city.src} alt="" />
             </Link>
           </SwiperSlide>
         ))}
       </Swiper>
       {width > 1000 && scrollHight <= 450 && (
-        <img className="home__img" src="images/clickColorPng.png" alt="" />
+        <img className="home__clickImg" src="images/clickColorPng.png" alt="" />
       )}
       {width > 1000 && scrollHight > 450 && (
-        <img className="home__img2" src="images/clickColorPng.png" alt="" />
+        <img
+          className="home__clickImg2"
+          src="images/clickColorPng.png"
+          alt=""
+        />
       )}
     </div>
   );

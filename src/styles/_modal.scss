@@ -5,20 +5,22 @@
   inset: 0;
   z-index: 6;
   background-color: rgba(43, 25, 6, 0.3);
+
+  backdrop-filter: opacity(20%);
   transition: all 0.2s ease-in-out;
 }
 
 .modal-body {
   position: relative;
-  width: min(90%, 500px);
-  aspect-ratio: 1;
-  background-color: rgb(230, 201, 147);
+  width: min(90%, 400px);
+
+  background-color: rgb(219, 203, 174);
   border: 3px solid hsl(35, 11%, 22%);
   display: flex;
   flex-direction: column;
   gap: 10px;
   border-radius: 20px;
-  padding: 20px 40px;
+  // padding: 20px 40px;
   overflow: hidden;
   animation: modalMoveIn 0.6s linear forwards;
 }
@@ -51,27 +53,58 @@
 @keyframes modalMoveIn {
   0% {
     scale: 0;
-    transform: translateY(100vh);
+    transform: translate3d(0, 100vh, 0);
   }
   80% {
     scale: 1;
-    transform: translateY(-10%);
+    transform: translate3d(0, -10%, 0);
   }
   90% {
-    transform: translateY(15%);
+    transform: translate3d(0, 15%, 0);
   }
   100% {
-    transform: translateY(5%);
+    transform: translate3d(0, 5%, 0);
   }
 }
 
 @keyframes modalMoveOut {
   0% {
     scale: 1;
-    transform: translateX(0);
+    transform: translate3d(0, 0, 0);
   }
   100% {
     scale: 0;
-    transform: translateX(-100vw);
+    transform: translate3d(-100vw, 0, 0);
   }
+}
+
+.modal__img {
+  width: 100%;
+  aspect-ratio: 1;
+
+  img {
+    width: 100%;
+    height: 100%;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+.modal__desc {
+  width: 100%;
+  padding-inline: 20px;
+  padding-block: 10px;
+}
+
+.modal__tags {
+  display: flex;
+  gap: 5px;
+}
+
+.modal__tag {
+  padding: 3px 10px;
+  border-radius: 20px;
+  border: 1px solid hsl(35, 11%, 22%);
 }

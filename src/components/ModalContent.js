@@ -3,10 +3,23 @@ import { TextSpinner } from "./SvgComponents";
 import { usePath } from "../hooks/usePath";
 import { Link } from "react-router-dom";
 import { scrollWin } from "../function/group";
+import ModalSwiper from "./Swiper/ModalSwiper";
 const ModalContent = ({ info }, ref) => {
-  const { isArtistInfo, isVenueInfo } = usePath();
+  const { isArtistInfo, isVenueInfo, pathArr } = usePath();
   const infoData = info[0] ? info[0].exhibition : info;
-  const imgIndex = info[1] ? info[1].index : undefined;
+
+  const { id, startDate } = info;
+  const whichYear = startDate ? startDate.split("/")[0] : undefined;
+  const cityId = id.length >= 4 ? id.slice(0, 3) : undefined;
+  const whichCity = cityId
+    ? cityId == "TPE"
+      ? "TAIPEI"
+      : cityId == "TXG"
+      ? "TAICHUNG"
+      : cityId == "TNN"
+      ? "TAINAN"
+      : "OTHER"
+    : undefined;
 
   return (
     <section
@@ -17,27 +30,46 @@ const ModalContent = ({ info }, ref) => {
       <div className="spinner">
         <TextSpinner />
       </div>
+      {!isArtistInfo && !isVenueInfo && (
+        <>
+          <h1 className="modal-title">{infoData.name || infoData.title}</h1>
 
-      <h1 className="modal-title">{infoData.name || infoData.title}</h1>
+          <dl>
+            <dt>Artist</dt>
+            <dd>{infoData.artist}</dd>
+          </dl>
+          <dl>
+            <dt>Venue</dt>
+            <dd>{infoData.venue}</dd>
+          </dl>
+        </>
+      )}
 
-      <dl>
-        <dt>Artist</dt>
-        <dd>{infoData.artist}</dd>
-      </dl>
-      <dl>
-        <dt>Venue</dt>
-        <dd>{infoData.venue}</dd>
-      </dl>
-      {isArtistInfo && infoData.venueLink && (
-        <Link to={infoData.venueLink} onClick={scrollWin}>
-          看空間的展覽照片
-        </Link>
-      )}
-      {isVenueInfo && infoData.artistLink && (
-        <Link to={infoData.artistLink} onClick={scrollWin}>
-          看藝術家更多作品
-        </Link>
-      )}
+      {isArtistInfo || isVenueInfo ? (
+        <>
+          <div className="modal__img">
+            <ModalSwiper imgArr={info.imgUrl} />
+          </div>
+          <article className="modal__desc">
+            <h4> {info.title} </h4>
+            <div className="modal__tags">
+              <p className="modal__tag">
+                {isArtistInfo
+                  ? whichCity
+                  : info.brand
+                  ? info.brand
+                  : info.artist}
+              </p>
+              <p className="modal__tag"> {whichYear} </p>
+            </div>
+            <p> {info.brand || info.artist} </p>
+            <p>{info.venue}</p>
+            <p>
+              {info.startDate} {info.endDate ? `-${info.endDate}` : null}{" "}
+            </p>
+          </article>
+        </>
+      ) : null}
     </section>
   );
 };

@@ -11,13 +11,16 @@ import Modal from "../components/Modal";
 import { isOpenChecked } from "../function/weekdayFilter";
 import { scrollWin } from "../function/group";
 import { useModal } from "../hooks/useModal";
+import { usePromise } from "../hooks/usePromise";
+import Loading from "../components/Loading";
+import { useWindowResize } from "../hooks/useWindowResize";
+import PageTransition from "../components/PageTransition";
 const CityInfoGroup = () => {
   const [currentTab, setCurrentTab] = useState("current");
   const [views, setViews] = useState([]);
   const { modalContent, modalToggle, changeContent } = useModal();
   const { city, page } = useOutletContext();
-  const [imgsLoaded, setImgsLoaded] = useState(false);
-
+  const { width } = useWindowResize();
   const getExhibiotnInfo = async () => {
     if (city == "taipei") {
       await import("../data/taipeiExhibition").then(({ taipeiExp }) => {
@@ -44,36 +47,10 @@ const CityInfoGroup = () => {
       : city == "taichung"
       ? taichungVenues
       : tainanVenues;
-
+  const { imgsLoaded } = usePromise(page == "venue" ? venues : views);
   useEffect(() => {
     getExhibiotnInfo();
-  }, [views]);
-
-  useEffect(() => {
-    const loadImage = (image) => {
-      return new Promise((resolve, reject) => {
-        const loadImg = new Image();
-        loadImg.src = image.venueImgUrl[0] ? image.venueImgUrl[0] : image.src;
-        // wait 2 seconds to simulate loading time
-        loadImg.onload = () =>
-          setTimeout(() => {
-            resolve(image.venueImgUrl[0] ? image.venueImgUrl[0] : image.src);
-          }, 2000);
-
-        loadImg.onerror = (err) => reject(err);
-      });
-    };
-    if (page == "exhibition") {
-      Promise.all(views.map((image) => loadImage(image)))
-        .then(() => setImgsLoaded(true))
-        .catch((err) => console.log("Failed to load images", err));
-    } else {
-      Promise.all(venues.map((image) => loadImage(image)))
-        .then(() => setImgsLoaded(true))
-        .catch((err) => console.log("Failed to load images", err));
-    }
   }, []);
-
   return (
     <div
       className={classNames(
@@ -82,7 +59,16 @@ const CityInfoGroup = () => {
       )}
     >
       <PageHeader />
-      <div className="card-container pt-200 ">
+      {imgsLoaded && <PageTransition />}
+      <div
+        className={classNames(
+          imgsLoaded ? "card-container" : "",
+          width < 450 ? "w-60" : "",
+          "pt-200",
+          "pb-45",
+          "pi-20"
+        )}
+      >
         {page == "exhibition" && (
           <>
             <button
@@ -112,41 +98,41 @@ const CityInfoGroup = () => {
           </>
         )}
 
-        {page == "exhibition" ? (
-          imgsLoaded ? (
-            viewsAfterFilter.map((view) => (
-              <SingleContent
-                classNames={classNames}
-                isOpenChecked={isOpenChecked}
-                exhibition={view}
-                key={view.id}
-                changeContent={changeContent}
-              />
-            ))
-          ) : (
-            <h1>Loading images...</h1>
-          )
-        ) : imgsLoaded ? (
-          venues.map((view) => (
-            <Link
-              to={`${view.id}`}
-              key={view.id}
-              onClick={scrollWin}
-              className={classNames(
-                isOpenChecked(view.openDay.split("")) ? "" : "closedFilter",
-                "card"
-              )}
-            >
-              <img
-                className="card__img"
-                src={view?.venueImgUrl[0]}
-                alt={view.venue}
-              />
-              <h2> {view.venue} </h2>
-            </Link>
-          ))
+        {imgsLoaded ? (
+          <>
+            {page == "exhibition"
+              ? viewsAfterFilter.map((view) => (
+                  <SingleContent
+                    classNames={classNames}
+                    isOpenChecked={isOpenChecked}
+                    exhibition={view}
+                    key={view.id}
+                    changeContent={changeContent}
+                  />
+                ))
+              : venues.map((view) => (
+                  <Link
+                    to={`${view.id}`}
+                    key={view.id}
+                    onClick={scrollWin}
+                    className={classNames(
+                      isOpenChecked(view.openDay.split(""))
+                        ? ""
+                        : "closedFilter",
+                      "card"
+                    )}
+                  >
+                    <img
+                      className="card__img"
+                      src={view?.venueImgUrl[0]}
+                      alt={view.venue}
+                    />
+                    <h2> {view.venue} </h2>
+                  </Link>
+                ))}
+          </>
         ) : (
-          <h1>Loading images...</h1>
+          <Loading />
         )}
         {page == "exhibition" && modalToggle && (
           <Modal
