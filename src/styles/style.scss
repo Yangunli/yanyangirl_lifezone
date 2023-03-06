@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Zen+Antique&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -11,6 +10,8 @@
   --matcha-bg: hsl(62, 20%, 59%);
   --milktea-bg: hsl(39, 28%, 76%);
   --p: 15px;
+  --color-background: #000000;
+  --color-text: #ffffff;
 }
 
 #root {

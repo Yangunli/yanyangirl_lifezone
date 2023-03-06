@@ -6,12 +6,12 @@ export const usePromise = (infos) => {
     const loadImage = (image) => {
       return new Promise((resolve, reject) => {
         const loadImg = new Image();
-        loadImg.src = image.venueImgUrl[0] ? image.venueImgUrl[0] : image?.src;
+        loadImg.src = image.venueImgUrl[0] ? image.venueImgUrl[0] : image.src;
         // wait 2 seconds to simulate loading time
         loadImg.onload = () =>
           setTimeout(() => {
-            resolve(image.venueImgUrl[0] ? image.venueImgUrl[0] : image?.src);
-          }, 2000);
+            resolve(image.venueImgUrl[0] ? image.venueImgUrl[0] : image.src);
+          }, 1000);
         loadImg.onerror = (err) => reject(err);
       });
     };

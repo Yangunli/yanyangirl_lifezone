@@ -9,12 +9,14 @@ import { exhibitionList } from "../data/exhibitionList";
 import { usePath } from "../hooks/usePath";
 import CardSwiper from "../components/Swiper/CardSwiper";
 import PageTransition from "../components/PageTransition";
+import { useWindowResize } from "../hooks/useWindowResize";
 const ArtistInfo = () => {
   // const { path } = usePath();
   const { Id } = useParams();
   const exhibitions = useExhibitonRefs("artistLink");
   const { changeContent, modalContent, modalToggle } = useModal();
   const artist = artists.find((artist) => artist.id == Id);
+  const { width, height } = useWindowResize();
   // const exhibitions = exhibitionList.filter(
   //   (exhibition) => exhibition.artistLink == path
   // );
@@ -23,8 +25,14 @@ const ArtistInfo = () => {
       <PageHeader />
       <PageTransition />
       <div className="pt-200 main ">
-        <h1 className="pb-45">{artist.brand || artist.artist}</h1>
-        <div className="card-container  pi-20 w-70 pb-45">
+        <h1 className="pb-45 artist__name">{artist.brand || artist.artist}</h1>
+        {width >= 450 && height >= 400 && exhibitions.length <= 2 && (
+          <img className="artist__empty" src="../images/reading.svg" alt="" />
+        )}
+        {width >= 1200 && height >= 400 && exhibitions.length <= 3 && (
+          <img className="artist__empty" src="../images/reading.svg" alt="" />
+        )}
+        <div className="card-container  pi-20 w-60 pb-45">
           {exhibitions.map((exhibition, i) => (
             <CardSwiper
               key={exhibition.id}

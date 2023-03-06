@@ -1,20 +1,20 @@
 export const taichungVenues = [
-  {
-    id: 209,
-    category: "shop",
-    venue: "美好工作室",
-    openDay: "234560",
-    hostImgUrl: "",
+  // {
+  //   id: 209,
+  //   category: "shop",
+  //   venue: "美好工作室",
+  //   openDay: "234560",
+  //   hostImgUrl: "",
 
-    venueImgUrl: [
-      "https://firebasestorage.googleapis.com/v0/b/yanyangirl-lifezone.appspot.com/o/venue%2Fmeiho%2FR0014221.webp?alt=media&token=94a029f3-5f0c-4997-aa35-c5d5f03bdfae",
-    ],
+  //   venueImgUrl: [
+  //     "https://firebasestorage.googleapis.com/v0/b/yanyangirl-lifezone.appspot.com/o/venue%2Fmeiho%2FR0014221.webp?alt=media&token=94a029f3-5f0c-4997-aa35-c5d5f03bdfae",
+  //   ],
 
-    city: "taichung",
-    location: "臺中市中區民族路208號1樓",
-    desc: "",
-    link: "https://www.facebook.com/MeiHoStudio/",
-  },
+  //   city: "taichung",
+  //   location: "臺中市中區民族路208號1樓",
+  //   desc: "",
+  //   link: "https://www.facebook.com/MeiHoStudio/",
+  // },
   // {
   //   id: ,
   //   category: "shop,art space",
@@ -35,6 +35,9 @@ export const taichungVenues = [
     hostImgUrl: "",
     venueImgUrl: [
       "https://firebasestorage.googleapis.com/v0/b/yanyangirl-lifezone.appspot.com/o/venue%2F%E6%B8%85%E9%A2%A8%2FR0023438.webp?alt=media&token=310e9ffe-bd54-49f2-bb54-3708155de6fc",
+      "https://firebasestorage.googleapis.com/v0/b/yanyangirl-lifezone.appspot.com/o/venue%2F%E6%B8%85%E9%A2%A8%2FR0023495.webp?alt=media&token=30767aad-0553-44c7-9b52-180f80226864",
+      "https://firebasestorage.googleapis.com/v0/b/yanyangirl-lifezone.appspot.com/o/venue%2F%E6%B8%85%E9%A2%A8%2FR0023490.webp?alt=media&token=78200ec0-20ff-4e4b-81dc-a93448257481",
+      "https://firebasestorage.googleapis.com/v0/b/yanyangirl-lifezone.appspot.com/o/venue%2F%E6%B8%85%E9%A2%A8%2FR0023522.webp?alt=media&token=f15dbd2a-271e-47aa-8a3a-0b070bf04673",
     ],
     city: "taichung",
     location: "臺中市西屯區市政北二路324號",
@@ -49,6 +52,9 @@ export const taichungVenues = [
     hostImgUrl: "",
     venueImgUrl: [
       "https://firebasestorage.googleapis.com/v0/b/yanyangirl-lifezone.appspot.com/o/venue%2F%E6%9C%88%E8%87%A8%E7%95%AB%E5%BB%8A%2FR0023536.webp?alt=media&token=acae43de-75c9-4c67-b403-67213bbc49d7",
+      "https://firebasestorage.googleapis.com/v0/b/yanyangirl-lifezone.appspot.com/o/venue%2F%E6%9C%88%E8%87%A8%E7%95%AB%E5%BB%8A%2FR0022089.webp?alt=media&token=1fc37122-086e-41a9-b493-3f778bea40e5",
+      "https://firebasestorage.googleapis.com/v0/b/yanyangirl-lifezone.appspot.com/o/venue%2F%E6%9C%88%E8%87%A8%E7%95%AB%E5%BB%8A%2F6915_n.webp?alt=media&token=9ac2f4f2-7029-406f-96f1-197906bc38e6",
+      "https://firebasestorage.googleapis.com/v0/b/yanyangirl-lifezone.appspot.com/o/venue%2F%E6%9C%88%E8%87%A8%E7%95%AB%E5%BB%8A%2FR0022096.webp?alt=media&token=a6b8df60-f8cb-4b08-9fa7-110411e63c23",
     ],
     city: "taichung",
     location: "臺中市西區英才路589巷6號",
@@ -63,6 +69,9 @@ export const taichungVenues = [
     hostImgUrl: "",
     venueImgUrl: [
       "https://firebasestorage.googleapis.com/v0/b/yanyangirl-lifezone.appspot.com/o/venue%2F%E6%B8%9B%E8%B2%BC%2FR0006736.webp?alt=media&token=e3bed2ac-a163-4efc-86bb-6f7f1d8bcc01",
+      "https://firebasestorage.googleapis.com/v0/b/yanyangirl-lifezone.appspot.com/o/venue%2F%E6%B8%9B%E8%B2%BC%2FR0015544.webp?alt=media&token=ff44c059-3e1a-4b9d-8cad-a9384615dfed",
+      "https://firebasestorage.googleapis.com/v0/b/yanyangirl-lifezone.appspot.com/o/venue%2F%E6%B8%9B%E8%B2%BC%2FDSC02653.webp?alt=media&token=c3014338-52d5-4a26-b6a7-e697824e8522",
+      "https://firebasestorage.googleapis.com/v0/b/yanyangirl-lifezone.appspot.com/o/venue%2F%E6%B8%9B%E8%B2%BC%2FDSC06717.webp?alt=media&token=a38e8145-b266-4f70-b2c4-cf165f88f36f",
     ],
     city: "taichung",
     location: "臺中市西區向上路一段79巷66弄15號",
@@ -107,6 +116,9 @@ export const taichungVenues = [
     hostImgUrl: "",
     venueImgUrl: [
       "https://firebasestorage.googleapis.com/v0/b/yanyangirl-lifezone.appspot.com/o/venue%2Fgreenray.marute%2FR0005513.webp?alt=media&token=49840671-2bea-45aa-ab97-8ec8a9d0cf74",
+      "https://firebasestorage.googleapis.com/v0/b/yanyangirl-lifezone.appspot.com/o/venue%2Fgreenray.marute%2F8287_n.webp?alt=media&token=b133d8dc-818c-400c-ac53-158acceda47e",
+      "https://firebasestorage.googleapis.com/v0/b/yanyangirl-lifezone.appspot.com/o/venue%2Fgreenray.marute%2FR0002461.webp?alt=media&token=67f753d9-91b8-42c0-b0d8-ea383820b7fa",
+      "https://firebasestorage.googleapis.com/v0/b/yanyangirl-lifezone.appspot.com/o/venue%2Fgreenray.marute%2FR0005515.webp?alt=media&token=38f338c3-65c1-4ef5-8b52-10395582473b",
     ],
     city: "taichung",
     location: "台中市西區中興一巷2號",
@@ -122,6 +134,8 @@ export const taichungVenues = [
     venueImgUrl: [
       "https://firebasestorage.googleapis.com/v0/b/yanyangirl-lifezone.appspot.com/o/venue%2F%E5%B0%8F%E8%B7%AF%E6%98%A0%E7%94%BB%2F3632_n.webp?alt=media&token=5726fe11-26be-4754-93d1-c2aee92a4eb4",
       "https://firebasestorage.googleapis.com/v0/b/yanyangirl-lifezone.appspot.com/o/venue%2F%E5%B0%8F%E8%B7%AF%E6%98%A0%E7%94%BB%2FR0023673.webp?alt=media&token=0acb22c8-d652-484f-a4e7-e9cbf28e5a90",
+      "https://firebasestorage.googleapis.com/v0/b/yanyangirl-lifezone.appspot.com/o/venue%2F%E5%B0%8F%E8%B7%AF%E6%98%A0%E7%94%BB%2FR0010955.webp?alt=media&token=cc278744-0c9c-4ae1-8b66-ccfccff1f5d3",
+      "https://firebasestorage.googleapis.com/v0/b/yanyangirl-lifezone.appspot.com/o/venue%2F%E5%B0%8F%E8%B7%AF%E6%98%A0%E7%94%BB%2FR0023677.webp?alt=media&token=5dd1d488-f9f7-46cc-934c-e1b3db8846c3",
     ],
     city: "taichung",
     location: "台中市西區五權五街94巷36號",

@@ -41,19 +41,19 @@
 }
 
 :where(:nth-child(4n + 1), :nth-child(4n + 2)).card {
-  animation: LTR 0.5s linear;
+  animation: LTR 0.3s linear;
 }
 
 :where(:nth-child(4n + 3), :nth-child(4n)).card {
-  animation: RTL 0.5s linear;
+  animation: RTL 0.3s linear;
 }
 
 @keyframes LTR {
   0% {
-    transform: translate3d(-300px, -200px, 0) scale(1.2);
+    transform: translate(-300px, -200px) scale(1.2);
   }
   100% {
-    transform: translate3d(0, 0, 0);
+    transform: translate(0, 0);
   }
 }
 
@@ -62,6 +62,6 @@
     transform: translate3d(300px, 200px, 0) scale(1);
   }
   100% {
-    transform: translate3d(0, 0, 0);
+    transform: translate(0, 0);
   }
 }

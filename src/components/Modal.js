@@ -15,7 +15,11 @@ const Modal = ({ changeContent, modalContent }) => {
     <div
       ref={modalContainerRef}
       className={classNames(
-        pathArr.includes("artist" || "venue") ? "twillBg" : "",
+        pathArr.includes("artist")
+          ? "twillBg"
+          : pathArr.includes("venue")
+          ? "twillBg"
+          : "",
         "modal-container"
       )}
       onClick={() => {

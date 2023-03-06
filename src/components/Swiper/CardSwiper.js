@@ -41,7 +41,12 @@ const CardSwiper = ({ exhibition, changeContent }) => {
       <article className="cardSwiper__article">
         <p>
           <span className="artcle__tag">
-            #{pathArr.includes("artist") ? city : exhibition.artist}
+            #
+            {pathArr.includes("artist")
+              ? city
+              : exhibition.brand
+              ? exhibition.brand
+              : exhibition.artist}
           </span>
           <span className="artcle__tag">#{exhibitedYear}</span>
         </p>

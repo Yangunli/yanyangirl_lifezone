@@ -118,3 +118,9 @@
     hsl(26, 30%, 55%) 15px
   );
 }
+
+.strokeText {
+  color: transparent;
+  -webkit-text-stroke: 1px var(--lightBg-text);
+  user-select: none;
+}

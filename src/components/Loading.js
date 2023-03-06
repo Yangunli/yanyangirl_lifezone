@@ -3,8 +3,8 @@ import React from "react";
 const Loading = () => {
   return (
     <div className="loading">
-      <div class="progress-bar">
-        <div class="progress-fill"></div>
+      <div className="progress-bar">
+        <div className="progress-fill"></div>
       </div>
     </div>
   );

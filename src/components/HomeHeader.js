@@ -12,7 +12,7 @@ const HomeHeader = () => {
   const scrollDirection = useScrollNavDisplay();
   return (
     <>
-      <button onClick={changeMenu} ariaLabel="menu button">
+      <button onClick={changeMenu} aria-label="menu button">
         <MenuSvg1 />
       </button>
       {menuToggle ? <Menu changeMenu={changeMenu} /> : null}
@@ -30,7 +30,7 @@ const HomeHeader = () => {
                 className="nav__link"
                 key={pathName}
                 to={pathName.toLowerCase() == "home" ? "/" : `/${pathName}`}
-                ariaLabel={ariaLabel}
+                aria-label={ariaLabel}
                 onClick={scrollWin}
               >
                 {pathName}

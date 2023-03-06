@@ -100,7 +100,7 @@ export const taipeiVenues = [
     ],
     city: "taipei",
     location: "臺北市大安區樂利路72巷15號2樓",
-    desc: "",
+    desc: "與茶香和展覽相遇之所在",
     link: "https://www.facebook.com/LiquideAmbre",
   },
 
@@ -143,6 +143,7 @@ export const taipeiVenues = [
     hostImgUrl: "",
     venueImgUrl: [
       "https://firebasestorage.googleapis.com/v0/b/yanyangirl-lifezone.appspot.com/o/venue%2F%E8%88%8A%E9%A6%99%E5%B1%85%2FR0022204.webp?alt=media&token=e3961c9a-3615-4639-a4c7-6ce59d023f46",
+      "https://firebasestorage.googleapis.com/v0/b/yanyangirl-lifezone.appspot.com/o/venue%2F%E8%88%8A%E9%A6%99%E5%B1%85%2FR0014126.webp?alt=media&token=dc3690c3-3986-46c1-9bd1-a9f1345954b5",
     ],
     city: "taipei",
     location: "臺北市師大路117巷6號1樓",
@@ -188,7 +189,7 @@ export const taipeiVenues = [
     ],
     city: "taipei",
     location: "臺北市信義區忠孝東路四段553巷46弄15號1 樓",
-    desc: "",
+    desc: "與茶香和展覽相遇之所在",
     link: "https://www.hermits-hut.com/",
   },
   {

@@ -1,36 +1,79 @@
-.artist-container {
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  color: var(--lightBg-text);
-  padding-top: 120px;
-  gap: 2px;
+.artist__filters {
+  padding-top: calc(60px + 10vh);
+  padding-bottom: 50px;
+  flex-wrap: wrap;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  width: min(80%, 500px);
+  cursor: pointer;
 }
 
-.artist {
-  aspect-ratio: 1;
-  display: grid;
-
-  place-items: center;
-  background-color: rgb(183, 174, 155);
-  opacity: 0.8;
+.artist__filter {
+  padding: 3px 10px;
   border-radius: 20px;
-  // &:nth-child(4n + 1) {
-  //   background-color: #bb9fab;
-  // }
-  // &:nth-child(4n + 2) {
-  //   background-color: #91adb3;
-  // }
-  // &:nth-child(4n + 3) {
-  //   background-color: #bfb79e;
-  // }
-
-  img {
-    grid-column: 1;
-    grid-row: 1;
+  border: 1px solid;
+  &:hover,
+  &--active {
+    background-color: rgb(54, 29, 3);
+    color: var(--milktea-bg);
   }
-  h2 {
-    grid-column: 1;
-    grid-row: 1;
+}
+
+.artist__name {
+  position: fixed;
+  right: -15px;
+  top: 40%;
+  letter-spacing: 5vh;
+  font-size: 30px;
+  font-family: fantasy;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--lightBg-text);
+  user-select: none;
+  writing-mode: vertical-rl;
+  transition: transform 0.5s ease-in-out;
+  &:hover {
+    transform: translate3d(-20px, 0, 0);
+  }
+}
+
+.artist__empty {
+  position: absolute;
+  width: 200px;
+  bottom: 0;
+  right: 50px;
+}
+
+@media screen and (min-width: 800px) and (min-height: 450px) {
+  .artist__empty {
+    top: 450px;
+    right: 50px;
+    width: 400px;
+
+    // width: calc(100% / 3 - 100px);
+  }
+  .artist__filters {
+    padding-top: calc(30px + 10vh);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .artist__empty {
+    width: 300px;
+    right: 100px;
+    transform: translate3d(0, -25%, 0);
+  }
+}
+
+@media screen and (min-width: 1000px) and (max-height: 700px) {
+  .artist__empty {
+    width: 150px;
+    right: 20px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .artist__filters {
+    padding-top: calc(120px + 10vh);
   }
 }

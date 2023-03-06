@@ -11,10 +11,10 @@ import { useExhibitonRefs } from "../hooks/useExhibitionRef";
 import Loading from "../components/Loading";
 import CardSwiper from "../components/Swiper/CardSwiper";
 import PageTransition from "../components/PageTransition";
-
+import { useWindowResize } from "../hooks/useWindowResize";
 const VenueInfo = () => {
   const [imgsLoaded, setImgsLoaded] = useState(false);
-
+  const { width } = useWindowResize();
   const { Id } = useParams();
   const { city } = useOutletContext();
   const { modalContent, changeContent, modalToggle } = useModal();
@@ -24,7 +24,9 @@ const VenueInfo = () => {
       : city === "taichung"
       ? taichungVenues
       : tainanVenues;
+
   const venue = venues.find((venue) => venue.id == Id);
+  const desc = venue.desc ? venue.desc : "走進展覽以及美好的所在";
   const venueOpenArr = venue.openDay.split("");
   const isVenueOpen = isOpenChecked(venueOpenArr);
   const exhibitions = useExhibitonRefs("venueLink");
@@ -56,51 +58,42 @@ const VenueInfo = () => {
     <div className="main venue-bg">
       <PageHeader />
       <PageTransition />
-      <div className="pt-200 w-100 df">
-        <img
-          className="venue__img"
-          src={venue.hostImgUrl ? venue.hostImgUrl : venue.venueImgUrl[0]}
-          alt={venue.venue}
-        />
-        <h1>{venue.venue}</h1>
-        <h3>
-          {isVenueOpen
-            ? isVenueOpen == "?"
-              ? "不定休"
-              : "今日有開"
-            : "今日公休"}
-        </h3>
-        {isVenueOpen != "?" && (
-          <p>
-            營業日: {translateWeekday(venueOpenArr.at(0))}-
-            {translateWeekday(venueOpenArr.at(-1))}
-          </p>
-        )}
+      <div className="pt-200 w-100 df venueInfo  h-100">
+        <div className="venue__imgContainer">
+          <img
+            className="venue__img"
+            src={venue.hostImgUrl ? venue.venueImgUrl[1] : venue.venueImgUrl[0]}
+            alt={venue.venue}
+          />
+        </div>
+
+        <section className="venue__desc">
+          <h1>{desc}</h1>
+          <h2 className="venue__desc__title">{venue.venue}</h2>
+
+          {isVenueOpen != "?" ? (
+            <p>
+              營業日: {translateWeekday(venueOpenArr.at(0))}-
+              {translateWeekday(venueOpenArr.at(-1))}
+            </p>
+          ) : (
+            <p>不定休</p>
+          )}
+          <small>{venue.location}</small>
+          {width >= 600 && <img src="/images/walking.png" alt="" />}
+        </section>
       </div>
 
-      <div className="card-container pt-100  w-70 pb-45">
+      <div className="card-container pt-100  w-60 pb-45">
         {imgsLoaded ? (
           <>
-            {exhibitions.map(
-              (exhibition) => (
-                <CardSwiper
-                  key={exhibition.imgUrl[0]}
-                  exhibition={exhibition}
-                  changeContent={changeContent}
-                />
-              )
-
-              // <img
-              //   key={url}
-              //   src={url}
-              //   alt=""
-              //   className="card"
-              // onClick={() => {
-              //   changeContent([{ exhibition }, { index: i }]);
-              // }}
-              // />
-              // ))
-            )}
+            {exhibitions.map((exhibition) => (
+              <CardSwiper
+                key={exhibition.imgUrl[0]}
+                exhibition={exhibition}
+                changeContent={changeContent}
+              />
+            ))}
           </>
         ) : (
           <h1>loading...</h1>
