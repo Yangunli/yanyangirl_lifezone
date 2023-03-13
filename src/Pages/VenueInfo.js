@@ -12,6 +12,7 @@ import Loading from "../components/Loading";
 import CardSwiper from "../components/Swiper/CardSwiper";
 import PageTransition from "../components/PageTransition";
 import { useWindowResize } from "../hooks/useWindowResize";
+
 const VenueInfo = () => {
   const [imgsLoaded, setImgsLoaded] = useState(false);
   const { width } = useWindowResize();
@@ -52,13 +53,13 @@ const VenueInfo = () => {
       .catch((err) => console.log("Failed to load images", err));
 
     // Function call
-  }, []);
+  }, [exhibitions]);
 
   return (
     <div className="main venue-bg">
       <PageHeader />
-      <PageTransition />
-      <div className="pt-200 w-100 df venueInfo  h-100">
+      {imgsLoaded && <PageTransition />}
+      <div className="pt-200 w-100  venueInfo  h-100">
         <div className="venue__imgContainer">
           <img
             className="venue__img"
@@ -96,7 +97,7 @@ const VenueInfo = () => {
             ))}
           </>
         ) : (
-          <h1>loading...</h1>
+          <Loading />
         )}
       </div>
       {modalToggle && (

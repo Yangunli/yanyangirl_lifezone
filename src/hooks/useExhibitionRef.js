@@ -25,7 +25,6 @@ export const useExhibitonRefs = (linkName) => {
         exhibitionArr.push({ ...doc.data(), id: doc.id });
       });
       setExhibitions(exhibitionArr);
-      console.log(exhibitions);
     });
     return () => unsubscribe();
   }, []);

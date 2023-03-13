@@ -7,12 +7,11 @@ import classNames from "../function/classNames";
 import PageTransition from "../components/PageTransition";
 import Loading from "../components/Loading";
 import { useWindowResize } from "../hooks/useWindowResize";
-import Footer from "../components/Footer";
 const ArtistPage = () => {
   const [imgsLoaded, setImgsLoaded] = useState(false);
   const [categoryFilter, setCategoryFilter] = useState("all");
   const { width } = useWindowResize();
-  const filterArtistList =
+  const artistsAfterFilter =
     categoryFilter == "all"
       ? artists
       : artists.filter((artist) => artist.category.includes(categoryFilter));
@@ -40,11 +39,11 @@ const ArtistPage = () => {
   return (
     <>
       <PageHeader />
-      <PageTransition />
+      {imgsLoaded && <PageTransition />}
       <div className="artist__filters">
         <p
           className={classNames(
-            categoryFilter == "home" ? "artist__filter--active" : "",
+            categoryFilter == "all" ? "artist__filter--active" : "",
             "artist__filter"
           )}
           onClick={() => {
@@ -55,6 +54,7 @@ const ArtistPage = () => {
         </p>
         {kwList.map((kw) => (
           <p
+            key={kw}
             className={classNames(
               categoryFilter == kw ? "artist__filter--active" : "",
               "artist__filter"
@@ -76,7 +76,7 @@ const ArtistPage = () => {
         )}
       >
         {imgsLoaded ? (
-          filterArtistList.map(({ brand, id, artist, imgUrl }) => (
+          artistsAfterFilter.map(({ brand, id, artist, imgUrl }) => (
             <Link to={`${id}`} key={id} className="card">
               <img src={imgUrl} alt="" className="card__img" />
               <h2>{brand || artist}</h2>

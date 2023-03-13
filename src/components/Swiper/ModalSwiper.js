@@ -25,8 +25,8 @@ const ModalSwiper = ({ imgArr }) => {
       modules={[EffectCreative, Autoplay]}
     >
       {imgArr.map((url) => (
-        <SwiperSlide>
-          <img src={url} alt="" />
+        <SwiperSlide key={url}>
+          <img src={url} alt={url} />
         </SwiperSlide>
       ))}
     </Swiper>

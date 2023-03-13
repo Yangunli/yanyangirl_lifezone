@@ -3,15 +3,15 @@ import { useEffect, useState } from "react";
 export const usePromise = (infos) => {
   const [imgsLoaded, setImgsLoaded] = useState(false);
   useEffect(() => {
-    const loadImage = (image) => {
+    const loadImage = (info) => {
       return new Promise((resolve, reject) => {
         const loadImg = new Image();
-        loadImg.src = image.venueImgUrl[0] ? image.venueImgUrl[0] : image.src;
+        loadImg.src = info.venueImgUrl[0] ? info.venueImgUrl[0] : info.src;
         // wait 2 seconds to simulate loading time
         loadImg.onload = () =>
           setTimeout(() => {
-            resolve(image.venueImgUrl[0] ? image.venueImgUrl[0] : image.src);
-          }, 1000);
+            resolve(info.venueImgUrl[0] ? info.venueImgUrl[0] : info.src);
+          }, 800);
         loadImg.onerror = (err) => reject(err);
       });
     };

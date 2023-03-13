@@ -10,7 +10,7 @@
 
 .progress-bar {
   position: relative;
-  height: 2px;
+  height: 1px;
   width: 200px;
   background-color: rgb(126, 60, 9);
   border-radius: 25px;
@@ -18,10 +18,10 @@
 
 .progress-fill {
   position: absolute;
-  height: 2px;
+  height: 1px;
   width: 0%;
-  animation: progress-forward 0.5s infinite;
-  background-color: rgb(255, 207, 119);
+  animation: progress-forward 1.2s infinite;
+  background-color: rgb(255, 244, 223);
   border-radius: 15px;
 }
 

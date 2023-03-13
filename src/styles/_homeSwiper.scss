@@ -20,7 +20,8 @@
       position: relative;
       font-size: 1.2em;
       img {
-        height: calc(100% - 50px);
+        width: 172.5px;
+        height: 230px;
         aspect-ratio: 3/4;
         border-radius: 100vw;
         object-fit: cover;
@@ -68,12 +69,20 @@
 @media screen and (min-width: 300px) {
   .homeSwiper {
     height: 320px;
+    .swiper-slide a img {
+      width: 202.5px;
+      height: 270px;
+    }
   }
 }
 
 @media screen and (min-width: 600px) {
   .homeSwiper {
     height: 500px;
+    .swiper-slide a img {
+      width: 337.5px;
+      height: 450px;
+    }
   }
 }
 
@@ -83,6 +92,8 @@
     .swiper-slide {
       a {
         img {
+          width: 412.5px;
+          height: 550px;
           border-width: 8px;
         }
       }
@@ -102,6 +113,10 @@
 @media screen and (min-width: 1200px) {
   .homdSwiper {
     height: 800px;
+    .swiper-slide a img {
+      width: 562.5px;
+      height: 750px;
+    }
   }
   .home__city-slider {
     padding-top: 200px;

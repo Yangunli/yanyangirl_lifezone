@@ -11,12 +11,12 @@
     grid-column: 1;
     transform-origin: right;
     animation-name: fadeDiv;
-    animation-duration: 0.1s;
+    animation-duration: 0.2s;
     animation-fill-mode: forwards;
     will-change: transform;
   }
   div:first-child {
-    animation-delay: 0.5s;
+    animation-delay: 0.6s;
     background-color: black;
   }
   div:nth-child(3n + 2) {
@@ -31,15 +31,15 @@
 
 @keyframes fadeDiv {
   0% {
-    transform: scale3d(1, 1, 1);
+    transform: scale(1, 1);
   }
   50% {
-    transform: scale3d(0.6, 1, 1);
+    transform: scale(0.5, 1);
   }
   90% {
-    transform: scale3d(0.01, 1, 1);
+    transform: scale(0.01, 1);
   }
   100% {
-    transform: scale3d(0, 0, 0);
+    transform: scale(0, 0);
   }
 }

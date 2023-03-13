@@ -28,6 +28,7 @@ const SingleContent = ({
       )}
     >
       <img
+        loading="lazy"
         className="card__img"
         onClick={() => changeContent(exhibition)}
         src={exhibition.src}

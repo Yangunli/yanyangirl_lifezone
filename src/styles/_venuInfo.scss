@@ -1,12 +1,10 @@
 .venue__img {
   width: min(90%, 450px);
-  max-height: 450px;
+  aspect-ratio: 3/4;
   aspect-ratio: 1;
   object-fit: cover;
   border-top-left-radius: 50%;
   border-top-right-radius: 50%;
-  outline: 3px #d8d49f solid;
-  outline-offset: -10px;
 }
 
 .venueInfo {
@@ -50,6 +48,7 @@
   .venue__desc {
     img {
       position: absolute;
+      right: 60%;
       transform: scale(2) translateX(90px);
     }
   }

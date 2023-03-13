@@ -37,11 +37,12 @@
   place-items: center;
   padding-top: calc(var(--p) * 2);
   padding-inline: 50px;
+  a {
+    width: 100%;
+  }
 }
 
 .home__header .logoSvg {
-  // position: absolute;
-
   width: 90%;
   transform: translate(5%, 20%);
 }
@@ -154,44 +155,5 @@
   .home .logoSvg {
     transform: translate(10%, -5%);
     width: 70%;
-  }
-}
-
-.home-animation {
-  position: fixed;
-  inset: 0;
-  opacity: 1;
-  z-index: 55;
-  animation: homeAnimation 1.2s ease-in-out,
-    homeAnimationEnd 0.3s ease-in-out forwards 1.2s;
-}
-
-@keyframes homeAnimation {
-  0% {
-    background-color: rgb(144, 42, 42);
-  }
-  10% {
-    background-color: pink;
-  }
-  20% {
-    background-color: wheat;
-  }
-  90% {
-    background-color: lightcoral;
-  }
-
-  100% {
-    background-color: rgb(173, 130, 187);
-    opacity: 0;
-  }
-}
-
-@keyframes homeAnimationEnd {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-    pointer-events: none;
   }
 }

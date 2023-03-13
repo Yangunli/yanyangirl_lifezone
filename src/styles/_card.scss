@@ -41,11 +41,11 @@
 }
 
 :where(:nth-child(4n + 1), :nth-child(4n + 2)).card {
-  animation: LTR 0.3s linear;
+  animation: LTR 0.5s linear;
 }
 
 :where(:nth-child(4n + 3), :nth-child(4n)).card {
-  animation: RTL 0.3s linear;
+  animation: RTL 0.5s linear;
 }
 
 @keyframes LTR {

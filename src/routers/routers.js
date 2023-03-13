@@ -1,21 +1,31 @@
-import React from "react";
+import React, { lazy } from "react";
 import {
   createBrowserRouter,
   Route,
   createRoutesFromElements,
 } from "react-router-dom";
-import CityLayout from "../Layout/CityLayout";
-import ArtistPageLayout from "../Layout/ArtistPageLayout";
-import Home from "../Pages/Home";
-import ArtistPage from "../Pages/ArtistPage";
-import ArtistInfo from "../Pages/ArtistInfo";
-import CityInfoGroup from "../Pages/CityInfoGroup";
-import VenueInfo from "../Pages/VenueInfo";
+const CityLayout = lazy(() => import("../Layout/CityLayout"));
+// import CityLayout from "../Layout/CityLayout";
+const ArtistPageLayout = lazy(() => import("../Layout/ArtistPageLayout"));
+// import ArtistPageLayout from "../Layout/ArtistPageLayout";
+const Home = lazy(() => import("../Pages/Home"));
+// import Home from "../Pages/Home";
+const ArtistPage = lazy(() => import("../Pages/ArtistPage"));
+// import ArtistPage from "../Pages/ArtistPage";
+const ArtistInfo = lazy(() => import("../Pages/ArtistInfo"));
+// import ArtistInfo from "../Pages/ArtistInfo";
+const CityInfoGroup = lazy(() => import("../Pages/CityInfoGroup"));
+// import CityInfoGroup from "../Pages/CityInfoGroup";
+const VenueInfo = lazy(() => import("../Pages/VenueInfo"));
+// import VenueInfo from "../Pages/VenueInfo";
+
 import Login from "../Pages/Login";
 import Info from "../Pages/Info";
 import UserLayout from "../Layout/UserLayout";
-import City from "../Pages/City";
-import InfoLayout from "../Layout/InfoLayout";
+const City = lazy(() => import("../Pages/City"));
+// import City from "../Pages/City";
+const InfoLayout = lazy(() => import("../Layout/InfoLayout"));
+// import InfoLayout from "../Layout/InfoLayout";
 
 export const router = createBrowserRouter(
   createRoutesFromElements(

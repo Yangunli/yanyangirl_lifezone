@@ -125,6 +125,7 @@
 @media screen and (min-width: 1024px) {
   .menu__items {
     grid-template-columns: repeat(4, calc((100% - 48px) / 4));
+    grid-template-rows: repeat(2, calc((100vw - 112px - 32px) / 8));
   }
 }
 

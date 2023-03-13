@@ -33,7 +33,7 @@ export const artists = [
     artist: "非人製陶",
     brand: "非人製陶",
     imgUrl:
-      "https://firebasestorage.googleapis.com/v0/b/yanyangirl-lifezone.appspot.com/o/%E5%B1%95%E8%A6%BD%2FTPEexp%2FR0021692.webp?alt=media&token=035fbd5f-7512-4119-8d11-d82fe1330632",
+      "https://firebasestorage.googleapis.com/v0/b/yanyangirl-lifezone.appspot.com/o/%E5%B1%95%E8%A6%BD%2FTPEother%2F4240_n.webp?alt=media&token=f14b3e0e-e026-44b7-b1e5-14f98dbf83b6",
     category: ["陶"],
   },
   {
@@ -178,5 +178,26 @@ export const artists = [
     imgUrl:
       "https://firebasestorage.googleapis.com/v0/b/yanyangirl-lifezone.appspot.com/o/%E5%B1%95%E8%A6%BD%2F%E6%9C%9D%E4%BB%A3%2FR0001802.webp?alt=media&token=ea28c0a9-f9a3-4515-ae82-821b916794de",
     category: ["木彫"],
+  },
+  {
+    id: 25,
+    artist: "不討喜",
+    imgUrl:
+      "https://firebasestorage.googleapis.com/v0/b/yanyangirl-lifezone.appspot.com/o/%E5%B1%95%E8%A6%BD%2F%E5%B0%8F%E8%B7%AF%E6%98%A0%E7%94%BB%2FR0012349.webp?alt=media&token=664cfd70-da3b-454e-b194-c198eb097a8a",
+    category: ["陶"],
+  },
+  {
+    id: 26,
+    artist: "宋立",
+    imgUrl:
+      "https://firebasestorage.googleapis.com/v0/b/yanyangirl-lifezone.appspot.com/o/%E5%B1%95%E8%A6%BD%2F%E4%BA%9E%E7%B1%B3%E8%97%9D%E8%A1%93%2FR0013816.webp?alt=media&token=20b9c240-1f5e-4426-93f1-f4fcbed63806",
+    category: ["陶"],
+  },
+  {
+    id: 27,
+    artist: "蔡文明",
+    imgUrl:
+      "https://firebasestorage.googleapis.com/v0/b/yanyangirl-lifezone.appspot.com/o/%E5%B1%95%E8%A6%BD%2FwrongGallery%2FR0013342.webp?alt=media&token=c2caa34f-ce39-4701-87a0-0647a6f74cec",
+    category: ["陶"],
   },
 ];

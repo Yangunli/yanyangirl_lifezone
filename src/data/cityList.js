@@ -10,7 +10,7 @@ export const cityList = [
     name: "taichung",
     cityName: "臺中",
     desc: "不是在西區就是在鄰近西區，展覽有點近也不是太近的移動範圍",
-    src: "https://firebasestorage.googleapis.com/v0/b/react-firebase-306e5.appspot.com/o/taichung%2Fvenue%2F%E4%BD%94%E7%A9%BA%E9%96%93%2FvenueImg%2FR0001384.webp%20?alt=media&token=0c2ae3ea-f16d-47e0-b66a-0636c9b234e7",
+    src: "https://firebasestorage.googleapis.com/v0/b/yanyangirl-lifezone.appspot.com/o/venue%2F%E4%BD%94%E7%A9%BA%E9%96%93%2FR0001385.webp?alt=media&token=d0f68383-a9eb-4389-b0e2-e5cac53432f1",
     alt: "Read more about Taichung",
   },
   {

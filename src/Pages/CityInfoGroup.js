@@ -17,40 +17,43 @@ import { useWindowResize } from "../hooks/useWindowResize";
 import PageTransition from "../components/PageTransition";
 const CityInfoGroup = () => {
   const [currentTab, setCurrentTab] = useState("current");
-  const [views, setViews] = useState([]);
+  const [exhibitions, setExhibitions] = useState([]);
   const { modalContent, modalToggle, changeContent } = useModal();
   const { city, page } = useOutletContext();
   const { width } = useWindowResize();
   const getExhibiotnInfo = async () => {
     if (city == "taipei") {
       await import("../data/taipeiExhibition").then(({ taipeiExp }) => {
-        setViews(taipeiExp);
+        setExhibitions(taipeiExp);
       });
     }
     if (city == "taichung") {
       await import("../data/taichungExhibition").then(({ taichungExp }) => {
-        setViews(taichungExp);
+        setExhibitions(taichungExp);
       });
     }
     if (city == "tainan") {
       await import("../data/tainanExhibition").then(({ tainanExp }) => {
-        setViews(tainanExp);
+        setExhibitions(tainanExp);
       });
     }
   };
-
-  const viewsAfterFilter =
-    currentTab == "current" ? currentFilter(views) : upComingFilter(views);
   const venues =
     city == "taipei"
       ? taipeiVenues
       : city == "taichung"
       ? taichungVenues
       : tainanVenues;
-  const { imgsLoaded } = usePromise(page == "venue" ? venues : views);
+  const { imgsLoaded } = usePromise(page == "venue" ? venues : exhibitions);
+  const exhibitionsAfterFilter =
+    currentTab == "current"
+      ? currentFilter(exhibitions)
+      : upComingFilter(exhibitions);
+
   useEffect(() => {
     getExhibiotnInfo();
   }, []);
+
   return (
     <div
       className={classNames(
@@ -101,7 +104,7 @@ const CityInfoGroup = () => {
         {imgsLoaded ? (
           <>
             {page == "exhibition"
-              ? viewsAfterFilter.map((view) => (
+              ? exhibitionsAfterFilter.map((view) => (
                   <SingleContent
                     classNames={classNames}
                     isOpenChecked={isOpenChecked}

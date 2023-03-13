@@ -5,51 +5,48 @@
   inset: 0;
   z-index: 6;
   background-color: rgba(43, 25, 6, 0.3);
-
-  backdrop-filter: opacity(20%);
   transition: all 0.2s ease-in-out;
 }
 
-.modal-body {
+.modal {
   position: relative;
   width: min(90%, 400px);
-
   background-color: rgb(219, 203, 174);
   border: 3px solid hsl(35, 11%, 22%);
   display: flex;
   flex-direction: column;
   gap: 10px;
   border-radius: 20px;
-  // padding: 20px 40px;
   overflow: hidden;
+  will-change: transform, scale;
   animation: modalMoveIn 0.6s linear forwards;
 }
 
-.modal-body dl {
+.modal dl {
   display: flex;
 }
 
-.spinner {
-  position: absolute;
-  width: 250px;
-  bottom: -50%;
-  right: -75px;
-  transform-origin: center center;
+// .spinner {
+//   position: absolute;
+//   width: 250px;
+//   top: -30%;
+//   right: -75px;
+//   transform-origin: center center;
 
-  .textSpinnerSvg {
-    width: 250px;
-    animation: rotateText 10s linear infinite;
-  }
-}
+//   .textSpinnerSvg {
+//     width: 250px;
+//     animation: rotateText 10s linear infinite;
+//   }
+// }
 
-@keyframes rotateText {
-  from {
-    transform: rotate(0) translateX(0);
-  }
-  to {
-    transform: rotate(-360deg) translateX(0);
-  }
-}
+// @keyframes rotateText {
+//   from {
+//     transform: rotate(0) translateX(0);
+//   }
+//   to {
+//     transform: rotate(-360deg) translateX(0);
+//   }
+// }
 @keyframes modalMoveIn {
   0% {
     scale: 0;

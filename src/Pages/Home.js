@@ -20,10 +20,10 @@ import Loading from "../components/Loading";
 const Home = () => {
   const { imgsLoaded } = usePromise(cityList);
   const { width } = useWindowResize();
-  const exhibition = [
-    ...currentFilter(taipeiExp).slice(-5, -1),
-    ...currentFilter(taichungExp).slice(-5, -1),
-    ...currentFilter(tainanExp.slice(-5, -1)),
+  const exhibitions = [
+    ...currentFilter(taipeiExp).slice(0, 4),
+    ...currentFilter(taichungExp).slice(0, 4),
+    ...currentFilter(tainanExp).slice(0, 4),
   ];
 
   const { modalContent, modalToggle, changeContent } = useModal();
@@ -47,12 +47,12 @@ const Home = () => {
                 "pi-20"
               )}
             >
-              {exhibition.map((exp) => (
+              {exhibitions.map((exhibition) => (
                 <SingleContent
                   classNames={classNames}
                   isOpenChecked={isOpenChecked}
-                  exhibition={exp}
-                  key={exp.id}
+                  exhibition={exhibition}
+                  key={exhibition.id}
                   changeContent={changeContent}
                 />
               ))}

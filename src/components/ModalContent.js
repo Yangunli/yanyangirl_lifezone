@@ -21,14 +21,7 @@ const ModalContent = ({ info }, ref) => {
       : "OTHER"
     : undefined;
   return (
-    <section
-      className="modal-body"
-      onClick={(e) => e.stopPropagation()}
-      ref={ref}
-    >
-      <div className="spinner">
-        <TextSpinner />
-      </div>
+    <section className="modal" onClick={(e) => e.stopPropagation()} ref={ref}>
       {!isArtistInfo && !isVenueInfo && (
         <section className="modal--exhibition">
           <div className="modal__about">
@@ -61,7 +54,13 @@ const ModalContent = ({ info }, ref) => {
             </p>
             <p>
               <span>相關連結</span>
-              <a href={infoData.link}>活動網址</a>
+              <a
+                href={infoData.link}
+                target="_blank"
+                rel="noreferrer noopenner"
+              >
+                活動網址
+              </a>
             </p>
           </div>
         </section>

@@ -238,6 +238,9 @@ button {
   padding-top: calc(var(--p) * 2);
   padding-inline: 50px;
 }
+.home__nav a {
+  width: 100%;
+}
 
 .home__header .logoSvg {
   width: 90%;
@@ -340,41 +343,6 @@ button {
     width: 70%;
   }
 }
-.home-animation {
-  position: fixed;
-  inset: 0;
-  opacity: 1;
-  z-index: 55;
-  animation: homeAnimation 1.2s ease-in-out, homeAnimationEnd 0.3s ease-in-out forwards 1.2s;
-}
-
-@keyframes homeAnimation {
-  0% {
-    background-color: rgb(144, 42, 42);
-  }
-  10% {
-    background-color: pink;
-  }
-  20% {
-    background-color: wheat;
-  }
-  90% {
-    background-color: lightcoral;
-  }
-  100% {
-    background-color: rgb(173, 130, 187);
-    opacity: 0;
-  }
-}
-@keyframes homeAnimationEnd {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-    pointer-events: none;
-  }
-}
 .modal-container {
   position: fixed;
   display: grid;
@@ -382,12 +350,10 @@ button {
   inset: 0;
   z-index: 6;
   background-color: rgba(43, 25, 6, 0.3);
-  -webkit-backdrop-filter: opacity(20%);
-          backdrop-filter: opacity(20%);
   transition: all 0.2s ease-in-out;
 }
 
-.modal-body {
+.modal {
   position: relative;
   width: min(90%, 400px);
   background-color: rgb(219, 203, 174);
@@ -397,33 +363,14 @@ button {
   gap: 10px;
   border-radius: 20px;
   overflow: hidden;
+  will-change: transform, scale;
   animation: modalMoveIn 0.6s linear forwards;
 }
 
-.modal-body dl {
+.modal dl {
   display: flex;
 }
 
-.spinner {
-  position: absolute;
-  width: 250px;
-  bottom: -50%;
-  right: -75px;
-  transform-origin: center center;
-}
-.spinner .textSpinnerSvg {
-  width: 250px;
-  animation: rotateText 10s linear infinite;
-}
-
-@keyframes rotateText {
-  from {
-    transform: rotate(0) translateX(0);
-  }
-  to {
-    transform: rotate(-360deg) translateX(0);
-  }
-}
 @keyframes modalMoveIn {
   0% {
     scale: 0;
@@ -545,11 +492,11 @@ button {
 }
 
 :where(:nth-child(4n+1), :nth-child(4n+2)).card {
-  animation: LTR 0.3s linear;
+  animation: LTR 0.5s linear;
 }
 
 :where(:nth-child(4n+3), :nth-child(4n)).card {
-  animation: RTL 0.3s linear;
+  animation: RTL 0.5s linear;
 }
 
 @keyframes LTR {
@@ -642,7 +589,8 @@ button {
   font-size: 1.2em;
 }
 .homeSwiper .swiper-slide a img {
-  height: calc(100% - 50px);
+  width: 172.5px;
+  height: 230px;
   aspect-ratio: 3/4;
   border-radius: 100vw;
   -o-object-fit: cover;
@@ -689,10 +637,18 @@ button {
   .homeSwiper {
     height: 320px;
   }
+  .homeSwiper .swiper-slide a img {
+    width: 202.5px;
+    height: 270px;
+  }
 }
 @media screen and (min-width: 600px) {
   .homeSwiper {
     height: 500px;
+  }
+  .homeSwiper .swiper-slide a img {
+    width: 337.5px;
+    height: 450px;
   }
 }
 @media screen and (min-width: 800px) {
@@ -700,6 +656,8 @@ button {
     height: 600px;
   }
   .homeSwiper .swiper-slide a img {
+    width: 412.5px;
+    height: 550px;
     border-width: 8px;
   }
   .home__clickImg {
@@ -714,6 +672,10 @@ button {
 @media screen and (min-width: 1200px) {
   .homdSwiper {
     height: 800px;
+  }
+  .homdSwiper .swiper-slide a img {
+    width: 562.5px;
+    height: 750px;
   }
   .home__city-slider {
     padding-top: 200px;
@@ -847,6 +809,7 @@ button {
 @media screen and (min-width: 1024px) {
   .menu__items {
     grid-template-columns: repeat(4, calc((100% - 48px) / 4));
+    grid-template-rows: repeat(2, calc((100vw - 112px - 32px) / 8));
   }
 }
 @keyframes MenuIn {
@@ -871,14 +834,12 @@ button {
 }
 .venue__img {
   width: min(90%, 450px);
-  max-height: 450px;
+  aspect-ratio: 3/4;
   aspect-ratio: 1;
   -o-object-fit: cover;
      object-fit: cover;
   border-top-left-radius: 50%;
   border-top-right-radius: 50%;
-  outline: 3px #d8d49f solid;
-  outline-offset: -10px;
 }
 
 .venueInfo {
@@ -920,6 +881,7 @@ button {
 @media screen and (min-width: 1000px) {
   .venue__desc img {
     position: absolute;
+    right: 60%;
     transform: scale(2) translateX(90px);
   }
 }
@@ -1118,7 +1080,7 @@ footer .pureLogoSvg {
 
 .progress-bar {
   position: relative;
-  height: 2px;
+  height: 1px;
   width: 200px;
   background-color: rgb(126, 60, 9);
   border-radius: 25px;
@@ -1126,10 +1088,10 @@ footer .pureLogoSvg {
 
 .progress-fill {
   position: absolute;
-  height: 2px;
+  height: 1px;
   width: 0%;
-  animation: progress-forward 0.5s infinite;
-  background-color: rgb(255, 207, 119);
+  animation: progress-forward 1.2s infinite;
+  background-color: rgb(255, 244, 223);
   border-radius: 15px;
 }
 
@@ -1204,6 +1166,7 @@ footer .pureLogoSvg {
 }
 .cardSwiper__article h2 {
   font-size: 16px;
+  text-overflow: ellipsis;
   color: rgb(56, 30, 8);
 }
 
@@ -1329,12 +1292,12 @@ footer .pureLogoSvg {
   grid-column: 1;
   transform-origin: right;
   animation-name: fadeDiv;
-  animation-duration: 0.1s;
+  animation-duration: 0.2s;
   animation-fill-mode: forwards;
   will-change: transform;
 }
 .pageTransition div:first-child {
-  animation-delay: 0.5s;
+  animation-delay: 0.6s;
   background-color: black;
 }
 .pageTransition div:nth-child(3n+2) {
@@ -1348,15 +1311,15 @@ footer .pureLogoSvg {
 
 @keyframes fadeDiv {
   0% {
-    transform: scale3d(1, 1, 1);
+    transform: scale(1, 1);
   }
   50% {
-    transform: scale3d(0.6, 1, 1);
+    transform: scale(0.5, 1);
   }
   90% {
-    transform: scale3d(0.01, 1, 1);
+    transform: scale(0.01, 1);
   }
   100% {
-    transform: scale3d(0, 0, 0);
+    transform: scale(0, 0);
   }
 }/*# sourceMappingURL=style.css.map */

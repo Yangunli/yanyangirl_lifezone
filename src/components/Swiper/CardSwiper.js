@@ -26,6 +26,7 @@ const CardSwiper = ({ exhibition, changeContent }) => {
       spaceBetween={5}
       centeredSlides={true}
       loop={true}
+      // preloadImages={false}
       autoplay={{
         delay: 2500,
         disableOnInteraction: false,
@@ -35,7 +36,7 @@ const CardSwiper = ({ exhibition, changeContent }) => {
     >
       {exhibition.imgUrl.map((url) => (
         <SwiperSlide key={url}>
-          <img src={url} alt="" />
+          <img src={url} alt="" draggable="false" />
         </SwiperSlide>
       ))}
       <article className="cardSwiper__article">
@@ -48,7 +49,9 @@ const CardSwiper = ({ exhibition, changeContent }) => {
               ? exhibition.brand
               : exhibition.artist}
           </span>
-          <span className="artcle__tag">#{exhibitedYear}</span>
+          {exhibitedYear && (
+            <span className="artcle__tag">#{exhibitedYear}</span>
+          )}
         </p>
         <h2>{exhibition.title}</h2>
       </article>
