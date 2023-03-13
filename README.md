@@ -3,7 +3,8 @@
   <img width="100%" src="https://firebasestorage.googleapis.com/v0/b/yanyangirl-lifezone.appspot.com/o/readme%2FHOME.jpg?alt=media&token=e2d0873d-003f-4cb3-b773-6c1507e56566" >
 
 ```
-This lovely website is about exhibitions (fine art / scuplture / illustraction / craft). Provide some information about current or upcoming exhibitions, and some exhibition record.
+This lovely website is about exhibitions (fine art / scuplture / illustraction / craft).
+Provide some information about current or upcoming exhibitions, and some exhibition record.
 
 ```
 
@@ -18,8 +19,7 @@ This lovely website is about exhibitions (fine art / scuplture / illustraction /
 
 ### Modal Component & Menu Component do not rely on 3rd party liberary.
 
-<img width="100%" src="
-https://firebasestorage.googleapis.com/v0/b/yanyangirl-lifezone.appspot.com/o/readme%2FModal.gif?alt=media&token=5d77f368-e6c6-4fe8-8ca7-c795ae74e466">
+<img width="100%" src="https://firebasestorage.googleapis.com/v0/b/yanyangirl-lifezone.appspot.com/o/readme%2FModal.gif?alt=media&token=5d77f368-e6c6-4fe8-8ca7-c795ae74e466">
 
 - Use hooks (useRef/useState) to store content and toggle state.
 - Before component exit (click event), use setTimeout() methods to trigger exit animation.
