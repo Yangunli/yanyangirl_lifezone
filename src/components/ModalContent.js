@@ -25,17 +25,16 @@ const ModalContent = ({ info }, ref) => {
       {!isArtistInfo && !isVenueInfo && (
         <section className="modal--exhibition">
           <div className="modal__about">
-            {" "}
-            <h1 className="modal__title">
-              {infoData.name || infoData.title}
-            </h1>{" "}
+            <h1 className="modal__title">{infoData.name || infoData.title}</h1>{" "}
             <small>{infoData.time}</small>
           </div>
           <div className="modal__about">
-            {" "}
-            <p>{infoData.artist}</p>
+            {infoData.artistLink ? (
+              <Link to={info.artistLink}> #{infoData.artist} </Link>
+            ) : (
+              <p>{infoData.artist}</p>
+            )}
           </div>
-
           <p>活動資訊</p>
           <hr />
           <div className="modal__about">

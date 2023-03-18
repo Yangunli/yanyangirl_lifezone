@@ -71,6 +71,13 @@
     bottom: 0;
   }
 }
+
+.menu__link:last-child .menu__link__name {
+  &::after {
+    scale: 0;
+  }
+}
+
 .menu__link__name {
   position: relative;
   font-size: 16px;
@@ -118,6 +125,12 @@
     img {
       width: 20px;
       height: 20px;
+    }
+  }
+
+  .menu__link:last-child .menu__link__name {
+    &::after {
+      scale: 0.9;
     }
   }
 }

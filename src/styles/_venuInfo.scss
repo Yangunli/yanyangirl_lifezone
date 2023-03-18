@@ -8,6 +8,7 @@
 }
 
 .venueInfo {
+  width: 100%;
   display: grid;
   justify-content: center;
   text-align: center;
@@ -15,6 +16,7 @@
 
 @media screen and (min-width: 450px) {
   .venueInfo {
+    width: min(100% - 100px, 1150px);
     grid-template-columns: 1fr 1fr;
     align-items: flex-end;
     text-align: left;

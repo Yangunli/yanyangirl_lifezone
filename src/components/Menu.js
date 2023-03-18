@@ -26,7 +26,7 @@ const Menu = ({ changeMenu }) => {
       <nav className="menu__items  pb-45">
         {menuNavList.map((li) => (
           <Link
-            key={li.pathName}
+            key={`menu_${li.venueLink || li.pathName}`}
             to={li.venueLink ? li.venueLink : `/${li.pathName}`}
             aria-label={li.ariaLabel}
             onClick={scrollWin}
@@ -66,7 +66,6 @@ const Menu = ({ changeMenu }) => {
           </div>
           <span className="menu__link__name">github</span>
         </a>
-
         <a
           className="menu__link"
           href="https://yangunli.github.io/yanyangirl/"

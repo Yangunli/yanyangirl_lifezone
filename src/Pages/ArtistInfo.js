@@ -9,37 +9,14 @@ import CardSwiper from "../components/Swiper/CardSwiper";
 import PageTransition from "../components/PageTransition";
 import { useWindowResize } from "../hooks/useWindowResize";
 import Loading from "../components/Loading";
+import { useFirestorePromise } from "../hooks/useFirestorePromise";
 const ArtistInfo = () => {
-  const [imgsLoaded, setImgsLoaded] = useState(false);
   const { Id } = useParams();
   const exhibitions = useExhibitonRefs("artistLink");
   const { changeContent, modalContent, modalToggle } = useModal();
   const artist = artists.find((artist) => artist.id == Id);
   const { width, height } = useWindowResize();
-
-  useEffect(() => {
-    const loadImage = (url) => {
-      return new Promise((resolve, reject) => {
-        const loadImg = new Image();
-        loadImg.src = url;
-        loadImg.onload = () =>
-          setTimeout(() => {
-            resolve(url);
-          }, 0);
-        loadImg.onerror = (err) => reject(err);
-      });
-    };
-    if (exhibitions.length) {
-      Promise.all(
-        exhibitions.map((info) => info.imgUrl.map((url) => loadImage(url)))
-      )
-        .then(() => setImgsLoaded(true))
-        .catch((err) => console.log("Failed to load images", err));
-    }
-
-    // Function call
-  }, [exhibitions]);
-
+  const { imgsLoaded } = exhibitions ? useFirestorePromise(exhibitions) : null;
   return (
     <>
       <PageHeader />

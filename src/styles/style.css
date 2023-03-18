@@ -8,7 +8,7 @@
 :root {
   --darkBg-text: hsl(60, 100%, 71%);
   --lightBg-text: hsl(173, 61%, 11%);
-  --matcha-bg: hsl(62, 20%, 59%);
+  --matcha-bg: hsl(62, 20%, 65%);
   --milktea-bg: hsl(39, 28%, 76%);
   --p: 15px;
   --color-background: #000000;
@@ -760,6 +760,10 @@ button {
   bottom: 0;
 }
 
+.menu__link:last-child .menu__link__name::after {
+  scale: 0;
+}
+
 .menu__link__name {
   position: relative;
   font-size: 16px;
@@ -805,6 +809,9 @@ button {
     width: 20px;
     height: 20px;
   }
+  .menu__link:last-child .menu__link__name::after {
+    scale: 0.9;
+  }
 }
 @media screen and (min-width: 1024px) {
   .menu__items {
@@ -843,6 +850,7 @@ button {
 }
 
 .venueInfo {
+  width: 100%;
   display: grid;
   justify-content: center;
   text-align: center;
@@ -850,6 +858,7 @@ button {
 
 @media screen and (min-width: 450px) {
   .venueInfo {
+    width: min(100% - 100px, 1150px);
     grid-template-columns: 1fr 1fr;
     align-items: flex-end;
     text-align: left;

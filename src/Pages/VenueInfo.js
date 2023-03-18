@@ -1,20 +1,19 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { useParams, useOutletContext } from "react-router-dom";
 import { taipeiVenues } from "../data/taipeiVenues";
 import { taichungVenues } from "../data/taichungVenue";
 import { tainanVenues } from "../data/tainanVenues";
 import PageHeader from "../components/PageHeader";
-import { isOpenChecked, translateWeekday } from "../function/weekdayFilter";
-import { useModal } from "../hooks/useModal";
-import Modal from "../components/Modal";
-import { useExhibitonRefs } from "../hooks/useExhibitionRef";
 import Loading from "../components/Loading";
 import CardSwiper from "../components/Swiper/CardSwiper";
+import Modal from "../components/Modal";
 import PageTransition from "../components/PageTransition";
+import { isOpenChecked, translateWeekday } from "../function/weekdayFilter";
+import { useModal } from "../hooks/useModal";
+import { useExhibitonRefs } from "../hooks/useExhibitionRef";
 import { useWindowResize } from "../hooks/useWindowResize";
-
+import { useFirestorePromise } from "../hooks/useFirestorePromise";
 const VenueInfo = () => {
-  const [imgsLoaded, setImgsLoaded] = useState(false);
   const { width } = useWindowResize();
   const { Id } = useParams();
   const { city } = useOutletContext();
@@ -31,35 +30,13 @@ const VenueInfo = () => {
   const venueOpenArr = venue.openDay.split("");
   const isVenueOpen = isOpenChecked(venueOpenArr);
   const exhibitions = useExhibitonRefs("venueLink");
-
-  useEffect(() => {
-    const loadImage = (url) => {
-      return new Promise((resolve, reject) => {
-        const loadImg = new Image();
-        loadImg.src = url;
-        // wait 2 seconds to simulate loading time
-        loadImg.onload = () =>
-          setTimeout(() => {
-            resolve(url);
-          }, 1000);
-        loadImg.onerror = (err) => reject(err);
-      });
-    };
-
-    Promise.allSettled(
-      exhibitions.map((info) => info.imgUrl.map((url) => loadImage(url)))
-    )
-      .then(() => setImgsLoaded(true))
-      .catch((err) => console.log("Failed to load images", err));
-
-    // Function call
-  }, [exhibitions]);
+  const { imgsLoaded } = exhibitions ? useFirestorePromise(exhibitions) : null;
 
   return (
     <div className="main venue-bg">
       <PageHeader />
       {imgsLoaded && <PageTransition />}
-      <div className="pt-200 w-100  venueInfo  h-100">
+      <div className="pt-200 venueInfo  h-100">
         <div className="venue__imgContainer">
           <img
             className="venue__img"

@@ -33,6 +33,10 @@ export const tainanVenues = [
       "https://firebasestorage.googleapis.com/v0/b/yanyangirl-lifezone.appspot.com/o/venue%2F%E6%B0%B4%E8%89%B2%2FR0023122.webp?alt=media&token=251e3aed-7849-4341-b8c0-79c66fdae0d0",
       "https://firebasestorage.googleapis.com/v0/b/yanyangirl-lifezone.appspot.com/o/venue%2F%E6%B0%B4%E8%89%B2%2FR0023117.webp?alt=media&token=d1734e92-a05f-46a0-ae21-213c2149983d",
     ],
+    city: "tainan",
+    location: "臺南市中西區環河街129巷31號",
+    desc: "",
+    link: "https://www.facebook.com/mizuiro1214",
   },
   // {
   //   id: 307,

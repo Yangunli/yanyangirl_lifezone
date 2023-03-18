@@ -15,45 +15,40 @@ import { usePromise } from "../hooks/usePromise";
 import Loading from "../components/Loading";
 import { useWindowResize } from "../hooks/useWindowResize";
 import PageTransition from "../components/PageTransition";
+import { taipeiExp } from "../data/taipeiExhibition";
+import { taichungExp } from "../data/taichungExhibition";
+import { tainanExp } from "../data/tainanExhibition";
 const CityInfoGroup = () => {
   const [currentTab, setCurrentTab] = useState("current");
-  const [exhibitions, setExhibitions] = useState([]);
   const { modalContent, modalToggle, changeContent } = useModal();
   const { city, page } = useOutletContext();
   const { width } = useWindowResize();
-  const getExhibiotnInfo = async () => {
-    if (city == "taipei") {
-      await import("../data/taipeiExhibition").then(({ taipeiExp }) => {
-        setExhibitions(taipeiExp);
-      });
-    }
-    if (city == "taichung") {
-      await import("../data/taichungExhibition").then(({ taichungExp }) => {
-        setExhibitions(taichungExp);
-      });
-    }
-    if (city == "tainan") {
-      await import("../data/tainanExhibition").then(({ tainanExp }) => {
-        setExhibitions(tainanExp);
-      });
-    }
-  };
+  const exhibitions =
+    page == "exhibition"
+      ? city == "taipei"
+        ? taipeiExp
+        : city == "taichung"
+        ? taichungExp
+        : city == "tainan"
+        ? tainanExp
+        : null
+      : null;
+
   const venues =
-    city == "taipei"
-      ? taipeiVenues
-      : city == "taichung"
-      ? taichungVenues
-      : tainanVenues;
+    page == "venue"
+      ? city == "taipei"
+        ? taipeiVenues
+        : city == "taichung"
+        ? taichungVenues
+        : tainanVenues
+      : null;
   const { imgsLoaded } = usePromise(page == "venue" ? venues : exhibitions);
   const exhibitionsAfterFilter =
-    currentTab == "current"
-      ? currentFilter(exhibitions)
-      : upComingFilter(exhibitions);
-
-  useEffect(() => {
-    getExhibiotnInfo();
-  }, []);
-
+    page == "exhibition"
+      ? currentTab == "current"
+        ? currentFilter(exhibitions)
+        : upComingFilter(exhibitions)
+      : null;
   return (
     <div
       className={classNames(
@@ -113,7 +108,8 @@ const CityInfoGroup = () => {
                     changeContent={changeContent}
                   />
                 ))
-              : venues.map((view) => (
+              : venues &&
+                venues.map((view) => (
                   <Link
                     to={`${view.id}`}
                     key={view.id}
