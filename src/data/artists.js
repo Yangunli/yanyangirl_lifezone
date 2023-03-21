@@ -177,7 +177,7 @@ export const artists = [
     artist: "曾上杰",
     imgUrl:
       "https://firebasestorage.googleapis.com/v0/b/yanyangirl-lifezone.appspot.com/o/%E5%B1%95%E8%A6%BD%2F%E6%9C%9D%E4%BB%A3%2FR0001802.webp?alt=media&token=ea28c0a9-f9a3-4515-ae82-821b916794de",
-    category: ["木彫"],
+    category: ["木雕"],
   },
   {
     id: 25,

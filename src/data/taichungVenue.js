@@ -158,6 +158,6 @@ export const taichungVenues = [
       "https://firebasestorage.googleapis.com/v0/b/yanyangirl-lifezone.appspot.com/o/venue%2F%E4%BD%94%E7%A9%BA%E9%96%93%2FR0001376.webp?alt=media&token=d640bd90-a057-4438-b228-77c25870a9d8",
       "https://firebasestorage.googleapis.com/v0/b/yanyangirl-lifezone.appspot.com/o/venue%2F%E4%BD%94%E7%A9%BA%E9%96%93%2FR0001374.webp?alt=media&token=fe0941df-e619-424a-a695-3fbb03f855ad",
     ],
-    link: " https://www.facebook.com/ArtQPie",
+    link: "https://www.facebook.com/ArtQPie",
   },
 ];

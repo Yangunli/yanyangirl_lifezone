@@ -1,5 +1,17 @@
 export const taipeiExp = [
   {
+    id: 118,
+    name: "漫漫林間",
+    artist: "浮游人",
+    openDay: "234560",
+    venue: "靠邊走藝術空間",
+    TicketType: "免費",
+    time: "2023/03/25-2023/04/16",
+    location: "臺北市萬華區西寧南路72-1號4F",
+    src: "https://pic.pimg.tw/yangun410/1679073120-3075255801-g_b.jpg",
+    link: "https://www.facebook.com/events/548979444043805/548979507377132/?active_tab=about",
+  },
+  {
     id: 117,
     name: "萌物集",
     artist: "儲嘉慧",

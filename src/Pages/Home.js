@@ -20,11 +20,15 @@ import Loading from "../components/Loading";
 const Home = () => {
   const { imgsLoaded } = usePromise(cityList);
   const { width } = useWindowResize();
-  const exhibitions = [
-    ...currentFilter(taipeiExp).slice(0, 4),
-    ...currentFilter(taichungExp).slice(0, 4),
-    ...currentFilter(tainanExp).slice(0, 4),
-  ];
+  const isOpenCurrentExhibition = [
+    ...currentFilter(taipeiExp),
+    ...currentFilter(taichungExp),
+    ...currentFilter(tainanExp),
+  ].filter((exhibition) => isOpenChecked(exhibition.openDay.split("")));
+  const exhibitions =
+    isOpenCurrentExhibition.length >= 12
+      ? isOpenCurrentExhibition.slice(-12)
+      : isOpenCurrentExhibition;
 
   const { modalContent, modalToggle, changeContent } = useModal();
 
