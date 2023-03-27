@@ -200,4 +200,25 @@ export const artists = [
       "https://firebasestorage.googleapis.com/v0/b/yanyangirl-lifezone.appspot.com/o/%E5%B1%95%E8%A6%BD%2FwrongGallery%2FR0013342.webp?alt=media&token=c2caa34f-ce39-4701-87a0-0647a6f74cec",
     category: ["陶"],
   },
+  {
+    id: 28,
+    artist: "王冠蓁",
+    imgUrl:
+      "https://firebasestorage.googleapis.com/v0/b/yanyangirl-lifezone.appspot.com/o/%E5%B1%95%E8%A6%BD%2FYIRI%20ARTS%2FR0023027.webp?alt=media&token=c254a621-39ad-4cd6-9e85-7b49af9560f7",
+    category: ["繪畫"],
+  },
+  {
+    id: 29,
+    artist: "C.PIC",
+    imgUrl:
+      "https://firebasestorage.googleapis.com/v0/b/yanyangirl-lifezone.appspot.com/o/%E5%B1%95%E8%A6%BD%2F%E8%8C%B6%E7%AD%86%E5%B7%B7%2F5862_n.webp?alt=media&token=9ee3317b-437c-4087-9376-3d5e3d565659",
+    category: ["拼貼"],
+  },
+  {
+    id: 30,
+    artist: "低級失誤",
+    imgUrl:
+      "https://firebasestorage.googleapis.com/v0/b/yanyangirl-lifezone.appspot.com/o/%E5%B1%95%E8%A6%BD%2Fmangasick%2F3870_n.webp?alt=media&token=39a74bce-6290-4d12-bcdc-ab4d6156d322",
+    category: ["插畫"],
+  },
 ];

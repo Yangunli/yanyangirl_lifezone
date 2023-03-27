@@ -16,15 +16,7 @@ export const useFirestorePromise = (exhibitions) => {
         loadImg.onerror = (err) => reject(err);
       });
     };
-
-    if (!isArtistInfo) {
-      Promise.all(
-        exhibitions.map((info) => info.imgUrl.map((url) => loadImage(url)))
-      )
-        .then(() => setImgsLoaded(true))
-        .catch((err) => console.log("Failed to load images", err));
-    }
-    if (isArtistInfo && exhibitions.length) {
+    if (exhibitions.length) {
       Promise.all(
         exhibitions.map((info) => info.imgUrl.map((url) => loadImage(url)))
       )

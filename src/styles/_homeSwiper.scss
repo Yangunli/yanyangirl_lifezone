@@ -27,6 +27,7 @@
         object-fit: cover;
         object-position: center;
         z-index: -2;
+        background-color: var(--darkBg-text);
         border: 5px solid #534b41;
         &:hover {
           rotate: 5deg;

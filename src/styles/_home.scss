@@ -11,7 +11,7 @@
 
 .home__header {
   position: fixed;
-  z-index: 2;
+  z-index: 5;
   top: 0;
   width: 100%;
   height: 150px;
@@ -51,7 +51,7 @@
   position: fixed;
   right: 5%;
   top: 10px;
-  z-index: 5;
+  z-index: 6;
 }
 
 .home .menuSvg1 {
@@ -60,7 +60,7 @@
   position: fixed;
   top: 5%;
   left: 5%;
-  z-index: 5;
+  z-index: 6;
   display: none;
   color: var(--lightBg-text);
   path {
@@ -138,6 +138,7 @@
   }
   .home__nav {
     display: grid;
+    z-index: 4;
   }
   .home .logoSvg {
     transform: translate(10%, 0%);

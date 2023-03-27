@@ -211,7 +211,7 @@ button {
 
 .home__header {
   position: fixed;
-  z-index: 2;
+  z-index: 5;
   top: 0;
   width: 100%;
   height: 150px;
@@ -251,7 +251,7 @@ button {
   position: fixed;
   right: 5%;
   top: 10px;
-  z-index: 5;
+  z-index: 6;
 }
 
 .home .menuSvg1 {
@@ -260,7 +260,7 @@ button {
   position: fixed;
   top: 5%;
   left: 5%;
-  z-index: 5;
+  z-index: 6;
   display: none;
   color: var(--lightBg-text);
 }
@@ -325,6 +325,7 @@ button {
   }
   .home__nav {
     display: grid;
+    z-index: 4;
   }
   .home .logoSvg {
     transform: translate(10%, 0%);
@@ -598,6 +599,7 @@ button {
   -o-object-position: center;
      object-position: center;
   z-index: -2;
+  background-color: var(--darkBg-text);
   border: 5px solid #534b41;
 }
 .homeSwiper .swiper-slide a img:hover {
@@ -1093,6 +1095,7 @@ footer .pureLogoSvg {
   width: 200px;
   background-color: rgb(126, 60, 9);
   border-radius: 25px;
+  rotate: 315deg;
 }
 
 .progress-fill {

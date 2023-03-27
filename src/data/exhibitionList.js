@@ -1,5 +1,5 @@
 export const exhibitionList = [
-  // TPE46- TXG22- TNN09-
+  // TPE51- TXG23- TNN09-
   // {
   //   title: "大海的一天",
   //   venue: "田園城市生活風格書店",
