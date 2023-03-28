@@ -40,7 +40,7 @@ const City = () => {
                     ? width / 4 - 20
                     : width / 4 - 50
                 }px ,  
-            ${height / 2 + 40}px  ,0)  `,
+            ${height > 420 ? height / 2 + 40 : height / 2}px  ,0)  `,
               }}
             >
               VENUE

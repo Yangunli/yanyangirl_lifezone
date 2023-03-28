@@ -8,7 +8,7 @@ const SingleContent = ({
   return (
     <div
       className={classNames(
-        isOpenChecked(exhibition.openDay.split("")) ? "" : "closedFilter",
+        isOpenChecked(Object.values(exhibition.openDay)) ? "" : "closedFilter",
         "card"
       )}
     >

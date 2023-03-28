@@ -10,7 +10,7 @@ const ArtistPageLayout = lazy(() => import("../Layout/ArtistPageLayout"));
 // import ArtistPageLayout from "../Layout/ArtistPageLayout";
 const Home = lazy(() => import("../Pages/Home"));
 // import Home from "../Pages/Home";
-const ArtistPage = lazy(() => import("../Pages/ArtistPage"));
+const ArtistGroup = lazy(() => import("../Pages/ArtistGroup"));
 // import ArtistPage from "../Pages/ArtistPage";
 const ArtistInfo = lazy(() => import("../Pages/ArtistInfo"));
 // import ArtistInfo from "../Pages/ArtistInfo";
@@ -36,7 +36,7 @@ export const router = createBrowserRouter(
         <Route path="info" element={<Info />} />
       </Route>
       <Route path="/artist" element={<ArtistPageLayout />}>
-        <Route index element={<ArtistPage />} />
+        <Route index element={<ArtistGroup />} />
         <Route path=":Id" element={<ArtistInfo />} />
       </Route>
       <Route path=":cityName" element={<CityLayout />}>

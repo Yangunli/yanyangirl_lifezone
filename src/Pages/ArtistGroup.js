@@ -7,7 +7,7 @@ import classNames from "../function/classNames";
 import PageTransition from "../components/PageTransition";
 import Loading from "../components/Loading";
 import { useWindowResize } from "../hooks/useWindowResize";
-const ArtistPage = () => {
+const ArtistGroup = () => {
   const [imgsLoaded, setImgsLoaded] = useState(false);
   const [categoryFilter, setCategoryFilter] = useState("all");
   const { width } = useWindowResize();
@@ -90,4 +90,4 @@ const ArtistPage = () => {
   );
 };
 
-export default ArtistPage;
+export default ArtistGroup;

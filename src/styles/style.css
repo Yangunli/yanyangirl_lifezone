@@ -524,6 +524,7 @@ button {
   background-size: cover;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  overflow: hidden;
 }
 
 .test {
@@ -599,7 +600,7 @@ button {
   -o-object-position: center;
      object-position: center;
   z-index: -2;
-  background-color: var(--darkBg-text);
+  background-color: var(--lightBg-text);
   border: 5px solid #534b41;
 }
 .homeSwiper .swiper-slide a img:hover {
@@ -1095,7 +1096,7 @@ footer .pureLogoSvg {
   width: 200px;
   background-color: rgb(126, 60, 9);
   border-radius: 25px;
-  rotate: 315deg;
+  rotate: 330deg;
 }
 
 .progress-fill {
