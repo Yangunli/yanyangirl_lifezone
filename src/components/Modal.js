@@ -7,7 +7,7 @@ const Modal = ({ changeContent, modalContent }) => {
   const modalRef = useRef();
   function modalMoveOut() {
     modalRef.current.style =
-      "animation:modalMoveOut 0.2s ease-in-out forwards;transform-origin:  bottom left ;";
+      "animation: modalMoveOut 0.2s ease-in-out forwards; transform-origin: bottom left ;";
     modalContainerRef.current.style = "opacity:0;";
   }
   const { pathArr } = usePath();

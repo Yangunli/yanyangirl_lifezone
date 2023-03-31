@@ -51,8 +51,8 @@ const VenueInfo = () => {
 
           {isVenueOpen != "?" ? (
             <p>
-              營業日: {translateWeekday(venueOpenArr.at(0))}-
-              {translateWeekday(venueOpenArr.at(-1))}
+              營業日: {translateWeekday(venueOpenArr[0])}-
+              {translateWeekday(venueOpenArr[venueOpenArr.length - 1])}
             </p>
           ) : (
             <p>不定休</p>
