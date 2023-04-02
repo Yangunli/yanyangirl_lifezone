@@ -61,12 +61,17 @@ This lovely website is about exhibitions (fine art / scuplture / illustraction /
   4.  Follow the onscreen instructions to install the PWA.
 
 - Android
+
+  <img width="100%" src="./asset/android.png">
+
   1. On your Android device, open Chrome Chrome.
   2. Go to a website with a PWA that you want to install.
   3. Tap Install.
   4. Follow the on-screen instructions.
 
 * IOS
+
+  <img width="100%" src="./asset/iphone12.png">
 
   1. On your IOS device, open Safari.
   2. Press the "Share" button and select "Add to Home Screen" from the drawer.
