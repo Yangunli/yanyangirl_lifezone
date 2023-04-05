@@ -1,10 +1,8 @@
 import React from "react";
-import { usePath } from "../hooks/usePath";
 import { Link } from "react-router-dom";
 import { translateWeekday } from "../function/weekdayFilter";
 import ModalSwiper from "./Swiper/ModalSwiper";
-const ModalContent = ({ info }, ref) => {
-  const { isArtistInfo, isVenueInfo } = usePath();
+const ModalContent = ({ info, modalContentType }, ref) => {
   const openDayArr = info?.openDay ? info?.openDay.split("") : undefined;
   const { id, startDate } = info;
   const whichYear = startDate ? startDate.split("/")[0] : undefined;
@@ -20,7 +18,7 @@ const ModalContent = ({ info }, ref) => {
     : undefined;
   return (
     <section className="modal" onClick={(e) => e.stopPropagation()} ref={ref}>
-      {!isArtistInfo && !isVenueInfo && (
+      {!modalContentType && (
         <section className="modal--exhibition">
           <div className="modal__about">
             <h1 className="modal__title">{info?.name || info?.title}</h1>{" "}
@@ -62,7 +60,7 @@ const ModalContent = ({ info }, ref) => {
         </section>
       )}
 
-      {isArtistInfo || isVenueInfo ? (
+      {modalContentType ? (
         <>
           <div className="modal__img">
             <ModalSwiper imgArr={info?.imgUrl} />

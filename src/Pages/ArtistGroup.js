@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { artists } from "../data/artists";
 import { Link } from "react-router-dom";
 import PageHeader from "../components/PageHeader";
@@ -7,35 +7,16 @@ import classNames from "../function/classNames";
 import PageTransition from "../components/PageTransition";
 import Loading from "../components/Loading";
 import { useWindowResize } from "../hooks/useWindowResize";
+import { usePromise } from "../hooks/usePromise";
 const ArtistGroup = () => {
-  const [imgsLoaded, setImgsLoaded] = useState(false);
   const [categoryFilter, setCategoryFilter] = useState("all");
   const { width } = useWindowResize();
   const artistsAfterFilter =
     categoryFilter == "all"
       ? artists
       : artists.filter((artist) => artist.category.includes(categoryFilter));
-  useEffect(() => {
-    const loadImage = (info) => {
-      return new Promise((resolve, reject) => {
-        const loadImg = new Image();
-        loadImg.src = info.imgUrl;
-        // wait 2 seconds to simulate loading time
-        loadImg.onload = () =>
-          setTimeout(() => {
-            resolve(info.imgUrl);
-          }, 1000);
-        loadImg.onerror = (err) => reject(err);
-      });
-    };
 
-    Promise.allSettled(artists.map((artist) => loadImage(artist)))
-      .then(() => setImgsLoaded(true))
-      .catch((err) => console.log("Failed to load images", err));
-
-    // Function call
-  }, []);
-
+  const { imgsLoaded } = usePromise(artists);
   return (
     <>
       <PageHeader />
@@ -76,9 +57,9 @@ const ArtistGroup = () => {
         )}
       >
         {imgsLoaded ? (
-          artistsAfterFilter.map(({ brand, id, artist, imgUrl }) => (
+          artistsAfterFilter.map(({ brand, id, artist, src }) => (
             <Link to={`${id}`} key={id} className="card">
-              <img src={imgUrl} alt="" className="card__img" />
+              <img src={src} alt="" className="card__img" />
               <h2>{brand || artist}</h2>
             </Link>
           ))

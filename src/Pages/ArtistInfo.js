@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { useParams } from "react-router-dom";
 import { artists } from "../data/artists";
 import PageHeader from "../components/PageHeader";
@@ -45,6 +45,8 @@ const ArtistInfo = () => {
         </div>
         {modalToggle && (
           <Modal
+            modalBg="twillBg"
+            modalContentType="isArtistInfo"
             changeContent={changeContent}
             modalContent={modalContent.current}
           />

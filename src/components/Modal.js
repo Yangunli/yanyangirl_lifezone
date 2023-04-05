@@ -1,8 +1,7 @@
 import React, { useRef } from "react";
 import ModalContent from "./ModalContent";
-import { usePath } from "../hooks/usePath";
 import classNames from "../function/classNames";
-const Modal = ({ changeContent, modalContent }) => {
+const Modal = ({ changeContent, modalContent, modalBg, modalContentType }) => {
   const modalContainerRef = useRef();
   const modalRef = useRef();
   function modalMoveOut() {
@@ -10,16 +9,12 @@ const Modal = ({ changeContent, modalContent }) => {
       "animation: modalMoveOut 0.2s ease-in-out forwards; transform-origin: bottom left ;";
     modalContainerRef.current.style = "opacity:0;";
   }
-  const { pathArr } = usePath();
+
   return (
     <div
       ref={modalContainerRef}
       className={classNames(
-        pathArr.includes("artist")
-          ? "twillBg"
-          : pathArr.includes("venue")
-          ? "twillBg"
-          : "",
+        modalBg == "twillBg" ? "twillBg" : "",
         "modal-container"
       )}
       onClick={() => {
@@ -30,7 +25,12 @@ const Modal = ({ changeContent, modalContent }) => {
       }}
     >
       {modalContent.map((modal) => (
-        <ModalContent info={modal} ref={modalRef} key="modal" />
+        <ModalContent
+          info={modal}
+          ref={modalRef}
+          modalContentType={modalContentType}
+          key="modal"
+        />
       ))}
     </div>
   );

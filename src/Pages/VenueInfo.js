@@ -79,6 +79,8 @@ const VenueInfo = () => {
       </div>
       {modalToggle && (
         <Modal
+          modalBg="twillBg"
+          modalContentType="isVenueInfo"
           changeContent={changeContent}
           modalContent={modalContent.current}
         />
