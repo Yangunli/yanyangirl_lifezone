@@ -1,5 +1,17 @@
 export const taichungExp = [
   {
+    id: 222,
+    name: "摯 友",
+    artist: "魚羊",
+    time: "2023/04/01-2023/06/25",
+    openDay: "234560",
+    venue: "春樹暮雲商旅 ",
+    location: "台中市西區五權五街151號1樓",
+    TicketType: "免費",
+    src: "https://pic.pimg.tw/yangun410/1680868621-3614346018-g_b.jpg?v=1680868630",
+    link: "https://www.facebook.com/blankplan.tw/photos/a.225118029675066/591497789703753/?locale=zh_TW",
+  },
+  {
     id: 221,
     name: "𝐒𝐨𝐦𝐞𝐰𝐡𝐞𝐫𝐞 好地方",
     artist: "于小鷺",
@@ -142,17 +154,5 @@ export const taichungExp = [
   //   TicketType: "免費",
   //   src: "https://pic.pimg.tw/yangun410/1673022993-1489543016-g_b.jpg?v=1673023010",
   //   link: "https://www.mrwingart.com/?fbclid=IwAR0kLSXrulEqrUeRxJ8B6--lizK30QOgFaYBIY7yDBkcbj3FZKnGFp6-OTU",
-  // },
-  // {
-  //   id: 203,
-  //   name: "無名的繆思",
-  //   artist: "江賢二、林友寒、周裕穎",
-  //   openDay: "234560",
-  //   time: "2022/12/22-2023/03/11",
-  //   TicketType: "免費",
-  //   venue: "THE 201 ART 順天建築.文化.藝術中心",
-  //   location: "臺中市西屯區文心路二段201號 B2F",
-  //   src: "https://pic.pimg.tw/yangun410/1672929420-850586009-g_n.jpg",
-  //   link: "https://www.facebook.com/THE201ART/",
   // },
 ];

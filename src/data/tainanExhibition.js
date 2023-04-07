@@ -1,5 +1,17 @@
 export const tainanExp = [
   {
+    id: 312,
+    name: " 情感效應",
+    artist: "麥片郎",
+    venue: "錦源興空間",
+    openDay: "34560",
+    TicketType: "免費",
+    location: "臺南市中西區中正路209巷3號",
+    time: "2023/04/01-2023/04/23",
+    src: "https://pic.pimg.tw/yangun410/1680862866-645156987-g.jpg",
+    link: "https://www.facebook.com/gimgoanheng",
+  },
+  {
     id: 311,
     name: "看似不重要的生活",
     artist: "黃韶瑩",
