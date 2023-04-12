@@ -65,3 +65,24 @@
     transform: translate(0, 0);
   }
 }
+
+.closedFilter {
+  position: relative;
+
+  & > *:not(img) {
+    color: hsl(82, 37%, 27%);
+  }
+
+  > h2::after {
+    z-index: 1;
+    position: absolute;
+    margin-left: 5px;
+    border: 2px solid currentColor;
+    border-radius: 100%;
+    font-size: 15px;
+    color: currentColor;
+    content: "休";
+    mix-blend-mode: difference;
+    transform: translateY(5px) rotate(45deg);
+  }
+}

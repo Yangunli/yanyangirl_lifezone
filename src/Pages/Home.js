@@ -12,12 +12,13 @@ import { currentFilter } from "../function/exhibitionFilter";
 import { isOpenChecked } from "../function/weekdayFilter";
 import Footer from "../components/Footer";
 import { useModal } from "../hooks/useModal";
-import { cityList } from "../data/cityList";
+import { navList } from "../data/navList";
 import { usePromise } from "../hooks/usePromise";
 import HomeHeader from "../components/HomeHeader";
 import PageTransition from "../components/PageTransition";
 import Loading from "../components/Loading";
 const Home = () => {
+  const cityList = navList.filter((li) => li.src);
   const { imgsLoaded } = usePromise(cityList);
   const { width } = useWindowResize();
   const isOpenCurrentExhibition = [

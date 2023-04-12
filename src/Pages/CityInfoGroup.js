@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useOutletContext, Link } from "react-router-dom";
 import { taipeiVenues } from "../data/taipeiVenues";
 import { taichungVenues } from "../data/taichungVenue";
@@ -70,25 +70,13 @@ const CityInfoGroup = () => {
         {page == "exhibition" && (
           <>
             <button
-              style={{
-                position: "fixed",
-                top: "40vh",
-                left: "5px",
-                rotate: "90deg",
-                fontSize: "1rem",
-              }}
+              className="currentBtn exhibition__Btn"
               onClick={() => setCurrentTab("current")}
             >
               CURRENT
             </button>
             <button
-              style={{
-                position: "fixed",
-                top: "75vh",
-                left: "0px",
-                rotate: "90deg",
-                fontSize: "1rem",
-              }}
+              className="upComingBtn exhibition__Btn"
               onClick={() => setCurrentTab("upComing")}
             >
               UPCOMING

@@ -36,8 +36,8 @@ const HomeSwiper = ({ cityList }) => {
         lazy={true}
       >
         {cityList.map((city) => (
-          <SwiperSlide key={city.name}>
-            <Link to={city.name} aria-label={city.alt} onClick={scrollWin}>
+          <SwiperSlide key={`home__${city.pathName}`}>
+            <Link to={city.pathName} aria-label={city.alt} onClick={scrollWin}>
               <img src={city.src} alt="" />
             </Link>
           </SwiperSlide>

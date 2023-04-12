@@ -1,15 +1,14 @@
 import React from "react";
 import { Link, useOutletContext } from "react-router-dom";
 import PageHeader from "../components/PageHeader";
-import { cityList } from "../data/cityList";
 import { useWindowResize } from "../hooks/useWindowResize";
 import { usePromise } from "../hooks/usePromise";
 import PageTransition from "../components/PageTransition";
 import Loading from "../components/Loading";
 const City = () => {
-  const { city } = useOutletContext();
+  const { city, cityList } = useOutletContext();
   const { width, height } = useWindowResize();
-  const cityObj = cityList.filter((c) => c.name == city);
+  const cityObj = cityList.filter((c) => c.pathName == city);
   const cityImgUrl = cityObj[0].src;
   const { imgsLoaded } = usePromise(cityObj);
 

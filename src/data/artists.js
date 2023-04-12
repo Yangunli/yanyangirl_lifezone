@@ -147,7 +147,7 @@ export const artists = [
     artists: "吳季禎",
     src: "https://firebasestorage.googleapis.com/v0/b/yanyangirl-lifezone.appspot.com/o/%E5%B1%95%E8%A6%BD%2F%E4%BD%94%E7%A9%BA%E9%96%93%2FR0003351.webp?alt=media&token=d4e13bdb-a893-445f-8ebb-ccd24eed71b3",
     brand: "今晚我是手",
-    category: ["複合媒材", "手寫字"],
+    category: ["複合媒材"],
   },
   {
     id: 24,

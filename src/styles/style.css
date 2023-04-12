@@ -69,25 +69,6 @@ button {
   background-color: transparent;
 }
 
-.closedFilter {
-  position: relative;
-}
-.closedFilter > *:not(img) {
-  color: hsl(82, 37%, 27%);
-}
-.closedFilter > h2::after {
-  z-index: 1;
-  position: absolute;
-  margin-left: 5px;
-  border: 2px solid currentColor;
-  border-radius: 100%;
-  font-size: 15px;
-  color: currentColor;
-  content: "休";
-  mix-blend-mode: difference;
-  transform: translateY(5px) rotate(45deg);
-}
-
 .opacity-0 {
   opacity: 0;
   transform: translateY(-200px);
@@ -516,6 +497,25 @@ button {
     transform: translate(0, 0);
   }
 }
+.closedFilter {
+  position: relative;
+}
+.closedFilter > *:not(img) {
+  color: hsl(82, 37%, 27%);
+}
+.closedFilter > h2::after {
+  z-index: 1;
+  position: absolute;
+  margin-left: 5px;
+  border: 2px solid currentColor;
+  border-radius: 100%;
+  font-size: 15px;
+  color: currentColor;
+  content: "休";
+  mix-blend-mode: difference;
+  transform: translateY(5px) rotate(45deg);
+}
+
 .banner {
   transform: translate3d(0, 100px, 0);
   width: 100%;
@@ -1223,7 +1223,7 @@ footer .pureLogoSvg {
   display: flex;
   gap: 10px;
   justify-content: center;
-  width: min(80%, 500px);
+  width: min(90%, 650px);
   cursor: pointer;
 }
 
@@ -1263,14 +1263,24 @@ footer .pureLogoSvg {
   right: 50px;
 }
 
-@media screen and (min-width: 800px) and (min-height: 450px) {
+@media screen and (min-width: 600px) and (min-height: 300px) {
   .artist__empty {
     top: 450px;
     right: 50px;
     width: 400px;
   }
   .artist__filters {
-    padding-top: calc(30px + 10vh);
+    padding-top: calc(120px + 10vh);
+  }
+}
+@media screen and (min-width: 600px) and (min-height: 800px) {
+  .artist__filters {
+    padding-top: calc(60px + 10vh);
+  }
+}
+@media screen and (min-width: 1000px) {
+  .artist__filters {
+    padding-top: calc(80px + 10vh);
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1279,16 +1289,14 @@ footer .pureLogoSvg {
     right: 100px;
     transform: translate3d(0, -25%, 0);
   }
+  .artist__filters {
+    padding-top: calc(130px + 10vh);
+  }
 }
 @media screen and (min-width: 1000px) and (max-height: 700px) {
   .artist__empty {
     width: 150px;
     right: 20px;
-  }
-}
-@media screen and (min-width: 1000px) {
-  .artist__filters {
-    padding-top: calc(120px + 10vh);
   }
 }
 .pageTransition {
@@ -1335,4 +1343,19 @@ footer .pureLogoSvg {
   100% {
     transform: scale(0, 0);
   }
+}
+.exhibition__Btn {
+  position: fixed;
+  rotate: 90deg;
+  font-size: 1rem;
+}
+
+.currentBtn {
+  top: 40vh;
+  left: 5px;
+}
+
+.upComingBtn {
+  top: 75vh;
+  left: 0px;
 }/*# sourceMappingURL=style.css.map */

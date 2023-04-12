@@ -1,14 +1,14 @@
 import React, { useState } from "react";
-import { artists } from "../data/artists";
+import { useOutletContext } from "react-router-dom";
 import { Link } from "react-router-dom";
 import PageHeader from "../components/PageHeader";
-import { kwList } from "../data/artistCategory";
 import classNames from "../function/classNames";
 import PageTransition from "../components/PageTransition";
 import Loading from "../components/Loading";
 import { useWindowResize } from "../hooks/useWindowResize";
 import { usePromise } from "../hooks/usePromise";
 const ArtistGroup = () => {
+  const { artists, kwList } = useOutletContext();
   const [categoryFilter, setCategoryFilter] = useState("all");
   const { width } = useWindowResize();
   const artistsAfterFilter =
