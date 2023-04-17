@@ -5,27 +5,17 @@ import {
   createRoutesFromElements,
 } from "react-router-dom";
 const CityLayout = lazy(() => import("../Layout/CityLayout"));
-// import CityLayout from "../Layout/CityLayout";
 const ArtistPageLayout = lazy(() => import("../Layout/ArtistPageLayout"));
-// import ArtistPageLayout from "../Layout/ArtistPageLayout";
 const Home = lazy(() => import("../Pages/Home"));
-// import Home from "../Pages/Home";
 const ArtistGroup = lazy(() => import("../Pages/ArtistGroup"));
-// import ArtistPage from "../Pages/ArtistPage";
 const ArtistInfo = lazy(() => import("../Pages/ArtistInfo"));
-// import ArtistInfo from "../Pages/ArtistInfo";
 const CityInfoGroup = lazy(() => import("../Pages/CityInfoGroup"));
-// import CityInfoGroup from "../Pages/CityInfoGroup";
 const VenueInfo = lazy(() => import("../Pages/VenueInfo"));
-// import VenueInfo from "../Pages/VenueInfo";
-
 import Login from "../Pages/Login";
 import Info from "../Pages/Info";
 import UserLayout from "../Layout/UserLayout";
 const City = lazy(() => import("../Pages/City"));
-// import City from "../Pages/City";
 const InfoLayout = lazy(() => import("../Layout/InfoLayout"));
-// import InfoLayout from "../Layout/InfoLayout";
 
 export const router = createBrowserRouter(
   createRoutesFromElements(

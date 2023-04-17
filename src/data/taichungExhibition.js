@@ -136,7 +136,7 @@ export const taichungExp = [
     id: 213,
     name: "在視覺之境遊走，我所看見的美麗",
     artist: "蕭筑方、王亮尹、陳奎延、李佩姍",
-    time: "2023/03/04-2023/04/15",
+    time: "2023/03/04-2023/04/22",
     openDay: "23456",
     TicketType: "免費",
     venue: "月臨畫廊",
