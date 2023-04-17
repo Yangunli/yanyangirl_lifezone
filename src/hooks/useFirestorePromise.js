@@ -1,8 +1,6 @@
 import { useEffect, useState } from "react";
-import { usePath } from "./usePath";
 export const useFirestorePromise = (exhibitions) => {
   const [imgsLoaded, setImgsLoaded] = useState(false);
-  const { isArtistInfo } = usePath();
 
   useEffect(() => {
     const loadImage = (url) => {
@@ -21,7 +19,7 @@ export const useFirestorePromise = (exhibitions) => {
         exhibitions.map((info) => info.imgUrl.map((url) => loadImage(url)))
       )
         .then(() => setImgsLoaded(true))
-        .catch((err) => console.log("Failed to load images", err));
+        .catch((err) => console.error("Failed to load images", err));
     }
 
     // Function call
