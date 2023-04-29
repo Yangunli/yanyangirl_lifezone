@@ -27,13 +27,12 @@ const HomeSwiper = ({ cityList }) => {
         spaceBetween={20}
         loop={true}
         centeredSlides={true}
+        // allowTouchMove={false}
         modules={[Pagination, Autoplay]}
         className="homeSwiper"
         autoplay={{ delay: 3000 }}
         simulateTouch={false}
         preloadImages={true}
-        // Enable lazy loading
-        lazy={true}
       >
         {cityList.map((city) => (
           <SwiperSlide key={`home__${city.pathName}`}>

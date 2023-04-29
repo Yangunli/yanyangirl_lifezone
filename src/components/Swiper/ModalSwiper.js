@@ -6,7 +6,7 @@ import { EffectCreative, Autoplay } from "swiper";
 const ModalSwiper = ({ imgArr }) => {
   return (
     <Swiper
-      grabCursor={true}
+      // grabCursor={true}
       effect={"creative"}
       loop={true}
       autoplay={{

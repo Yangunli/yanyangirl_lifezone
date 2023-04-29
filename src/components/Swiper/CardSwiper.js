@@ -26,7 +26,6 @@ const CardSwiper = ({ exhibition, changeContent }) => {
       spaceBetween={5}
       centeredSlides={true}
       loop={true}
-      // preloadImages={false}
       autoplay={{
         delay: 2500,
         disableOnInteraction: false,
