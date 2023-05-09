@@ -1,5 +1,5 @@
 export const exhibitionList = [
-  // TPE51- TXG23- TNN09-
+  // TPE60- TXG29- TNN10-
   // {
   //   title: "大海的一天",
   //   venue: "田園城市生活風格書店",
@@ -14,17 +14,26 @@ export const exhibitionList = [
   //   ],
   // },
   // {
-  //   title: "濱海日記",
-  //   venue: "金車文藝中心KCCA",
+  //   id: "TPE",
+  //   title: "",
+  //   venue: "",
   //   venueLink: "",
-  //   artist: "徐至宏",
-  //   artistLink: "/artist/6",
-  //   startDate: "2020/01/12",
-  //   endDate: "2020/03/08",
-  //   imgUrl: [
-  //     "https://firebasestorage.googleapis.com/v0/b/yanyangirl-lifezone.appspot.com/o/%E5%B1%95%E8%A6%BD%2F%E9%87%91%E8%BB%8A%2FDSC07860.webp?alt=media&token=14d2a5b3-076d-4ec0-999e-84b32dda574e",
-  //     "https://firebasestorage.googleapis.com/v0/b/yanyangirl-lifezone.appspot.com/o/%E5%B1%95%E8%A6%BD%2F%E9%87%91%E8%BB%8A%2FDSC07870.webp?alt=media&token=c18746da-185b-4a06-8578-b3f3c84032e9",
-  //   ],
+  //   artist: "",
+  //   artistLink: "/artist/",
+  //   startDate: "",
+  //   endDate: "",
+  //   imgUrl: [],
+  // },
+  // {
+  //   id: "TPE",
+  //   title: "",
+  //   venue: "",
+  //   venueLink: "",
+  //   artist: "",
+  //   artistLink: "/artist/",
+  //   startDate: "",
+  //   endDate: "",
+  //   imgUrl: [],
   // },
   // {
   //   id: "TPE",
@@ -33,17 +42,6 @@ export const exhibitionList = [
   //   venueLink: "/taipei/venue/114",
   //   artist: "",
   //   artistLink: "/artist/",
-  //   startDate: "",
-  //   endDate: "",
-  //   imgUrl: []
-  // },
-  // {
-  //   id: "",
-  //   title: "",
-  //   venue: "",
-  //   venueLink: "",
-  //   artist: "",
-  //   artistLink: "",
   //   startDate: "",
   //   endDate: "",
   //   imgUrl: [],

@@ -1,4 +1,28 @@
 export const taipeiExp = [
+  // {
+  //   id: ,
+  //   name: "",
+  //   artist: "",
+  //   venue: "首都藝術中心",
+  //   openDay: "23456",
+  //   TicketType: "免費",
+  //   location: "臺北市仁愛路四段343號2樓",
+  //   time: "",
+  //   src: "",
+  //   link: "",
+  // },
+  {
+    id: 134,
+    name: "繁花",
+    artist: "林宏信",
+    venue: "首都藝術中心",
+    openDay: "23456",
+    TicketType: "免費",
+    location: "臺北市仁愛路四段343號2樓",
+    time: "2023/05/05-2023/06/03",
+    src: "https://pic.pimg.tw/yangun410/1683620672-3775690489-g_n.jpg",
+    link: "https://www.capitalart.com.tw",
+  },
   {
     id: 133,
     name: "不落幕的演出",
@@ -146,18 +170,7 @@ export const taipeiExp = [
     src: "https://pic.pimg.tw/yangun410/1680683174-3235265711-g_b.jpg",
     link: "https://www.facebook.com/LinkLion2016/",
   },
-  {
-    id: 120,
-    name: "若水",
-    artist: "吳耀庭",
-    venue: "首都藝術中心",
-    openDay: "23456",
-    TicketType: "免費",
-    location: "臺北市仁愛路四段343號2樓",
-    time: "2023/04/08-2023/04/28",
-    src: "https://pic.pimg.tw/yangun410/1680683141-3622567034-g_b.jpg",
-    link: "https://www.facebook.com/events/923336078877332/?acontext=%7B%22event_action_history%22%3A[]%7D",
-  },
+
   // {
   //   id: ,
   //   name: "",

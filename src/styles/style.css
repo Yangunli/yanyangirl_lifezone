@@ -386,6 +386,7 @@ button {
 .modal__img img {
   width: 100%;
   height: 100%;
+  aspect-ratio: 1;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   -o-object-fit: cover;

@@ -12,7 +12,7 @@ export const usePromise = (infos) => {
           setTimeout(() => {
             resolve(info.src ? info.src : info.venueImgUrl[0]);
           }, 0);
-        loadImg.onerror = (err) => reject(err);
+        loadImg.onerror = (err) => reject(info);
       });
     };
 
