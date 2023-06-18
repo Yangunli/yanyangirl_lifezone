@@ -6,7 +6,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const BundleAnalyzerPlugin =
   require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
 module.exports = {
-  mode: "development",
+  mode: "production", //local : development
   entry: "./src/index.js",
   output: {
     path: path.resolve(__dirname, "public"),
