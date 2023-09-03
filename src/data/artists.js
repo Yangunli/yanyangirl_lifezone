@@ -256,13 +256,13 @@ export const artists = [
     src: "https://firebasestorage.googleapis.com/v0/b/yanyangirl-lifezone.appspot.com/o/%E5%B1%95%E8%A6%BD%2FTPEother%2FDSC09063.webp?alt=media&token=0c8f4ca7-8942-4b5d-b5c2-9bdc8164c877",
     category: ["插畫"],
   },
-  // {
-  //   id: 41,
-  //   artist: "洪添賢",
-  //   brand: "Croter",
-  //   src: "",
-  //   category: ["插畫"],
-  // },
+  {
+    id: 41,
+    artist: "洪添賢",
+    brand: "Croter",
+    src: "https://firebasestorage.googleapis.com/v0/b/yanyangirl-lifezone.appspot.com/o/%E5%B1%95%E8%A6%BD%2F%E5%B0%8F%E8%B7%AF%E6%98%A0%E7%94%BB%2F6d91_n.webp?alt=media&token=4ce4e439-c822-4214-ab2c-be94cce60761",
+    category: ["插畫"],
+  },
   {
     id: 42,
     artist: "Johnnp",
@@ -274,5 +274,24 @@ export const artists = [
   //   artist: "高菁穗",
   //   src: "",
   //   category: ["羊毛氈"],
+  // },
+  // {
+  //   id: 44,
+  //   artist: "王鴻川",
+  //   src: "",
+  //   category: ["陶"],
+  // },
+  // {
+  //   id: 45,
+  //   artist: "陳穎",
+  //   src: "",
+  //   category: ["陶"],
+  // },
+  // {
+  //   id: 46,
+  //   artist: "高愷蓮",
+  //   brand: "Karren",
+  //   src: "",
+  //   category: ["陶","攝影"],
   // },
 ];

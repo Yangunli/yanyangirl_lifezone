@@ -52,35 +52,35 @@ const Info = () => {
       });
     });
 
-  useEffect(() => {
-    const q = query(exhibitionRef, where("artist", "==", "Fanyu"));
-    const unsubscribe = onSnapshot(q, (querySnapshot) => {
-      let exhibitionArr = [];
-      querySnapshot.forEach((doc) => {
-        exhibitionArr.push({ ...doc.data(), id: doc.id });
-      });
-      setExhibitions(exhibitionArr);
-      console.log(exhibitionArr);
-    });
-    return () => unsubscribe();
-  }, []);
-
   // useEffect(() => {
-  //   const q = query(exhibitionRef);
+  //   const q = query(exhibitionRef, where("artist", "==", "Fanyu"));
   //   const unsubscribe = onSnapshot(q, (querySnapshot) => {
-  //     let venueArr = [];
+  //     let exhibitionArr = [];
   //     querySnapshot.forEach((doc) => {
-  //       venueArr.push({ ...doc.data(), id: doc.id });
+  //       exhibitionArr.push({ ...doc.data(), id: doc.id });
   //     });
-  //     console.log(venueArr);
+  //     setExhibitions(exhibitionArr);
+  //     console.log(exhibitionArr);
   //   });
   //   return () => unsubscribe();
   // }, []);
 
+  useEffect(() => {
+    const q = query(exhibitionRef);
+    const unsubscribe = onSnapshot(q, (querySnapshot) => {
+      let venueArr = [];
+      querySnapshot.forEach((doc) => {
+        venueArr.push({ ...doc.data(), id: doc.id });
+      });
+      console.log(venueArr);
+    });
+    return () => unsubscribe();
+  }, []);
+
   return (
     <div className="info">
-      {/* <button onClick={addIt}>ADD List DATA</button> */}
-      <button onClick={updateInfo}>UPDATE</button>
+      <button onClick={addIt}>ADD List DATA</button>
+      {/* <button onClick={updateInfo}>UPDATE</button> */}
     </div>
   );
 };

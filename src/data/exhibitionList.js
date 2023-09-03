@@ -1,5 +1,5 @@
 export const exhibitionList = [
-  // TPE60- TXG29- TNN10-
+  // TPE60- TXG34- TNN12-
   // {
   //   title: "大海的一天",
   //   venue: "田園城市生活風格書店",
@@ -13,26 +13,33 @@ export const exhibitionList = [
   //     "https://firebasestorage.googleapis.com/v0/b/yanyangirl-lifezone.appspot.com/o/%E5%B1%95%E8%A6%BD%2Fgardencity%2FR0002410.webp?alt=media&token=b7a24fce-4f85-433a-b9fd-7310d3222bf2",
   //   ],
   // },
-  // {
+  {
+    id: "TXG33",
+    title: "器官派對",
+    venue: "小路映画",
+    venueLink: "/taichung/venue/202",
+    artist: "高愷蓮",
+    brand: "Karren",
+    artistLink: "/artist/46",
+    startDate: "2018/05/26",
+    endDate: "2018/06/17",
+    imgUrl: [
+      "https://firebasestorage.googleapis.com/v0/b/yanyangirl-lifezone.appspot.com/o/%E5%B1%95%E8%A6%BD%2F%E5%B0%8F%E8%B7%AF%E6%98%A0%E7%94%BB%2FDSC08198.webp?alt=media&token=d2eb0b9e-4bcf-4dc0-a2e8-817df43e26ce",
+      "https://firebasestorage.googleapis.com/v0/b/yanyangirl-lifezone.appspot.com/o/%E5%B1%95%E8%A6%BD%2F%E5%B0%8F%E8%B7%AF%E6%98%A0%E7%94%BB%2FDSC08210.webp?alt=media&token=89058c67-d25d-437a-882b-9f1657b48cd9",
+      "https://firebasestorage.googleapis.com/v0/b/yanyangirl-lifezone.appspot.com/o/%E5%B1%95%E8%A6%BD%2F%E5%B0%8F%E8%B7%AF%E6%98%A0%E7%94%BB%2FDSC08231.webp?alt=media&token=b705ba49-d80b-4f32-90be-62902fa8132d",
+      "https://firebasestorage.googleapis.com/v0/b/yanyangirl-lifezone.appspot.com/o/%E5%B1%95%E8%A6%BD%2F%E5%B0%8F%E8%B7%AF%E6%98%A0%E7%94%BB%2FDSC08228.webp?alt=media&token=7c0bc15a-87ca-4e9d-8332-bbe7e6fc0137",
+    ],
+  },
+  //   {
   //   id: "TPE",
-  //   title: "",
-  //   venue: "",
+  //   title: "勿忘我旅行社",
+  //   venue: "詹記",
   //   venueLink: "",
-  //   artist: "",
-  //   artistLink: "/artist/",
-  //   startDate: "",
-  //   endDate: "",
-  //   imgUrl: [],
-  // },
-  // {
-  //   id: "TPE",
-  //   title: "",
-  //   venue: "",
-  //   venueLink: "",
-  //   artist: "",
-  //   artistLink: "/artist/",
-  //   startDate: "",
-  //   endDate: "",
+  //   artist: "高愷蓮",
+  //   brand: "Karren",
+  //   artistLink: "/artist/46",
+  //   startDate: "2020/09/14",
+  //   endDate: "2021/02/20",
   //   imgUrl: [],
   // },
   // {
