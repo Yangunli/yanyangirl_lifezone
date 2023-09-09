@@ -68,7 +68,7 @@ export const taipeiExp = [
     openDay: "23456",
     TicketType: "免費",
     location: "臺北市內湖區新明路66號",
-    time: "2023/08/17-2023/09/03",
+    time: "2023/08/17-2023/09/09",
     src: "https://pic.pimg.tw/yangun410/1692415712-1020359433-g_b.jpg",
     link: "https://www.facebook.com/BACK.YIRI",
   },
