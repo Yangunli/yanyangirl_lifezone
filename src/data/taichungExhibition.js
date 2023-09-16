@@ -1,5 +1,17 @@
 export const taichungExp = [
   {
+    id: 249,
+    name: "未必在他方",
+    artist: "點點陳手帳",
+    time: "2023/09/19-2023/10/22",
+    openDay: "234560",
+    venue: "茶筆巷文具生活空間",
+    location: "臺中市西區昇平街89號",
+    TicketType: "免費",
+    src: "https://pic.pimg.tw/yangun410/1694876811-3147566555-g.jpg",
+    link: "https://www.facebook.com/tpl.stationery",
+  },
+  {
     id: 248,
     name: "契 氳",
     artist: "胡竣傑、歐立婷、莊騰翔",
@@ -82,18 +94,6 @@ export const taichungExp = [
     time: "2023/07/29-2023/09/02",
     src: "https://pic.pimg.tw/yangun410/1691069254-1123964401-g_b.jpg",
     link: "https://www.facebook.com/22Pierre",
-  },
-  {
-    id: 239,
-    name: "甜甜圈的洞",
-    artist: "咚東",
-    time: "2023/07/05-2023/07/25",
-    openDay: "234560",
-    venue: "茶筆巷文具生活空間",
-    location: "臺中市西區昇平街89號",
-    TicketType: "免費",
-    src: "https://pic.pimg.tw/yangun410/1688892500-1344553850-g_b.jpg?v=1688892506",
-    link: "https://www.facebook.com/tpl.stationery",
   },
   {
     id: 237,

@@ -67,7 +67,7 @@ export const tainanExp = [
     openDay: "23456",
     TicketType: "免費",
     location: "臺南市中西區忠義路二段186號",
-    time: "2023/08/19-2023/09/16",
+    time: "2023/08/19-2023/09/23",
     src: "https://pic.pimg.tw/yangun410/1691069254-3357343835-g_b.jpg",
     link: "https://www.san-gallery.com.tw/",
   },
