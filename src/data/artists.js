@@ -287,11 +287,11 @@ export const artists = [
   //   src: "",
   //   category: ["陶"],
   // },
-  // {
-  //   id: 46,
-  //   artist: "高愷蓮",
-  //   brand: "Karren",
-  //   src: "",
-  //   category: ["陶","攝影"],
-  // },
+  {
+    id: 46,
+    artist: "高愷蓮",
+    brand: "Karren",
+    src: "https://firebasestorage.googleapis.com/v0/b/yanyangirl-lifezone.appspot.com/o/%E5%B1%95%E8%A6%BD%2FTPEother%2FDSC00516.webp?alt=media&token=fb4da8d0-2f17-47db-85f1-1a0ee2228495",
+    category: ["陶", "攝影"],
+  },
 ];
