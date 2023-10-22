@@ -198,12 +198,12 @@ export const artists = [
     src: "https://firebasestorage.googleapis.com/v0/b/yanyangirl-lifezone.appspot.com/o/%E5%B1%95%E8%A6%BD%2F%E4%BD%94%E7%A9%BA%E9%96%93%2FR0024618.webp?alt=media&token=3dbcd516-3807-46af-b55f-6535930b6736",
     category: ["插畫"],
   },
-  // {
-  //   id: 32,
-  //   artist: "魏少君",
-  //   src: "",
-  //   category: ["剪紙"],
-  // },
+  {
+    id: 32,
+    artist: "魏少君",
+    src: "https://firebasestorage.googleapis.com/v0/b/yanyangirl-lifezone.appspot.com/o/%E5%B1%95%E8%A6%BD%2Flinklion%2FR0000029.webp?alt=media&token=6e292d67-f4fc-4872-9215-c0432778c75f",
+    category: ["剪紙"],
+  },
   {
     id: 33,
     artist: "Brenda",
@@ -211,12 +211,12 @@ export const artists = [
     src: "https://firebasestorage.googleapis.com/v0/b/yanyangirl-lifezone.appspot.com/o/%E5%B1%95%E8%A6%BD%2FwrongGallery%2FR0000065.webp?alt=media&token=bf9611d1-9e3e-482a-875b-f1950ced7d66",
     category: ["插畫"],
   },
-  // {
-  //   id: 34,
-  //   artist: "吳芊頤",
-  //   src: "",
-  //   category: ["複合媒材"],
-  // },
+  {
+    id: 34,
+    artist: "吳芊頤",
+    src: "https://firebasestorage.googleapis.com/v0/b/yanyangirl-lifezone.appspot.com/o/%E5%B1%95%E8%A6%BD%2FTPEother%2FR0012915.webp?alt=media&token=1b406e67-d743-4157-9031-eef7b4d83f49",
+    category: ["複合媒材"],
+  },
   {
     id: 35,
     artist: "伏流物件",
@@ -318,6 +318,13 @@ export const artists = [
     id: 50,
     artist: "林彥良",
     src: "https://firebasestorage.googleapis.com/v0/b/yanyangirl-lifezone.appspot.com/o/%E5%B1%95%E8%A6%BD%2F333Gallery%2FR0010692.webp?alt=media&token=ef19f6ee-d79f-4410-bdd5-9c70ae85eb8f",
-    category: ["插畫"],
+    category: ["插畫", "繪畫"],
+  },
+  {
+    id: 51,
+    artist: "美好工作室",
+    brand: "美好工作室",
+    src: "https://firebasestorage.googleapis.com/v0/b/yanyangirl-lifezone.appspot.com/o/%E5%B1%95%E8%A6%BD%2F%E4%B8%AD%E5%8F%8B%2FR0024946.webp?alt=media&token=240a80dd-899e-4f6b-8c65-37a45a6a8026",
+    category: ["刺繡"],
   },
 ];
