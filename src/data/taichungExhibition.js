@@ -1,4 +1,16 @@
 export const taichungExp = [
+  {
+    id: 254,
+    name: "日常詩篇",
+    artist: "宋立、陳穎、楊煥照",
+    time: "2023/11/04-2023/12/02",
+    openDay: "23456",
+    TicketType: "免費",
+    venue: "亞米藝術",
+    location: "臺中市西區民生北路138號",
+    src: "https://pic.pimg.tw/yangun410/1698415796-2906974703-g.jpg",
+    link: "https://www.facebook.com/yamiartspace",
+  },
    {
     id:253 ,
     name: "悠長假期",
@@ -143,19 +155,6 @@ export const taichungExp = [
     location: "臺中市西區五權西六街72號",
     src: "https://pic.pimg.tw/yangun410/1687070717-2439759792-g_b.jpg",
     link: "https://www.facebook.com/zasso72",
-  },
-
-  {
-    id: 232,
-    name: "野地的繁華",
-    artist: "劉育仁",
-    time: "2023/05/13-2023/06/17",
-    openDay: "23456",
-    TicketType: "免費",
-    venue: "亞米藝術",
-    location: "臺中市西區民生北路138號",
-    src: "https://pic.pimg.tw/yangun410/1684135876-358399019-g_b.jpg",
-    link: "https://www.facebook.com/yamiartspace",
   },
   {
     id: 225,
