@@ -17,6 +17,7 @@
 #root {
   width: 100%;
   font-family: "Noto Sans TC", sans-serif;
+  cursor: default;
 }
 
 body {
@@ -63,7 +64,8 @@ button {
   color: currentColor;
 }
 
-a,button{
+a,
+button {
   cursor: pointer;
 }
 

@@ -13,6 +13,7 @@
   object-position: center;
   object-fit: cover;
   aspect-ratio: 3/4;
+  cursor: pointer;
   &:hover {
     rotate: -10deg;
   }

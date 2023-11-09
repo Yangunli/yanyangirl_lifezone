@@ -1,5 +1,5 @@
 export const exhibitionList = [
-  // TPE75- TXG45- TNN15-
+  // TPE76- TXG45- TNN15-
   //   {
   //   id: "TPE",
   //   title: "",

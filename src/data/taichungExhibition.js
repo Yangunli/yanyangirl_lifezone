@@ -8,11 +8,11 @@ export const taichungExp = [
     TicketType: "免費",
     venue: "亞米藝術",
     location: "臺中市西區民生北路138號",
-    src: "https://pic.pimg.tw/yangun410/1698415796-2906974703-g.jpg",
+    src: "https://pic.pimg.tw/yangun410/1699166873-2683156193-g.jpg",
     link: "https://www.facebook.com/yamiartspace",
   },
-   {
-    id:253 ,
+  {
+    id: 253,
     name: "悠長假期",
     artist: "黃姿瑜、陳麗如",
     venue: "寬藝術空間",

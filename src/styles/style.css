@@ -18,6 +18,7 @@
 #root {
   width: 100%;
   font-family: "Noto Sans TC", sans-serif;
+  cursor: default;
 }
 
 body {
@@ -63,6 +64,11 @@ button {
   border: none;
   background-color: transparent;
   color: currentColor;
+}
+
+a,
+button {
+  cursor: pointer;
 }
 
 .goback {
@@ -450,6 +456,7 @@ button {
   -o-object-fit: cover;
      object-fit: cover;
   aspect-ratio: 3/4;
+  cursor: pointer;
 }
 .card__img:hover {
   rotate: -10deg;
