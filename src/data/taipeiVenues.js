@@ -148,7 +148,7 @@ export const taipeiVenues = [
     city: "taipei",
     location: "臺北市師大路117巷6號1樓",
     desc: "",
-    link: "https://www.facebook.com/jxjbooks/",
+    link: "https://www.facebook.com/jxjgallery",
   },
   {
     id: 111,
