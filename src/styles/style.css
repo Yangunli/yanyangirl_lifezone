@@ -361,12 +361,10 @@ button {
 
 @keyframes modalMoveIn {
   0% {
-    scale: 0;
-    transform: translate3d(0, 100vh, 0);
+    transform: translate3d(0, 100vh, 0) scale(0);
   }
   80% {
-    scale: 1;
-    transform: translate3d(0, -10%, 0);
+    transform: translate3d(0, -10%, 0) scale(1);
   }
   90% {
     transform: translate3d(0, 15%, 0);
@@ -377,12 +375,10 @@ button {
 }
 @keyframes modalMoveOut {
   0% {
-    scale: 1;
-    transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0) scale(1);
   }
   100% {
-    scale: 0;
-    transform: translate3d(-100vw, 0, 0);
+    transform: translate3d(-100vw, 0, 0) scale(0);
   }
 }
 .modal__img {
@@ -616,14 +612,13 @@ button {
 }
 .homeSwiper .swiper-slide.swiper-slide-prev {
   opacity: 0;
-  scale: 0;
+  transform: scale(0);
 }
 .homeSwiper .swiper-slide.swiper-slide-active {
-  scale: 1;
-  translate: -15px;
+  transform: scale(1) translate(-15px);
 }
 .homeSwiper .swiper-slide.swiper-slide-next {
-  scale: 0.5;
+  transform: scale(0.5);
 }
 
 .home__clickImg {
@@ -772,7 +767,7 @@ button {
 }
 
 .menu__link:last-child .menu__link__name::after {
-  scale: 0;
+  transform: scale(0);
 }
 
 .menu__link__name {
@@ -782,7 +777,7 @@ button {
 .menu__link__name::after {
   position: absolute;
   content: url("../asset/images/curveArrow.svg");
-  scale: 0.9;
+  transform: scale(0.9);
 }
 
 .menu__link__icon {
@@ -821,7 +816,7 @@ button {
     height: 20px;
   }
   .menu__link:last-child .menu__link__name::after {
-    scale: 0.9;
+    transform: scale(0.9);
   }
 }
 @media screen and (min-width: 1024px) {

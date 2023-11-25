@@ -36,14 +36,13 @@
     }
     &.swiper-slide-prev {
       opacity: 0;
-      scale: 0;
+      transform: scale(0);
     }
     &.swiper-slide-active {
-      scale: 1;
-      translate: -15px;
+      transform: scale(1) translate(-15px);
     }
     &.swiper-slide-next {
-      scale: 0.5;
+      transform: scale(0.5);
     }
 
     flex-direction: column;

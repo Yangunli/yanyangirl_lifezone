@@ -28,12 +28,10 @@
 
 @keyframes modalMoveIn {
   0% {
-    scale: 0;
-    transform: translate3d(0, 100vh, 0);
+    transform: translate3d(0, 100vh, 0) scale(0);
   }
   80% {
-    scale: 1;
-    transform: translate3d(0, -10%, 0);
+    transform: translate3d(0, -10%, 0) scale(1);
   }
   90% {
     transform: translate3d(0, 15%, 0);
@@ -45,12 +43,10 @@
 
 @keyframes modalMoveOut {
   0% {
-    scale: 1;
-    transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0) scale(1);
   }
   100% {
-    scale: 0;
-    transform: translate3d(-100vw, 0, 0);
+    transform: translate3d(-100vw, 0, 0) scale(0);
   }
 }
 
