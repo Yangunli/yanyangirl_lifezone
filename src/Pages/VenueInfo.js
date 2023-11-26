@@ -44,18 +44,17 @@ const VenueInfo = () => {
             alt={venue.venue}
           />
         </div>
-
         <section className="venue__desc">
           <h1>{desc}</h1>
           <h2 className="venue__desc__title">{venue.venue}</h2>
 
-          {isVenueOpen != "?" ? (
+          {isVenueOpen != ("?"||"預") ? (
             <p>
               營業日: {translateWeekday(venueOpenArr[0])}-
               {translateWeekday(venueOpenArr[venueOpenArr.length - 1])}
             </p>
           ) : (
-            <p>不定休</p>
+            <p>不定休/預約制</p>
           )}
           <small>{venue.location}</small>
           {width >= 600 && <img src="/images/walking.png" alt="" />}

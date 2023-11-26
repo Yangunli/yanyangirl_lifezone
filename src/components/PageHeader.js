@@ -4,7 +4,7 @@ import { useScrollNavDisplay } from "../hooks/useScrollNavDisplay";
 import { MenuSvg2, LifezoneSvg, ArrowSvg, PureLogoSvg } from "./SvgComponents";
 import Menu from "./Menu";
 import classNames from "../function/classNames";
-import { scrollWin } from "../function/group";
+import { scrollWin } from "../function/scroll";
 import { navList } from "../data/navList";
 import { useWindowResize } from "../hooks/useWindowResize";
 import { usePath } from "../hooks/usePath";

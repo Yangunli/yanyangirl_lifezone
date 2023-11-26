@@ -44,8 +44,9 @@ const ModalContent = ({ info, modalContentType }, ref) => {
               <p>
                 <span>營業日</span>
                 <span>
-                  {translateWeekday(openDayArr[0])}～
-                  {translateWeekday(openDayArr[openDayArr.length - 1])}
+                  {translateWeekday(openDayArr[0])!==('預'||'休')?
+                  `${translateWeekday(openDayArr[0])}～ ${translateWeekday(openDayArr[openDayArr.length - 1])}`:
+                  translateWeekday(openDayArr[0])==='預'?'預約制':'不定休'}
                 </span>
               </p>
             )}

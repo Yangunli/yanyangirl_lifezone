@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { navList } from "../data/navList";
-import { scrollWin } from "../function/group";
+import { scrollWin } from "../function/scroll";
 import { PureLogoSvg } from "./SvgComponents";
 const Footer = () => {
   return (

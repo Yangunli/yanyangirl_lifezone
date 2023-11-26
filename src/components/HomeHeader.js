@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Menu from "./Menu";
 import { useMenu } from "../hooks/useMenu";
 import { useScrollNavDisplay } from "../hooks/useScrollNavDisplay";
-import { scrollWin } from "../function/group";
+import { scrollWin } from "../function/scroll";
 import { navList } from "../data/navList";
 import { MenuSvg1, LogoSvg } from "./SvgComponents";
 import classNames from "../function/classNames";

@@ -6,7 +6,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { useWindowResize } from "../../hooks/useWindowResize";
-import { scrollWin } from "../../function/group";
+import { scrollWin } from "../../function/scroll";
 const HomeSwiper = ({ cityList }) => {
   const [scrollHight, setScrollHight] = useState(window.screenY);
   const { width } = useWindowResize();

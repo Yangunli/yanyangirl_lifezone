@@ -29,8 +29,11 @@ export function translateWeekday(weekday) {
     case "0":
       weekdayZH = "周日";
       break;
-    case "?":
-      weekdayZH = "不定休";
+    case "預":
+      weekdayZH = "預";
+      break;
+   case "?":
+      weekdayZH = "休";
       break;
     default:
       console.error("請輸入0-6的字串");

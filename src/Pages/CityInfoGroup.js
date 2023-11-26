@@ -9,7 +9,7 @@ import classNames from "../function/classNames";
 import { currentFilter, upComingFilter } from "../function/exhibitionFilter";
 import Modal from "../components/Modal";
 import { isOpenChecked } from "../function/weekdayFilter";
-import { scrollWin } from "../function/group";
+import { scrollWin } from "../function/scroll";
 import { useModal } from "../hooks/useModal";
 import { usePromise } from "../hooks/usePromise";
 import Loading from "../components/Loading";

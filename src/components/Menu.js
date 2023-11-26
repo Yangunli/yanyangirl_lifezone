@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { Link, NavLink } from "react-router-dom";
-import { scrollWin } from "../function/group";
+import { scrollWin } from "../function/scroll";
 import { navList } from "../data/navList";
 import { recommendedList } from "../data/recommendedLst";
 const Menu = ({ changeMenu }) => {
