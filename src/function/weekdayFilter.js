@@ -32,7 +32,7 @@ export function translateWeekday(weekday) {
     case "預":
       weekdayZH = "預";
       break;
-   case "?":
+    case "?":
       weekdayZH = "休";
       break;
     default:
