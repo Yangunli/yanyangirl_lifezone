@@ -11,8 +11,20 @@ export const taipeiExp = [
   //   src: "",
   //   link: "",
   // },
-    {
-    id:199 ,
+  {
+    id: 200,
+    name: "另一個第十二夜",
+    artist: "鄭星慧",
+    venue: "cafe Bom Bom",
+    openDay: "1234560",
+    TicketType: "免費",
+    location: "臺北市松山區延壽街386號",
+    time: "2023/12/08-2024/01/07",
+    src: "https://pic.pimg.tw/yangun410/1701439210-2196898308-g_n.jpg",
+    link: "https://www.facebook.com/StarryStarIllustration",
+  },
+  {
+    id: 199,
     name: "Digital Monsters",
     artist: "非人製陶、LALAYO",
     venue: "靠邊走藝術空間",
@@ -23,8 +35,8 @@ export const taipeiExp = [
     src: "https://pic.pimg.tw/yangun410/1700975060-4010208119-g.jpg",
     link: "https://www.facebook.com/WrongGalleries",
   },
-    {
-    id:198 ,
+  {
+    id: 198,
     name: "海上繪圖師",
     artist: "王傑",
     venue: "Chambre 81",
@@ -60,7 +72,7 @@ export const taipeiExp = [
     link: "https://www.facebook.com/jxjgallery",
   },
   {
-    id:195 ,
+    id: 195,
     name: "哭是因為訊息的毛刺扎進眼",
     artist: "傅寧",
     venue: "双方藝廊",
@@ -74,7 +86,7 @@ export const taipeiExp = [
   {
     id: 194,
     name: "兔想世界",
-    artist:"倪士珍",
+    artist: "倪士珍",
     openDay: "34560",
     venue: "金車文藝中心 臺北承德館 ",
     TicketType: "免費",
@@ -95,8 +107,8 @@ export const taipeiExp = [
     src: "https://pic.pimg.tw/yangun410/1699166873-1269006975-g.jpg",
     link: "https://www.capitalart.com.tw",
   },
-    {
-    id:192 ,
+  {
+    id: 192,
     name: "我想念你的紅眼睛",
     artist: "傅寧",
     venue: "Hiro Hiro Art Space",
@@ -110,7 +122,8 @@ export const taipeiExp = [
   {
     id: 191,
     name: "In depth",
-    artist: "金巻芳俊、入江明日香、西岡良太、北彩子、篠原愛、稲田侑峰、中里勇太、山田航平",
+    artist:
+      "金巻芳俊、入江明日香、西岡良太、北彩子、篠原愛、稲田侑峰、中里勇太、山田航平",
     venue: "也趣藝廊",
     openDay: "23456",
     TicketType: "免費",
@@ -120,7 +133,7 @@ export const taipeiExp = [
     link: "https://www.facebook.com/galleryaki",
   },
   {
-    id:190,
+    id: 190,
     name: "Bad Dream",
     artist: "大坂秩加",
     openDay: "23456",
@@ -167,8 +180,8 @@ export const taipeiExp = [
     src: "https://pic.pimg.tw/yangun410/1697334218-2479644122-g.jpg",
     link: "https://www.facebook.com/neptune.gallery.taipei",
   },
-    {
-    id:185 ,
+  {
+    id: 185,
     name: "雲．想．藝",
     artist: "潘煒中、林怡慧、林麻依子、清水円加、佐野美里、阿寧",
     venue: "青雲畫廊",
@@ -190,10 +203,10 @@ export const taipeiExp = [
     time: "2023/10/28-2023/11/08",
     src: "https://pic.pimg.tw/yangun410/1697283174-2338110805-g_n.jpg",
     link: "https://www.instagram.com/san__galerie/",
-    artistLink:"/artist/3"
+    artistLink: "/artist/3",
   },
-    {
-    id:181 ,
+  {
+    id: 181,
     name: "25毫米的共鳴",
     artist: "矢田真之、小木曽‧韋茲‧恭子、上出由紀、山崎小枝子、三友周太",
     venue: "朝代畫廊",
@@ -215,18 +228,6 @@ export const taipeiExp = [
     time: "2023/09/21-2023/10/14",
     src: "https://pic.pimg.tw/yangun410/1694873079-790115167-g.jpg",
     link: "https://www.facebook.com/BACK.YIRI",
-  },
-  {
-    id: 165,
-    name: "閃閃赤子星",
-    artist: "林孜育",
-    venue: "cafe Bom Bom",
-    openDay: "23456",
-    TicketType: "免費",
-    location: "臺北市松山區延壽街386號",
-    time: "2023/08/04-2023/09/03",
-    src: "https://pic.pimg.tw/yangun410/1692414156-1989539695-g_b.jpg",
-    link: "https://www.facebook.com/cafebombom386",
   },
   {
     id: 162,
@@ -257,7 +258,7 @@ export const taipeiExp = [
     name: "在浮木上跳舞",
     artist: "紀少淵",
     openDay: "34560",
-    venue: "金車文藝中心 臺北南京館 ",
+    venue: "金車文藝中心 臺北南京館",
     TicketType: "免費",
     time: "2023/08.05/09/28",
     location: "臺北市中山區南京東路二段1號3樓",
@@ -287,20 +288,7 @@ export const taipeiExp = [
     time: "2023/05/19-2023/06/03",
     src: "https://pic.pimg.tw/yangun410/1684246253-3295060551-g_n.jpg",
     link: "https://www.facebook.com/leixianggallery",
-  }
-  // {
-  //   id: ,
-  //   name: "",
-  //   artist: "",
-  //   openDay: "234560",
-  //   venue: "靠邊走藝術空間",
-  //   TicketType: "免費",
-  //   time: "",
-  //   location: "臺北市萬華區西寧南路72-1號4F",
-  //   src: "",
-  //   link: "https://www.facebook.com/events/548979444043805/548979507377132/?active_tab=about",
-  // },
-
+  },
   // {
   //   id: ,
   //   name: "",

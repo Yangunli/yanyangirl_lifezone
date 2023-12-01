@@ -24,6 +24,18 @@ export const tainanExp = [
   //   link: "https://www.facebook.com/heididoll.tw",
   // },
   {
+    id: 333,
+    name: "向北的極霧森林",
+    artist: "曾永鴻",
+    TicketType: "預約",
+    openDay: "23456",
+    time: "2023/11/11-2024/01/06",
+    venue: "森初",
+    location: "臺南市安平區漁光路113號",
+    src: "https://pic.pimg.tw/yangun410/1700983908-669366111-g_n.jpg",
+    link: "https://www.instagram.com/moricasa_art/",
+  },
+  {
     id: 332,
     name: "揉陶擬態：考古、燭火與地景",
     artist: "陶啟安、羅縉壕、莫鎧靖",
@@ -62,7 +74,8 @@ export const tainanExp = [
   {
     id: 328,
     name: "秋波",
-    artist: "一莉、NIN、Seki、羅荷、Eli Lin 依萊、懶惰朽吉 • wohenlanduo、萩 結、しらかわ まゆ",
+    artist:
+      "一莉、NIN、Seki、羅荷、Eli Lin 依萊、懶惰朽吉 • wohenlanduo、萩 結、しらかわ まゆ",
     TicketType: "免費",
     time: "2023/09/23-2023/10/22",
     openDay: "34560",
