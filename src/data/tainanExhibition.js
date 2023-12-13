@@ -24,6 +24,19 @@ export const tainanExp = [
   //   link: "https://www.facebook.com/heididoll.tw",
   // },
   {
+    id: 334,
+    name: "等登燈",
+    artist:
+      "陳向榮、Taochi Tanchi、謝佳瑜、無光造物、真真鑲嵌玻璃研究所、拾未、倪瑞宏、Lulu Lin草人青、黃虹毓、黃舜廷、王怡婷、傅子峻",
+    TicketType: "免費",
+    openDay: "56012",
+    time: "2023/12/09-2024/01/09",
+    venue: "應力空間",
+    location: "臺南市中西區民權路二段64巷56號3F",
+    src: "https://pic.pimg.tw/yangun410/1702477011-2976505211-g.jpg",
+    link: "https://www.facebook.com/TuXingstudio",
+  },
+  {
     id: 333,
     name: "向北的極霧森林",
     artist: "曾永鴻",
@@ -96,18 +109,6 @@ export const tainanExp = [
     time: "2023/06/17-2023/11/26",
     src: "https://pic.pimg.tw/yangun410/1689394401-3450418016-g_b.jpg",
     link: "https://www.tnam.museum/exhibition/detail/417",
-  },
-  {
-    id: 324,
-    name: "聲形—皎夏蕪弭",
-    artist: "蔡坤霖",
-    TicketType: "免費",
-    openDay: "56012",
-    time: "2023/06/04-2023/07/02",
-    venue: "應力空間",
-    location: "臺南市中西區民權路二段64巷56號3F",
-    src: "https://pic.pimg.tw/yangun410/1687074244-3301402324-g_b.jpg?v=1687074251",
-    link: "https://www.facebook.com/TuXingstudio",
   },
   {
     id: 320,
