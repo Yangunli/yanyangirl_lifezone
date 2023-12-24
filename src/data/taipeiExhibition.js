@@ -12,7 +12,32 @@ export const taipeiExp = [
   //   link: "",
   // },
   {
-    id: 204,
+    id: 1106,
+    name: "素采",
+    artist: "蘇健霖、張蕙敏",
+    venue: "三徑就荒",
+    openDay: "1234560",
+    TicketType: "免費",
+    location: "臺北市信義區忠孝東路四段553巷46弄15號1樓",
+    time: "2023/12/17-2024/01/07",
+    src: "https://pic.pimg.tw/yangun410/1703396302-1547051752-g.jpg",
+    link: "https://www.hermits-hut.com/",
+  },
+  {
+    id: 1105,
+    name: "冬歲",
+    artist:
+      "Busy Fingers、寫生、今天懶洋洋、本質創作室、三時美術．賞茉 、里山織色",
+    venue: "一嶼",
+    openDay: "23456",
+    TicketType: "免費",
+    location: "臺北市大安區青田街6巷10號",
+    time: "2023/12/23-2024/01/28",
+    src: "https://pic.pimg.tw/yangun410/1703396302-955343952-g.jpg",
+    link: "https://www.is-land.tw/",
+  },
+  {
+    id: 1104,
     name: "靜止與永恆",
     artist:
       "丁奕云、朱冠勳、李承翰、李映嫺、林柏勳、陳瑀珩、陳禎憶、鄭景鴻、施博唯、龍暐翔、鍾美貞",
@@ -25,7 +50,7 @@ export const taipeiExp = [
     link: "https://www.facebook.com/donnaart.tw",
   },
   {
-    id: 203,
+    id: 1103,
     name: "伊薩卡島",
     artist: "川貝母",
     openDay: "234560",
@@ -37,7 +62,7 @@ export const taipeiExp = [
     link: "https://www.facebook.com/jxjgallery",
   },
   {
-    id: 202,
+    id: 1102,
     name: "落葉後的故事",
     artist: "林其勻",
     venue: "靜慮藝廊",
@@ -49,7 +74,7 @@ export const taipeiExp = [
     link: "https://www.instagram.com/jinglugallery/",
   },
   {
-    id: 201,
+    id: 1101,
     name: "殘片",
     artist: "顏妤庭",
     venue: "双方藝廊",
@@ -61,7 +86,7 @@ export const taipeiExp = [
     link: "https://www.facebook.com/doublesquare.gallery",
   },
   {
-    id: 200,
+    id: 1100,
     name: "另一個第十二夜",
     artist: "鄭星慧",
     venue: "cafe Bom Bom",
@@ -77,7 +102,7 @@ export const taipeiExp = [
     name: "Digital Monsters",
     artist: "非人製陶、LALAYO",
     venue: "靠邊走藝術空間",
-    openDay: "23456",
+    openDay: "234560",
     TicketType: "免費",
     location: "臺北市萬華區西寧南路 72-1 號4F",
     time: "2023/12/03-2023/12/31",

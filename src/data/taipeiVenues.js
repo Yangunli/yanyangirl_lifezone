@@ -188,7 +188,7 @@ export const taipeiVenues = [
       "https://firebasestorage.googleapis.com/v0/b/react-firebase-306e5.appspot.com/o/exhibition%2F%E4%B8%89%E5%BE%91%E5%B0%B1%E8%8D%92%2FR0001903.JPG?alt=media&token=3f6c4b40-866b-4bc1-b5c3-d3468fb05c5a",
     ],
     city: "taipei",
-    location: "臺北市信義區忠孝東路四段553巷46弄15號1 樓",
+    location: "臺北市信義區忠孝東路四段553巷46弄15號",
     desc: "與茶香和展覽相遇之所在",
     link: "https://www.hermits-hut.com/",
   },

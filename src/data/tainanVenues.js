@@ -1,17 +1,5 @@
 export const tainanVenues = [
   // {
-  //   id: 305,
-  //   category: "art space",
-  //   venue: "暮拉多元藝術空間",
-  //   openDay: "1234560",
-  //   hostImgUrl: "",
-  //   venueImgUrl: [""],
-  //   city: "tainan",
-  //   location: "臺南市中西區國華街三段15號",
-  //   desc: "",
-  //   link: "https://themoolahart.wixsite.com/my-site",
-  // },
-  // {
   //   id: 304,
   //   category: "art space",
   //   openDay: "34560",
