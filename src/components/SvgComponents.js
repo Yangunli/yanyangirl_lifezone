@@ -152,7 +152,7 @@ export const MenuSvg1 = () => {
         />
       </g>
       <defs>
-        <clipPath id="clip0_361_9">
+        <clipPath>
           <rect width="220" height="200" fill="white" />
         </clipPath>
       </defs>
@@ -179,11 +179,7 @@ export const MenuSvg2 = () => {
           strokeWidth="5"
         />
       </g>
-      <defs>
-        {/* <clipPath id="clip0_401_23">
-          <rect width="140" height="140" fill="white" />
-        </clipPath> */}
-      </defs>
+      <defs></defs>
     </svg>
   );
 };

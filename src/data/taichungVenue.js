@@ -30,7 +30,7 @@ export const taichungVenues = [
   {
     id: 208,
     category: "art space",
-    venue: "MR. WING GALLERY",
+    venue: "C Square Gallery",
     openDay: "234560",
     hostImgUrl: "",
     venueImgUrl: [
@@ -42,7 +42,7 @@ export const taichungVenues = [
     city: "taichung",
     location: "臺中市西屯區市政北二路324號",
     desc: "",
-    link: "https://www.mrwingart.com/",
+    link: "https://www.csquareart.com/",
   },
   {
     id: 207,

@@ -1,5 +1,17 @@
 export const taichungExp = [
   {
+    id: 266,
+    name: "When You See It",
+    artist: "林辰勳",
+    time: "2024/01/06-2024/03/03",
+    openDay: "234560",
+    venue: "C Square Gallery",
+    location: "臺中市西屯區市政北二路324號​",
+    TicketType: "免費",
+    src: "https://pic.pimg.tw/yangun410/1704617272-4160274026-g.jpg",
+    link: "https://www.csquareart.com/",
+  },
+  {
     id: 265,
     name: "不可思議劇場",
     artist: "Dabibi",
@@ -241,16 +253,4 @@ export const taichungExp = [
     src: "https://pic.pimg.tw/yangun410/1682745205-481617215-g_b.jpg",
     link: "https://www.moongallery.com.tw/",
   },
-  // {
-  //   id: ,
-  //   name: "",
-  //   artist: "",
-  //   time: "",
-  //   openDay: "234560",
-  //   venue: "清風Mr.Wing gallery",
-  //   location: "臺中市西屯區市政北二路324號​",
-  //   TicketType: "免費",
-  //   src: "",
-  //   link: "https://www.mrwingart.com/?fbclid=IwAR0kLSXrulEqrUeRxJ8B6--lizK30QOgFaYBIY7yDBkcbj3FZKnGFp6-OTU",
-  // },
 ];
