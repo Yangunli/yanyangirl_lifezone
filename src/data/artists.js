@@ -28,7 +28,7 @@ export const artists = [
     id: 5,
     artist: "非人製陶",
     brand: "非人製陶",
-    src: "https://firebasestorage.googleapis.com/v0/b/yanyangirl-lifezone.appspot.com/o/%E5%B1%95%E8%A6%BD%2FTPEother%2F4240_n.webp?alt=media&token=f14b3e0e-e026-44b7-b1e5-14f98dbf83b6",
+    src: "https://firebasestorage.googleapis.com/v0/b/yanyangirl-lifezone.appspot.com/o/%E5%B1%95%E8%A6%BD%2FwrongGallery%2FR0029885.webp?alt=media&token=5e474ef7-b463-4b50-bc66-d7c8666226d9",
     category: ["陶"],
   },
   {
