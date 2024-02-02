@@ -1,5 +1,17 @@
 export const taichungExp = [
   {
+    id: 269,
+    name: "房間裡的感覺",
+    artist: "agoera、dooors、MOND、蕨野知子",
+    time: "2024/02/03-2024/02/25",
+    openDay: "45601",
+    venue: "綠光+marüte",
+    location: "臺中市西區中興一巷2號",
+    TicketType: "免費",
+    src: "https://pic.pimg.tw/yangun410/1706884013-2429554231-g.jpg?v=1706884021",
+    link: "https://www.facebook.com/greenray.marute",
+  },
+  {
     id: 268,
     name: "CANTABILE",
     artist: "宮岡貴泉",
@@ -131,18 +143,6 @@ export const taichungExp = [
     TicketType: "售票",
     src: "https://pic.pimg.tw/yangun410/1701439758-1321628822-g.jpg",
     link: "https://www.facebook.com/petitdeer",
-  },
-  {
-    id: 255,
-    name: "三人のCOSMOS",
-    artist: "谷小夏、毬谷静、ア〜ミ〜",
-    time: "2023/12/02-2023/12/25",
-    openDay: "45601",
-    venue: "綠光+marüte",
-    location: "臺中市西區中興一巷2號",
-    TicketType: "免費",
-    src: "https://pic.pimg.tw/yangun410/1701439508-2894921912-g_n.jpg",
-    link: "https://www.facebook.com/greenray.marute",
   },
   {
     id: 249,
