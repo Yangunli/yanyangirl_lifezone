@@ -211,7 +211,7 @@ export const taipeiVenues = [
     id: 115,
     category: "art space",
     venue: "澍林",
-    openDay: "?",
+    openDay: "012345",
     hostImgUrl: "",
     venueImgUrl: [
       "https://firebasestorage.googleapis.com/v0/b/yanyangirl-lifezone.appspot.com/o/venue%2F%E6%BE%8D%E6%9E%97%2FR0022150.webp?alt=media&token=aef28292-8f39-428d-8de6-066dfe2d836c",
