@@ -24,6 +24,18 @@ export const tainanExp = [
   //   link: "https://www.facebook.com/Zit.Dim.Art.space/",
   // },
   {
+    id: 348,
+    name: "巷口街角",
+    artist: "粒魚",
+    TicketType: "免費",
+    time: "2024/03/15-2024/04/07",
+    openDay: "34560",
+    venue: "陸角銀Sixpence Gallery",
+    location: "臺南市中西區大德街83號2F",
+    src: "https://pic.pimg.tw/yangun410/1710681368-25018570-g.jpg",
+    link: "https://www.facebook.com/Sixpence.Gallery",
+  },
+  {
     id: 347,
     name: "圖 02",
     artist: "張般源",
@@ -165,19 +177,6 @@ export const tainanExp = [
     location: "臺南市安平區漁光路113號",
     src: "https://pic.pimg.tw/yangun410/1700983908-669366111-g_n.jpg",
     link: "https://www.instagram.com/moricasa_art/",
-  },
-  {
-    id: 328,
-    name: "秋波",
-    artist:
-      "一莉、NIN、Seki、羅荷、Eli Lin 依萊、懶惰朽吉 • wohenlanduo、萩 結、しらかわ まゆ",
-    TicketType: "免費",
-    time: "2023/09/23-2023/10/22",
-    openDay: "34560",
-    venue: "陸角銀Sixpence Gallery",
-    location: "臺南市中西區大德街83號2F",
-    src: "https://pic.pimg.tw/yangun410/1694258073-2549970367-g_n.jpg",
-    link: "https://www.facebook.com/Sixpence.Gallery",
   },
   {
     id: 327,
