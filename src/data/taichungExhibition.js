@@ -1,5 +1,17 @@
 export const taichungExp = [
   {
+    id: 278,
+    name: "翩 翩",
+    artist: "黃于亭、蔡育言",
+    time: "2024/03/30-2024/04/27",
+    openDay: "23456",
+    TicketType: "免費",
+    venue: "亞米藝術",
+    location: "臺中市西區民生北路138號",
+    src: "https://pic.pimg.tw/yangun410/1712196257-2426043804-g.jpg",
+    link: "https://www.facebook.com/yamiartspace",
+  },
+  {
     id: 277,
     name: "日復一日",
     artist: "Raimochi",
@@ -84,18 +96,6 @@ export const taichungExp = [
     TicketType: "免費",
     src: "https://pic.pimg.tw/yangun410/1708225911-1843446519-g.jpg",
     link: "https://www.facebook.com/alchemy.tw",
-  },
-  {
-    id: 267,
-    name: "許銘仁",
-    artist: "圖景之所",
-    time: "2024/02/03-2024/03/16",
-    openDay: "23456",
-    TicketType: "免費",
-    venue: "亞米藝術",
-    location: "臺中市西區民生北路138號",
-    src: "https://pic.pimg.tw/yangun410/1706263700-3123118803-g.jpg",
-    link: "https://www.facebook.com/yamiartspace",
   },
   {
     id: 266,
