@@ -20,7 +20,7 @@ export const taichungExp = [
     venue: "寬藝術空間",
     location: "臺中市西區向上路一段79巷38號",
     TicketType: "免費",
-    src: "",
+    src: "https://pic.pimg.tw/yangun410/1714262793-4127228727-g.jpg",
     link: "https://www.facebook.com/kuanartspace",
   },
   {
@@ -32,7 +32,7 @@ export const taichungExp = [
     venue: "綠光+marüte",
     location: "臺中市西區中興一巷2號",
     TicketType: "免費",
-    src: "",
+    src: "https://pic.pimg.tw/yangun410/1714262793-772880700-g.jpg",
     link: "https://www.facebook.com/greenray.marute",
   },
   {
