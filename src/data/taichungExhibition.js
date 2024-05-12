@@ -1,5 +1,17 @@
 export const taichungExp = [
   {
+    id: 287,
+    name: "島間迴映",
+    artist: "盧楷",
+    time: "2024/05/18-2024/06/09",
+    openDay: "234560",
+    TicketType: "免費",
+    venue: "ZASSO草也",
+    location: "臺中市西區五權西六街72號",
+    src: "https://pic.pimg.tw/yangun410/1715493178-1015266069-g.jpg",
+    link: "https://www.facebook.com/zasso72",
+  },
+  {
     id: 286,
     name: "消逝的風景",
     artist: "張芸家",
@@ -180,17 +192,5 @@ export const taichungExp = [
     time: "2023/07/29-2023/09/02",
     src: "https://pic.pimg.tw/yangun410/1691069254-1123964401-g_b.jpg",
     link: "https://www.facebook.com/22Pierre",
-  },
-  {
-    id: 234,
-    name: "光の庭",
-    artist: "中村眞弥子",
-    time: "2023/06/23-2023/07/23",
-    openDay: "234560",
-    TicketType: "免費",
-    venue: "ZASSO草也",
-    location: "臺中市西區五權西六街72號",
-    src: "https://pic.pimg.tw/yangun410/1687070717-2439759792-g_b.jpg",
-    link: "https://www.facebook.com/zasso72",
   },
 ];

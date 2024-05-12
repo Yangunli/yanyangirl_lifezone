@@ -131,7 +131,7 @@ export const taipeiVenues = [
       "https://firebasestorage.googleapis.com/v0/b/yanyangirl-lifezone.appspot.com/o/venue%2Fuitshinn%2FR0013394.webp?alt=media&token=c81fc490-6602-49fc-a273-54b86abd3450",
     ],
     city: "taipei",
-    location: "台北市泰順街12號2樓",
+    location: "臺北市泰順街12號2樓",
     desc: "",
     link: "https://www.facebook.com/uitshinn/",
   },
