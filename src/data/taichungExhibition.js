@@ -1,5 +1,17 @@
 export const taichungExp = [
   {
+    id: 288,
+    name: "翻譯年糕",
+    artist: "夏仙",
+    time: "2024/06/08-2024/06/30",
+    openDay: "34560",
+    venue: "小路映画",
+    location: "臺中市西區五權五街94巷36號",
+    TicketType: "售票",
+    src: "https://pic.pimg.tw/yangun410/1717493969-2164057151-g.jpg",
+    link: "https://www.facebook.com/petitdeer",
+  },
+  {
     id: 287,
     name: "島間迴映",
     artist: "盧楷",
@@ -82,18 +94,6 @@ export const taichungExp = [
     TicketType: "免費",
     src: "https://pic.pimg.tw/yangun410/1714262793-4127228727-g.jpg",
     link: "https://www.facebook.com/kuanartspace",
-  },
-  {
-    id: 279,
-    name: "CIRCUS HOME",
-    artist: "林孜育",
-    time: "2024/04/20-2024/05/26",
-    openDay: "34560",
-    venue: "小路映画",
-    location: "臺中市西區五權五街94巷36號",
-    TicketType: "售票",
-    src: "https://pic.pimg.tw/yangun410/1713617293-2877375322-g.jpg?v=1713617294",
-    link: "https://www.facebook.com/petitdeer",
   },
   {
     id: 276,
