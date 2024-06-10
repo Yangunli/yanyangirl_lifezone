@@ -25,14 +25,14 @@ export const tainanExp = [
   // },
   {
     id: 350,
-    name: "偏心唱片行",
-    artist: "寬片片",
+    name: "希望滿懷",
+    artist: "𝐍𝐎𝐌𝐀",
     TicketType: "免費",
-    time: "2024/05/01-2024/05/19",
+    time: "2024/06/22-2024/08/11",
     openDay: "34560",
     venue: "陸角銀Sixpence Gallery",
     location: "臺南市中西區大德街83號2F",
-    src: "https://pic.pimg.tw/yangun410/1715492833-579846438-g_b.png",
+    src: "https://pic.pimg.tw/yangun410/1718017550-1024058839-g.jpg",
     link: "https://www.facebook.com/Sixpence.Gallery",
   },
   {
