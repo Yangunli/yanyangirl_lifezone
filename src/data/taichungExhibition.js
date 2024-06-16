@@ -1,5 +1,17 @@
 export const taichungExp = [
   {
+    id: 292,
+    name: "數野仙蹤",
+    artist: "亞歷山大．阿普爾比、斯特凡諾．加利、黃舜廷、梁祐寧、吳秋虹",
+    time: "2024/06/15-2024/07/28",
+    openDay: "234560",
+    venue: "養心藝術",
+    location: "臺中市南屯區文心南五路一段395號",
+    TicketType: "免費",
+    src: "https://pic.pimg.tw/yangun410/1718504085-1769620710-g.jpg",
+    link: "https://www.artnutri.com/",
+  },
+  {
     id: 291,
     name: "春藝盎然: 天堂鳥",
     artist:
@@ -71,18 +83,6 @@ export const taichungExp = [
     TicketType: "免費",
     src: "https://pic.pimg.tw/yangun410/1714910747-3139590976-g.jpg",
     link: "https://www.facebook.com/yaospace",
-  },
-  {
-    id: 285,
-    name: "LOVE, AGAIN",
-    artist: "Haydonna",
-    time: "2024/05/04-2024/06/08",
-    openDay: "234560",
-    venue: "養心藝術",
-    location: "臺中市南屯區文心南五路一段395號",
-    TicketType: "免費",
-    src: "https://pic.pimg.tw/yangun410/1714910497-1370540750-g.jpg",
-    link: "https://www.artnutri.com/",
   },
   {
     id: 283,
