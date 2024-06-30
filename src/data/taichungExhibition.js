@@ -1,5 +1,17 @@
 export const taichungExp = [
   {
+    id: 293,
+    name: "lovelorn monster",
+    artist: "吳秋虹",
+    time: "2024/07/06-2024/08/04",
+    openDay: "34560",
+    venue: "小路映画",
+    location: "臺中市西區五權五街94巷36號",
+    TicketType: "售票",
+    src: "https://pic.pimg.tw/yangun410/1719711571-3589202965-g.jpg",
+    link: "https://www.facebook.com/petitdeer",
+  },
+  {
     id: 292,
     name: "數野仙蹤",
     artist: "亞歷山大．阿普爾比、斯特凡諾．加利、黃舜廷、梁祐寧、吳秋虹",
