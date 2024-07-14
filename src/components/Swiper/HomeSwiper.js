@@ -7,6 +7,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { useWindowResize } from "../../hooks/useWindowResize";
 import { scrollWin } from "../../function/scroll";
+
 const HomeSwiper = ({ cityList }) => {
   const [scrollHight, setScrollHight] = useState(window.screenY);
   const { width } = useWindowResize();
@@ -43,13 +44,17 @@ const HomeSwiper = ({ cityList }) => {
         ))}
       </Swiper>
       {width > 1000 && scrollHight <= 450 && (
-        <img className="home__clickImg" src="images/clickColorPng.png" alt="" />
+        <img
+          className="home__clickImg"
+          src="images/clickColorPng.png"
+          alt="click to open menu"
+        />
       )}
       {width > 1000 && scrollHight > 450 && (
         <img
           className="home__clickImg2"
           src="images/clickColorPng.png"
-          alt=""
+          alt="click to open menu"
         />
       )}
     </div>
