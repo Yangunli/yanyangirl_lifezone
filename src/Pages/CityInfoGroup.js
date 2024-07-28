@@ -18,6 +18,7 @@ import PageTransition from "../components/PageTransition";
 import { taipeiExp } from "../data/taipeiExhibition";
 import { taichungExp } from "../data/taichungExhibition";
 import { tainanExp } from "../data/tainanExhibition";
+import { tokyoExp } from "../data/tokyoExhibition";
 const CityInfoGroup = () => {
   const [currentTab, setCurrentTab] = useState("current");
   const { modalContent, modalToggle, changeContent } = useModal();
@@ -31,6 +32,8 @@ const CityInfoGroup = () => {
         ? taichungExp
         : city == "tainan"
         ? tainanExp
+        : city === "tokyo"
+        ? tokyoExp
         : null
       : null;
 
