@@ -1,7 +1,7 @@
 export const recommendedList = [
   {
-    venue: "Broom Design",
-    venueLink: "/tainan/venue/304",
+    venue: "Tokyo",
+    venueLink: "/tokyo/exhibition",
     src: "",
   },
 
