@@ -1,8 +1,8 @@
-import React, { useEffect, useRef } from "react";
-import { Link, NavLink } from "react-router-dom";
-import { scrollWin } from "../function/scroll";
+import React, { useRef } from "react";
+import { Link } from "react-router-dom";
 import { navList } from "../data/navList";
 import { recommendedList } from "../data/recommendedLst";
+import { scrollWin } from "../function/scroll";
 const Menu = ({ changeMenu }) => {
   const menuRef = useRef();
   function menuOut() {
