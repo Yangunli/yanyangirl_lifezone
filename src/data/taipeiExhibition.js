@@ -12,6 +12,18 @@ export const taipeiExp = [
   //   link: "",
   // },
   {
+    id: 1164,
+    name: "Flame in the light",
+    artist: "Eggzy Lin",
+    venue: "One little planet Taipei",
+    openDay: "4560",
+    TicketType: "免費",
+    location: "臺北市大安區四維路52巷8號",
+    time: "2024/08/10-2024/08/25",
+    src: "https://pic.pimg.tw/yangun410/1723031643-3774223152-g.jpg?v=1723031646",
+    link: "https://www.instagram.com/1littleplanet/",
+  },
+  {
     id: 1163,
     name: "童樂園",
     artist: "巫宇庭",
