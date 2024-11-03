@@ -146,7 +146,7 @@ export const taipeiVenues = [
       "https://firebasestorage.googleapis.com/v0/b/yanyangirl-lifezone.appspot.com/o/venue%2F%E8%88%8A%E9%A6%99%E5%B1%85%2FR0014126.webp?alt=media&token=dc3690c3-3986-46c1-9bd1-a9f1345954b5",
     ],
     city: "taipei",
-    location: "臺北市師大路117巷6號1樓",
+    location: "臺北市中正區羅斯福路三段210巷6號1樓",
     desc: "",
     link: "https://www.facebook.com/jxjgallery",
   },
