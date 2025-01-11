@@ -12,6 +12,18 @@ export const tainanExp = [
   //   link: "",
   // },
   {
+    id: 369,
+    name: "旅圖漫者",
+    artist: "Sophia Ji",
+    TicketType: "免費",
+    time: "2025/01/16-2025/02/16",
+    openDay: "34560",
+    venue: "陸角銀Sixpence Gallery",
+    location: "臺南市中西區大德街83號2F",
+    src: "https://pic.pimg.tw/yangun410/1736601766-3061032853-g.jpg",
+    link: "https://www.facebook.com/Sixpence.Gallery",
+  },
+  {
     id: 368,
     name: "迷彩-載體再探",
     artist: "吳佩珊",
@@ -59,19 +71,7 @@ export const tainanExp = [
     src: "https://pic.pimg.tw/yangun410/1735448189-2161064805-g.jpg",
     link: "https://www.facebook.com/chinchinpottery",
   },
-  {
-    id: 363,
-    name: "好想咬一口",
-    artist:
-      "三角ユウリ、Raini瀨泥、moca、穂の湯、Carriedraw、mahiro miyama、fuwa fuwa.studio",
-    TicketType: "免費",
-    time: "2024/12/06-2024/12/22",
-    openDay: "34560",
-    venue: "陸角銀Sixpence Gallery",
-    location: "臺南市中西區大德街83號2F",
-    src: "https://pic.pimg.tw/yangun410/1733748936-4005593179-g.jpg?v=1733748941",
-    link: "https://www.facebook.com/Sixpence.Gallery",
-  },
+
   {
     id: 362,
     name: "無限樂園",
