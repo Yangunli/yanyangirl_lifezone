@@ -12,6 +12,18 @@ export const taichungExp = [
   //   link: "",
   // },
   {
+    id: 2022,
+    name: "繁華若夢",
+    artist: "黃靜萱、王昱喬、王奕恩、白若潔、陌光、陳愛莉、張芸家",
+    venue: "民生路老宅56-3",
+    openDay: "23456",
+    TicketType: "免費",
+    location: "臺中市西區民生路56巷3號",
+    time: "2025/01/18-2025/03/15",
+    src: "https://pic.pimg.tw/yangun410/1737954649-2656810753-g.jpg?v=1737954661",
+    link: "https://www.facebook.com/laozhai56.3",
+  },
+  {
     id: 2021,
     name: "微光中盛開的思念",
     artist: "周幸宜",
